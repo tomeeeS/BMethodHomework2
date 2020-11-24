@@ -1,0 +1,4 @@
+THEORY User_Pass IS
+Pattern({a|->b}\/{c|->d}\/{e|->f}\/{g|->h}\/{i|->j} : a..i --> k..j) 
+	& ff(0) & dd & pr & p0 & pr & pr & pr & p0 & pr & pr & pr & p0 & pr & pr & pp & pp & pr
+END 

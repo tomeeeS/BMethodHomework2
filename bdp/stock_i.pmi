@@ -1,8 +1,8 @@
 ﻿THEORY BalanceX IS
-  stock_i,17,0,0,13,1,0,0;
+  stock_i,17,1,0,13,1,0,0;
   Initialisation,3,0,0,3,0,0,0;
   Put,7,0,0,5,0,0,0;
-  ValuesLemmas,1,0,0,0,0,0,0;
+  ValuesLemmas,1,1,0,0,0,0,0;
   WellDefinedness_Put,6,0,0,5,1,0,0
 END
 &
@@ -23,7 +23,7 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(0);
-  Unproved
+  Proved(Util)
 END
 &
 THEORY MethodList IS
@@ -43,7 +43,7 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  ?
+  dd & pr & p0 & pr & pr & pr & p0 & pr & pr & pr & p0 & pr & pr & pp & pp & pr
 END
 &
 THEORY PassList IS
