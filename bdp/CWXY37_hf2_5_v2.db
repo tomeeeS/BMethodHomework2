@@ -7,5 +7,8 @@
         <component_file path="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/src" name="stock" suffix="mch" user="tomi">
             <component name="stock" type="specification" />
         </component_file>
+        <component_file path="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/src" name="stock_i" suffix="imp" user="tomi">
+            <component name="stock_i" type="implementation" />
+        </component_file>
     </project>
 </db_xml>

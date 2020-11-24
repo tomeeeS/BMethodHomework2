@@ -1,14 +1,14 @@
 ﻿THEORY BalanceX IS
-  stock,59,0,0,45,14,0,0;
+  stock,59,0,0,45,13,0,0;
   Initialisation,7,0,0,5,2,0,0;
   Pop,8,0,0,6,2,0,0;
-  Put,8,0,0,6,2,0,0;
+  Put,8,0,0,5,2,0,0;
   WellDefinedness_GetRequiredAmount,1,0,0,1,0,0,0;
   WellDefinedness_GetSum,2,0,0,2,0,0,0;
   WellDefinedness_Pop,9,0,0,7,2,0,0;
   WellDefinedness_Precondition_Pop,8,0,0,6,2,0,0;
   WellDefinedness_Precondition_Put,7,0,0,5,2,0,0;
-  WellDefinedness_Put,9,0,0,7,2,0,0
+  WellDefinedness_Put,9,0,0,8,1,0,0
 END
 &
 THEORY ProofState IS
@@ -38,21 +38,12 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(0);
-  Proved(1);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(1);
-  Proved(0);
-  Proved(1);
-  Proved(0);
-  Proved(0);
-  Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
   Proved(1);
+  Proved(0);
   Proved(1);
   Proved(0);
   Proved(0);
@@ -61,15 +52,24 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(1);
-  Proved(1);
-  Proved(0);
-  Proved(0);
   Proved(0);
   Proved(0);
   Proved(1);
   Proved(0);
+  Unproved;
+  Proved(0);
   Proved(0);
   Proved(1);
+  Proved(0);
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(1);
+  Proved(0);
   Proved(0)
 END
 &
@@ -118,7 +118,7 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  pr;
+  ?;
   pr;
   pr;
   pr;
@@ -162,21 +162,12 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(1),(?;0);
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(1),(?;0);
-  Force(0),?;
-  Force(1),(?;0);
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(1),(?;0);
+  Force(0),?;
   Force(1),(?;0);
   Force(0),?;
   Force(0),?;
@@ -185,15 +176,24 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(1),(?;0);
-  Force(1),(?;0);
-  Force(0),?;
-  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(1),(?;0);
   Force(0),?;
+  Force(0),(?;0;1;2);
+  Force(0),?;
   Force(0),?;
   Force(1),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
   Force(0),?
 END
 &

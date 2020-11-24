@@ -47,15 +47,15 @@ INVARIANT
 
     // CurrentStocks
     & dom ( CurrentStocks ) = dom ( MaxStocks )
-    & ! ii . ( ii : dom ( CurrentStocks ) => CurrentStocks ( ii ) : 0 .. MaxStocks ( ii ) )
-
+    /*& ! ii . ( ii : dom ( CurrentStocks ) => CurrentStocks ( ii ) : 0 .. MaxStocks ( ii ) )
+    
     // Shortages
-    & ! xx . ( xx : Shortages => CurrentStocks ( xx ) < MaxStocks ( xx ) / 2 )
-    & ! xx . ( ( xx : dom ( CurrentStocks ) & CurrentStocks ( xx ) < MaxStocks ( xx ) / 2 ) => xx : Shortages )
-
+    & !xx.(xx : Shortages => CurrentStocks(xx) < MaxStocks ( xx ) / 2)
+    & !xx.((xx : dom(CurrentStocks) & CurrentStocks(xx) < MaxStocks(xx) / 2) => xx : Shortages)
+    
     // RequiredAmounts
-    & ! ii . ( ii : dom ( RequiredAmounts ) => RequiredAmounts ( ii ) = MaxStocks ( ii ) - CurrentStocks ( ii ) )
-
+    & !ii.(ii: dom(RequiredAmounts) => RequiredAmounts(ii) = MaxStocks(ii) - CurrentStocks(ii))
+    */
 INITIALISATION
     CurrentStocks :: ( 1 .. 5 ) --> { 0 }
     || Shortages := ( 1 .. 5 )
@@ -68,41 +68,42 @@ OPERATIONS
     PRE
         ii : dom ( CurrentStocks )
         & amt : 1 .. 4000
+
         & CurrentStocks ( ii ) + amt : ( 0 .. 4000 )
         & CurrentStocks ( ii ) + amt <= MaxStocks ( ii )
         & MaxStocks ( ii ) - ( CurrentStocks ( ii ) + amt ) : ( 0 .. 4000 )
 
     THEN
         CurrentStocks ( ii ) := CurrentStocks ( ii ) + amt
-        || RequiredAmounts ( ii ) := RequiredAmounts ( ii ) - amt
-        || Shortages := { xx | xx : dom ( CurrentStocks ) & ( CurrentStocks <+ { ii |-> CurrentStocks ( ii ) + amt } ) ( xx ) < MaxStocks ( xx ) / 2 }
+        || RequiredAmounts ( ii ) := MaxStocks ( ii ) - ( CurrentStocks ( ii ) + amt )
+        //|| Shortages := {xx | xx : dom(CurrentStocks) & (CurrentStocks<+{ii|->CurrentStocks(ii)+amt})(xx) < MaxStocks(xx) / 2}
     END
+    /*
     ;
-
-
+    
     Pop ( ii , amt ) = //Feladat2
     PRE
         ii : dom ( CurrentStocks )
         & amt : 1 .. 4000
-        & CurrentStocks ( ii ) - amt : ( 0 .. 4000 )
+        & CurrentStocks ( ii ) - amt : NUM_OF_STOCK_TYPE
         & CurrentStocks ( ii ) - amt >= 0
         & CurrentStocks ( ii ) - amt <= MaxStocks ( ii )
-        & MaxStocks ( ii ) - ( CurrentStocks ( ii ) - amt ) : ( 0 .. 4000 )
-
+        & MaxStocks(ii) - (CurrentStocks(ii) - amt) : NUM_OF_STOCK_TYPE
+        //& !yy.((yy : dom(CurrentStocks) & (CurrentStocks<+{ii|->CurrentStocks(ii)-amt})(yy) < MaxStocks(yy) / 2) => yy : Shortages \/ {ii}) 
     THEN
         CurrentStocks ( ii ) := CurrentStocks ( ii ) - amt
-        || RequiredAmounts ( ii ) := MaxStocks ( ii ) - ( CurrentStocks ( ii ) - amt )
-        || Shortages := { xx | xx : dom ( CurrentStocks ) & ( CurrentStocks <+ { ii |-> CurrentStocks ( ii ) - amt } ) ( xx ) < MaxStocks ( xx ) / 2 }
+        || RequiredAmounts(ii) := MaxStocks(ii) - (CurrentStocks(ii) - amt)
+        || Shortages := {xx | xx : dom(CurrentStocks) & (CurrentStocks<+{ii|->CurrentStocks(ii)-amt})(xx) < MaxStocks(xx) / 2}
     END
     ;
 
 
     res <-- GetShortage = //Feladat3
     BEGIN
-        res : (
-            res : ( 1 .. 5 ) --> BOOL
-            & dom ( res |> { TRUE } ) = Shortages
-            & dom ( res |> { FALSE } ) = ( ( 1 .. 5 ) ) - Shortages
+        res :(
+            res : STOCKS --> BOOL
+            & dom(res|>{TRUE}) = Shortages
+            & dom(res|>{FALSE}) = (STOCKS) - Shortages
         )
     END
     ;
@@ -119,10 +120,21 @@ OPERATIONS
     PRE
         ii : dom ( RequiredAmounts )
     THEN
-       res := RequiredAmounts ( ii )
+       res := RequiredAmounts(ii)
     END
-
+    
+    */
 END
+
+
+
+
+
+
+
+
+
+
 
 
 /* original

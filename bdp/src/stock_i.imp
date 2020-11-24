@@ -1,0 +1,86 @@
+﻿/*
+Sajti Tamas
+CWXY37
+*/
+
+IMPLEMENTATION stock_i
+REFINES stock
+
+
+
+
+VALUES
+    MaxStocks = {
+        1 |-> 1000 ,
+        2 |-> 2000 ,
+        3 |-> 500 ,
+        4 |-> 125 ,
+        5 |-> 4000
+    }
+
+CONCRETE_VARIABLES
+    cCurrentStocks , cShortages , cRequiredAmounts
+
+INVARIANT
+    // types
+    cCurrentStocks : ( 1 .. 5 ) --> ( 0 .. 4000 )
+    & cRequiredAmounts : ( 1 .. 5 ) --> ( 0 .. 4000 )
+    & cShortages : FIN ( { 1 , 2 , 3 , 4 , 5 } )
+
+    // which abstract vars do these refer to
+    & cCurrentStocks = CurrentStocks
+    & cShortages = Shortages
+    & cRequiredAmounts = RequiredAmounts
+
+    /*& STOCKS( cCurrentStocks ) = STOCKS( MaxStocks )
+    & !ii.( ii : STOCKS( cCurrentStocks ) => cCurrentStocks( ii ) : 0 .. MaxStocks( ii ) )
+    & !xx.(xx : cShortages => cCurrentStocks(xx) < MaxStocks( xx ) / 2)
+    & !xx.((xx : STOCKS(cCurrentStocks) & cCurrentStocks(xx) < MaxStocks(xx) / 2) => xx : cShortages)
+    & !ii.( ii : STOCKS(cRequiredAmounts) => cRequiredAmounts(ii) = MaxStocks(ii) - cCurrentStocks(ii))
+*/
+INITIALISATION
+    cCurrentStocks := ( 1 .. 5 ) * { 0 } ;
+    cShortages := ( 1 .. 5 ) ;
+    cRequiredAmounts := MaxStocks
+
+OPERATIONS
+
+    Put ( ii , amt ) = //Feladat1
+    BEGIN
+        cCurrentStocks ( ii ) := cCurrentStocks ( ii ) + amt ;
+        cRequiredAmounts ( ii ) := MaxStocks ( ii ) - ( cCurrentStocks ( ii ) + amt )
+        //cShortages := {xx | xx : STOCKS(cCurrentStocks) & (cCurrentStocks<+{ii|->cCurrentStocks(ii)+amt})(xx) < MaxStocks(xx) / 2}
+    END
+    /*;
+
+
+    Pop ( ii , amt ) = //Feladat2
+    BEGIN
+        cCurrentStocks( ii ) := cCurrentStocks( ii ) - amt;
+        cRequiredAmounts(ii) := MaxStocks(ii) - (cCurrentStocks(ii) - amt);
+        cShortages := {xx | xx : STOCKS(cCurrentStocks) & (cCurrentStocks<+{ii|->cCurrentStocks(ii)-amt})(xx) < MaxStocks(xx) / 2}
+    END
+    ;
+
+
+    res <-- GetShortage = //Feladat3
+    BEGIN
+        res := cShortages
+    END
+    ;
+
+
+    sum <-- GetSum = //Feladat4
+    BEGIN
+        sum := SIGMA ( xx ) . ( xx : dom( cCurrentStocks ) | cCurrentStocks ( xx ) )
+    END
+    ;
+
+
+    res <-- GetRequiredAmount( ii ) = // Feladat5
+    BEGIN
+       res := cRequiredAmounts(ii)
+    END
+
+    */
+ END
