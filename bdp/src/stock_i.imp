@@ -25,7 +25,7 @@ INVARIANT
     // types
     cCurrentStocks : ( 1 .. 5 ) --> ( 0 .. 4000 )
     & cRequiredAmounts : ( 1 .. 5 ) --> ( 0 .. 4000 )
-    & cShortages : FIN ( { 1 , 2 , 3 , 4 , 5 } )
+    & cShortages : FIN ( 1 .. 5 )
 
     // which abstract vars do these refer to
     & cCurrentStocks = CurrentStocks
@@ -44,14 +44,14 @@ INITIALISATION
     cRequiredAmounts := MaxStocks
 
 OPERATIONS
-
+    /*
     Put ( ii , amt ) = //Feladat1
     BEGIN
-        cCurrentStocks ( ii ) := cCurrentStocks ( ii ) + amt ;
-        cRequiredAmounts ( ii ) := MaxStocks ( ii ) - ( cCurrentStocks ( ii ) + amt )
+        cCurrentStocks( ii ) := cCurrentStocks( ii ) + amt;
+        cRequiredAmounts(ii) := MaxStocks(ii) - (cCurrentStocks(ii) + amt)
         //cShortages := {xx | xx : STOCKS(cCurrentStocks) & (cCurrentStocks<+{ii|->cCurrentStocks(ii)+amt})(xx) < MaxStocks(xx) / 2}
     END
-    /*;
+    ;
 
 
     Pop ( ii , amt ) = //Feladat2
@@ -62,11 +62,33 @@ OPERATIONS
     END
     ;
 
+    */
+
 
     res <-- GetShortage = //Feladat3
     BEGIN
-        res := cShortages
+        res := ( 1 .. 5 ) * { FALSE } ;
+        VAR ii , ii_until IN
+                    ii := 1 ;
+            ii_until := 6 ;
+
+            WHILE ii /= ii_until DO
+                res ( ii ) := bool ( ii : cShortages ) ;
+                ii := ii + 1
+
+            INVARIANT
+                ii : 1 .. ii_until
+                & res : 1 .. 5 --> BOOL
+                & ! xx . ( xx : 1 .. ( ii - 1 ) =>
+                    dom ( res |> { FALSE } ) = ( 1 .. 5 ) - Shortages
+                    & dom ( res |> { TRUE } ) = Shortages )
+
+            VARIANT
+                ii_until - ii
+            END
+        END
     END
+/*
     ;
 
 
@@ -75,7 +97,6 @@ OPERATIONS
         sum := SIGMA ( xx ) . ( xx : dom( cCurrentStocks ) | cCurrentStocks ( xx ) )
     END
     ;
-
 
     res <-- GetRequiredAmount( ii ) = // Feladat5
     BEGIN

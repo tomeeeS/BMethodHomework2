@@ -42,7 +42,7 @@ ABSTRACT_VARIABLES
 INVARIANT
     // types
     CurrentStocks : ( 1 .. 5 ) --> ( 0 .. 4000 )
-    & Shortages : FIN ( { 1 , 2 , 3 , 4 , 5 } )
+    & Shortages : FIN ( 1 .. 5 )
     & RequiredAmounts : ( 1 .. 5 ) --> ( 0 .. 4000 )
 
     // CurrentStocks
@@ -63,22 +63,22 @@ INITIALISATION
 
 OPERATIONS
 
-
+    /*
     Put ( ii , amt ) = //Feladat1
     PRE
         ii : dom ( CurrentStocks )
         & amt : 1 .. 4000
-
-        & CurrentStocks ( ii ) + amt : ( 0 .. 4000 )
+        
+        & CurrentStocks ( ii ) + amt : NUM_OF_STOCK_TYPE
         & CurrentStocks ( ii ) + amt <= MaxStocks ( ii )
-        & MaxStocks ( ii ) - ( CurrentStocks ( ii ) + amt ) : ( 0 .. 4000 )
-
+        & MaxStocks(ii) - (CurrentStocks(ii) + amt) : NUM_OF_STOCK_TYPE
+        //& !yy.((yy : dom(CurrentStocks) & (CurrentStocks<+{ii|->CurrentStocks(ii)+amt})(yy) < MaxStocks(yy) / 2) => yy : Shortages - {ii})
     THEN
         CurrentStocks ( ii ) := CurrentStocks ( ii ) + amt
-        || RequiredAmounts ( ii ) := MaxStocks ( ii ) - ( CurrentStocks ( ii ) + amt )
+        || RequiredAmounts(ii) := MaxStocks(ii) - (CurrentStocks(ii) + amt)
         //|| Shortages := {xx | xx : dom(CurrentStocks) & (CurrentStocks<+{ii|->CurrentStocks(ii)+amt})(xx) < MaxStocks(xx) / 2}
     END
-    /*
+    
     ;
     
     Pop ( ii , amt ) = //Feladat2
@@ -97,18 +97,19 @@ OPERATIONS
     END
     ;
 
+    */
 
     res <-- GetShortage = //Feladat3
     BEGIN
-        res :(
-            res : STOCKS --> BOOL
-            & dom(res|>{TRUE}) = Shortages
-            & dom(res|>{FALSE}) = (STOCKS) - Shortages
+        res : (
+            res : ( 1 .. 5 ) --> BOOL
+            & dom ( res |> { TRUE } ) = Shortages
+            & dom ( res |> { FALSE } ) = ( ( 1 .. 5 ) ) - Shortages
         )
     END
-    ;
 
 
+/*
     sum <-- GetSum = //Feladat4
     BEGIN
         sum := SIGMA ( xx ) . ( xx : dom ( CurrentStocks ) | CurrentStocks ( xx ) )

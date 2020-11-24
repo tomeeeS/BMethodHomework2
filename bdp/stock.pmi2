@@ -51,16 +51,9 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(0);
-  Proved(0);
-  Proved(1);
   Proved(1);
   Proved(0);
   Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(1);
   Proved(1);
   Proved(0);
   Proved(0);
@@ -70,6 +63,13 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(1);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(1);
+  Proved(0);
   Proved(0)
 END
 &
@@ -175,16 +175,9 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(0),?;
-  Force(1),(?;0);
   Force(1),(?;0);
   Force(0),?;
   Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(1),(?;0);
   Force(1),(?;0);
   Force(0),?;
   Force(0),?;
@@ -194,6 +187,13 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(1),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
   Force(0),?
 END
 &

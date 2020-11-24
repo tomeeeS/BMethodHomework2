@@ -21,55 +21,55 @@
 <Define name="seext" merge="="/>
 <Define name="lprp" merge="=">
 <Attr>
-<Pos s="10" l="35" c="1"/>
+<Pos c="1" s="10" l="35"/>
 </Attr>
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="36" c="15"/>
+<Pos c="15" s="1" l="36"/>
 </Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:1" value="MaxStocks" typref="103245008">
 <Attr>
-<Pos s="9" l="36" c="5"/>
+<Pos c="5" s="9" l="36"/>
 </Attr>
 </Id>
-<Binary_Exp op="-->" typref="3083833907">
+<Binary_Exp typref="3083833907" op="-->">
 <Attr>
-<Pos s="3" l="36" c="24"/>
+<Pos c="24" s="3" l="36"/>
 </Attr>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="2" expanded="yes" c="17"/>
-<Pos s="6" f="stock.mch" l="36" c="17"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="17" s="6" l="36"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="36" c="17"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="17" s="6" l="36"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:1:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="36" c="17"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="17" s="6" l="36"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="36" c="28"/>
+<Pos f="definitions.def" c="28" s="2" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="28" s="17" l="36"/>
 </Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:2:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:2:1" value="0" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="36" c="28"/>
+<Pos f="definitions.def" c="27" s="1" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="28" s="17" l="36"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:2:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:2:2" value="4000" typref="2701647786">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="36" c="28"/>
+<Pos f="definitions.def" c="30" s="4" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="28" s="17" l="36"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
@@ -77,105 +77,105 @@
 </Exp_Comparison>
 <Exp_Comparison op="=">
 <Attr>
-<Pos s="1" l="37" c="17"/>
+<Pos c="17" s="1" l="37"/>
 </Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:1" value="MaxStocks" typref="103245008">
 <Attr>
-<Pos s="9" l="37" c="7"/>
+<Pos c="7" s="9" l="37"/>
 </Attr>
 </Id>
-<Nary_Exp op="{" typref="103245008">
+<Nary_Exp typref="103245008" op="{">
 <Attr>
-<Pos s="1" f="definitions.def" l="4" expanded="yes" c="23"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
+<Pos f="definitions.def" c="23" s="1" l="4" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
 </Attr>
-<Binary_Exp op="|->" typref="3672872563">
+<Binary_Exp typref="3672872563" op="|->">
 <Attr>
-<Pos s="3" f="definitions.def" l="5" expanded="yes" c="11"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
+<Pos f="definitions.def" c="11" s="3" l="5" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="5" expanded="yes" c="9"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="1000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:1:2">
-<Attr>
-<Pos s="4" f="definitions.def" l="5" expanded="yes" c="15"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
+<Pos f="definitions.def" c="9" s="1" l="5" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
 </Attr>
 </Integer_Literal>
-</Binary_Exp>
-<Binary_Exp op="|->" typref="3672872563">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:1:2" value="1000" typref="2701647786">
 <Attr>
-<Pos s="3" f="definitions.def" l="6" expanded="yes" c="11"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
-</Attr>
-<Integer_Literal value="2" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:2:1">
-<Attr>
-<Pos s="1" f="definitions.def" l="6" expanded="yes" c="9"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="2000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:2:2">
-<Attr>
-<Pos s="4" f="definitions.def" l="6" expanded="yes" c="15"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
+<Pos f="definitions.def" c="15" s="4" l="5" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Binary_Exp op="|->" typref="3672872563">
+<Binary_Exp typref="3672872563" op="|->">
 <Attr>
-<Pos s="3" f="definitions.def" l="7" expanded="yes" c="11"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
+<Pos f="definitions.def" c="11" s="3" l="6" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
 </Attr>
-<Integer_Literal value="3" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:3:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:2:1" value="2" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="7" expanded="yes" c="9"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="500" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:3:2">
-<Attr>
-<Pos s="3" f="definitions.def" l="7" expanded="yes" c="15"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
+<Pos f="definitions.def" c="9" s="1" l="6" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
 </Attr>
 </Integer_Literal>
-</Binary_Exp>
-<Binary_Exp op="|->" typref="3672872563">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:2:2" value="2000" typref="2701647786">
 <Attr>
-<Pos s="3" f="definitions.def" l="8" expanded="yes" c="11"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
-</Attr>
-<Integer_Literal value="4" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:4:1">
-<Attr>
-<Pos s="1" f="definitions.def" l="8" expanded="yes" c="9"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="125" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:4:2">
-<Attr>
-<Pos s="3" f="definitions.def" l="8" expanded="yes" c="15"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
+<Pos f="definitions.def" c="15" s="4" l="6" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Binary_Exp op="|->" typref="3672872563">
+<Binary_Exp typref="3672872563" op="|->">
 <Attr>
-<Pos s="3" f="definitions.def" l="9" expanded="yes" c="11"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
+<Pos f="definitions.def" c="11" s="3" l="7" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
 </Attr>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:5:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:3:1" value="3" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="9" expanded="yes" c="9"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
+<Pos f="definitions.def" c="9" s="1" l="7" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:5:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:3:2" value="500" typref="2701647786">
 <Attr>
-<Pos s="4" f="definitions.def" l="9" expanded="yes" c="15"/>
-<Pos s="14" f="stock.mch" l="37" c="19"/>
+<Pos f="definitions.def" c="15" s="3" l="7" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Binary_Exp typref="3672872563" op="|->">
+<Attr>
+<Pos f="definitions.def" c="11" s="3" l="8" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
+</Attr>
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:4:1" value="4" typref="2701647786">
+<Attr>
+<Pos f="definitions.def" c="9" s="1" l="8" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:4:2" value="125" typref="2701647786">
+<Attr>
+<Pos f="definitions.def" c="15" s="3" l="8" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Binary_Exp typref="3672872563" op="|->">
+<Attr>
+<Pos f="definitions.def" c="11" s="3" l="9" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
+</Attr>
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:5:1" value="5" typref="2701647786">
+<Attr>
+<Pos f="definitions.def" c="9" s="1" l="9" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:2:2:5:2" value="4000" typref="2701647786">
+<Attr>
+<Pos f="definitions.def" c="15" s="4" l="9" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="14" l="37"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
@@ -187,177 +187,162 @@
 <Define name="inext" merge="="/>
 <Define name="inv" merge="-">
 <Attr>
-<Pos s="9" l="42" c="1"/>
+<Pos c="1" s="9" l="42"/>
 </Attr>
 <Nary_Pred op="&amp;">
-<Exp_Comparison op=":" initialTag="((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000))))))">
+<Exp_Comparison initialTag="((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000))))))" op=":">
 <Attr>
-<Pos s="1" l="44" c="19"/>
+<Pos c="19" s="1" l="44"/>
 </Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:1" value="CurrentStocks" typref="103245008">
 <Attr>
-<Pos s="13" l="44" c="5"/>
+<Pos c="5" s="13" l="44"/>
 </Attr>
 </Id>
-<Binary_Exp op="-->" typref="3083833907">
+<Binary_Exp typref="3083833907" op="-->">
 <Attr>
-<Pos s="3" l="44" c="28"/>
+<Pos c="28" s="3" l="44"/>
 </Attr>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="2" expanded="yes" c="17"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="21" s="6" l="44"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="21" s="6" l="44"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="21" s="6" l="44"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
+<Pos f="definitions.def" c="28" s="2" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="32" s="17" l="44"/>
 </Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:1" value="0" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
+<Pos f="definitions.def" c="27" s="1" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="32" s="17" l="44"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:2" value="4000" typref="2701647786">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
+<Pos f="definitions.def" c="30" s="4" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="32" s="17" l="44"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((Shortages) : (FIN(({1}\/{2}\/{3}\/{4}\/{5}))))">
+<Exp_Comparison initialTag="((Shortages) : (FIN(((1) .. (5)))))" op=":">
 <Attr>
-<Pos s="1" l="45" c="17"/>
+<Pos c="17" s="1" l="45"/>
 </Attr>
-<Id value="Shortages" typref="3603043417" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:1" value="Shortages" typref="3603043417">
 <Attr>
-<Pos s="9" l="45" c="7"/>
+<Pos c="7" s="9" l="45"/>
 </Attr>
 </Id>
-<Unary_Exp op="FIN" typref="949986794">
+<Unary_Exp typref="949986794" op="FIN">
 <Attr>
-<Pos s="3" l="45" c="19"/>
+<Pos c="19" s="3" l="45"/>
 </Attr>
-<Nary_Exp op="{" typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="1" l="45" c="23"/>
+<Pos c="24" s="2" l="45"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" l="45" c="24"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="2" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:2">
-<Attr>
-<Pos s="1" l="45" c="26"/>
+<Pos c="23" s="1" l="45"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="3" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:3">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" l="45" c="28"/>
+<Pos c="26" s="1" l="45"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:4">
-<Attr>
-<Pos s="1" l="45" c="30"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:5">
-<Attr>
-<Pos s="1" l="45" c="32"/>
-</Attr>
-</Integer_Literal>
-</Nary_Exp>
+</Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op=":" initialTag="((RequiredAmounts) : (((((1) .. (5))) --> (((0) .. (4000))))))">
+<Exp_Comparison initialTag="((RequiredAmounts) : (((((1) .. (5))) --> (((0) .. (4000))))))" op=":">
 <Attr>
-<Pos s="1" l="46" c="23"/>
+<Pos c="23" s="1" l="46"/>
 </Attr>
-<Id value="RequiredAmounts" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:1" value="RequiredAmounts" typref="103245008">
 <Attr>
-<Pos s="15" l="46" c="7"/>
+<Pos c="7" s="15" l="46"/>
 </Attr>
 </Id>
-<Binary_Exp op="-->" typref="3083833907">
+<Binary_Exp typref="3083833907" op="-->">
 <Attr>
-<Pos s="3" l="46" c="32"/>
+<Pos c="32" s="3" l="46"/>
 </Attr>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="2" expanded="yes" c="17"/>
-<Pos s="6" f="stock.mch" l="46" c="25"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="25" s="6" l="46"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="46" c="25"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="25" s="6" l="46"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:1:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="46" c="25"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="25" s="6" l="46"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="46" c="36"/>
+<Pos f="definitions.def" c="28" s="2" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="17" l="46"/>
 </Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:2:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:2:1" value="0" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="46" c="36"/>
+<Pos f="definitions.def" c="27" s="1" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="17" l="46"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:2:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:2:2" value="4000" typref="2701647786">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="46" c="36"/>
+<Pos f="definitions.def" c="30" s="4" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="17" l="46"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op="=" initialTag="((dom(CurrentStocks)) = (dom(MaxStocks)))">
+<Exp_Comparison initialTag="((dom(CurrentStocks)) = (dom(MaxStocks)))" op="=">
 <Attr>
-<Pos s="1" l="49" c="29"/>
+<Pos c="29" s="1" l="49"/>
 </Attr>
-<Unary_Exp op="dom" typref="3603043417">
+<Unary_Exp typref="3603043417" op="dom">
 <Attr>
-<Pos s="3" l="49" c="7"/>
+<Pos c="7" s="3" l="49"/>
 </Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:4:1:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:4:1:1" value="CurrentStocks" typref="103245008">
 <Attr>
-<Pos s="13" l="49" c="13"/>
+<Pos c="13" s="13" l="49"/>
 </Attr>
 </Id>
 </Unary_Exp>
-<Unary_Exp op="dom" typref="3603043417">
+<Unary_Exp typref="3603043417" op="dom">
 <Attr>
-<Pos s="3" l="49" c="31"/>
+<Pos c="31" s="3" l="49"/>
 </Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:4:2:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:4:2:1" value="MaxStocks" typref="103245008">
 <Attr>
-<Pos s="9" l="49" c="37"/>
+<Pos c="37" s="9" l="49"/>
 </Attr>
 </Id>
 </Unary_Exp>
@@ -382,40 +367,40 @@
 </Local_Hyp>
 <Local_Hyp num="2">
 <Exp_Comparison op=":">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1" suffix="1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1" value="CurrentStocks" typref="103245008" suffix="1">
 <Attr>
-<Pos s="13" l="60" c="5"/>
+<Pos c="5" s="13" l="60"/>
 </Attr>
 </Id>
-<Binary_Exp op="-->" typref="3083833907">
+<Binary_Exp typref="3083833907" op="-->">
 <Attr>
-<Pos s="3" l="60" c="29"/>
+<Pos c="29" s="3" l="60"/>
 </Attr>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="2" expanded="yes" c="17"/>
-<Pos s="6" f="stock.mch" l="60" c="22"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="22" s="6" l="60"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="60" c="22"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="22" s="6" l="60"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:1:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="60" c="22"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="22" s="6" l="60"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Nary_Exp op="{" typref="3603043417">
+<Nary_Exp typref="3603043417" op="{">
 <Attr>
-<Pos s="1" l="60" c="33"/>
+<Pos c="33" s="1" l="60"/>
 </Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:2:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:2:1" value="0" typref="2701647786">
 <Attr>
-<Pos s="1" l="60" c="35"/>
+<Pos c="35" s="1" l="60"/>
 </Attr>
 </Integer_Literal>
 </Nary_Exp>
@@ -430,52 +415,52 @@
 <Ref_Hyp num="2"/>
 <Ref_Hyp num="1"/>
 </Nary_Pred>
-<Exp_Comparison op=":" goalTag="Invariant is preserved" initialTag="((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000))))))">
+<Exp_Comparison initialTag="((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000))))))" goalTag="Invariant is preserved" op=":">
 <Attr>
-<Pos s="1" l="44" c="19"/>
+<Pos c="19" s="1" l="44"/>
 </Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1" suffix="1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1" value="CurrentStocks" typref="103245008" suffix="1">
 <Attr>
-<Pos s="13" l="60" c="5"/>
+<Pos c="5" s="13" l="60"/>
 </Attr>
 </Id>
-<Binary_Exp op="-->" typref="3083833907">
+<Binary_Exp typref="3083833907" op="-->">
 <Attr>
-<Pos s="3" l="44" c="28"/>
+<Pos c="28" s="3" l="44"/>
 </Attr>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="2" expanded="yes" c="17"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="21" s="6" l="44"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="21" s="6" l="44"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="21" s="6" l="44"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
+<Pos f="definitions.def" c="28" s="2" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="32" s="17" l="44"/>
 </Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:1" value="0" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
+<Pos f="definitions.def" c="27" s="1" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="32" s="17" l="44"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:2" value="4000" typref="2701647786">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
+<Pos f="definitions.def" c="30" s="4" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="32" s="17" l="44"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
@@ -483,7 +468,7 @@
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 <iapa/>
 </Simple_Goal>
 <Simple_Goal>
@@ -494,66 +479,51 @@
 <Ref_Hyp num="2"/>
 <Ref_Hyp num="1"/>
 </Nary_Pred>
-<Exp_Comparison op=":" goalTag="Invariant is preserved" initialTag="((Shortages) : (FIN(({1}\/{2}\/{3}\/{4}\/{5}))))">
+<Exp_Comparison initialTag="((Shortages) : (FIN(((1) .. (5)))))" goalTag="Invariant is preserved" op=":">
 <Attr>
-<Pos s="1" l="45" c="17"/>
+<Pos c="17" s="1" l="45"/>
 </Attr>
-<Binary_Exp op=".." typref="3603043417" tag=",/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:2:1:1">
+<Binary_Exp tag=",/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:2:1:1" typref="3603043417" op="..">
 <Attr>
-<Pos s="9" l="61" c="8"/>
+<Pos c="8" s="9" l="61"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:2:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:2:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="61" c="21"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="21" s="6" l="61"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:2:2:1:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:2:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="61" c="21"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="21" s="6" l="61"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Unary_Exp op="FIN" typref="949986794">
+<Unary_Exp typref="949986794" op="FIN">
 <Attr>
-<Pos s="3" l="45" c="19"/>
+<Pos c="19" s="3" l="45"/>
 </Attr>
-<Nary_Exp op="{" typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="1" l="45" c="23"/>
+<Pos c="24" s="2" l="45"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" l="45" c="24"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="2" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:2">
-<Attr>
-<Pos s="1" l="45" c="26"/>
+<Pos c="23" s="1" l="45"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="3" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:3">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" l="45" c="28"/>
+<Pos c="26" s="1" l="45"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:4">
-<Attr>
-<Pos s="1" l="45" c="30"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:5">
-<Attr>
-<Pos s="1" l="45" c="32"/>
-</Attr>
-</Integer_Literal>
-</Nary_Exp>
+</Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 <iapa/>
 </Simple_Goal>
 <Simple_Goal>
@@ -564,40 +534,40 @@
 <Ref_Hyp num="2"/>
 <Ref_Hyp num="1"/>
 </Nary_Pred>
-<Exp_Comparison op="=" goalTag="Invariant is preserved" initialTag="((dom(CurrentStocks)) = (dom(MaxStocks)))">
+<Exp_Comparison initialTag="((dom(CurrentStocks)) = (dom(MaxStocks)))" goalTag="Invariant is preserved" op="=">
 <Attr>
-<Pos s="1" l="49" c="29"/>
+<Pos c="29" s="1" l="49"/>
 </Attr>
-<Unary_Exp op="dom" typref="3603043417">
+<Unary_Exp typref="3603043417" op="dom">
 <Attr>
-<Pos s="3" l="49" c="7"/>
+<Pos c="7" s="3" l="49"/>
 </Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:4:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1" suffix="1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:4:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1" value="CurrentStocks" typref="103245008" suffix="1">
 <Attr>
-<Pos s="13" l="60" c="5"/>
+<Pos c="5" s="13" l="60"/>
 </Attr>
 </Id>
 </Unary_Exp>
-<Unary_Exp op="dom" typref="3603043417">
+<Unary_Exp typref="3603043417" op="dom">
 <Attr>
-<Pos s="3" l="49" c="31"/>
+<Pos c="31" s="3" l="49"/>
 </Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:4:2:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:4:2:1" value="MaxStocks" typref="103245008">
 <Attr>
-<Pos s="9" l="49" c="37"/>
+<Pos c="37" s="9" l="49"/>
 </Attr>
 </Id>
 </Unary_Exp>
 </Exp_Comparison>
 </Binary_Pred>
 </Goal>
-<Proof_State passList="Force(1),(?; 0)" methodList="pr" proofState="Proved(1)"/>
+<Proof_State passList="Force(1),(?; 0)" proofState="Proved(1)" methodList="pr"/>
 <iapa/>
 </Simple_Goal>
 </Proof_Obligation>
 <Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
-<Tag>Put</Tag>
+<Tag>GetShortage</Tag>
 <Tag>INVARIANT</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -608,501 +578,145 @@
 <Definition name="seext"/>
 <Definition name="inv"/>
 <Definition name="ass"/>
-<Hypothesis>
-<Nary_Pred op="&amp;">
-<Exp_Comparison op=":">
-<Attr>
-<Pos s="1" l="69" c="12"/>
-</Attr>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1">
-<Attr>
-<Pos s="2" l="69" c="9"/>
-</Attr>
-</Id>
-<Unary_Exp op="dom" typref="3603043417">
-<Attr>
-<Pos s="3" l="69" c="14"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:2:1">
-<Attr>
-<Pos s="13" l="69" c="20"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":">
-<Attr>
-<Pos s="1" l="70" c="15"/>
-</Attr>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1">
-<Attr>
-<Pos s="3" l="70" c="11"/>
-</Attr>
-</Id>
-<Binary_Exp op=".." typref="3603043417">
-<Attr>
-<Pos s="2" l="70" c="19"/>
-</Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:2:1">
-<Attr>
-<Pos s="1" l="70" c="17"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:2:2">
-<Attr>
-<Pos s="4" l="70" c="22"/>
-</Attr>
-</Integer_Literal>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":">
-<Attr>
-<Pos s="1" l="72" c="38"/>
-</Attr>
-<Binary_Exp op="+" typref="2701647786">
-<Attr>
-<Pos s="1" l="72" c="32"/>
-</Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="72" c="25"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:1:1">
-<Attr>
-<Pos s="13" l="72" c="11"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:1:2">
-<Attr>
-<Pos s="2" l="72" c="27"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:2">
-<Attr>
-<Pos s="3" l="72" c="34"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
-<Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="72" c="40"/>
-</Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:2:1">
-<Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="72" c="40"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:2:2">
-<Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="72" c="40"/>
-</Attr>
-</Integer_Literal>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op="&lt;=">
-<Attr>
-<Pos s="2" l="73" c="38"/>
-</Attr>
-<Binary_Exp op="+" typref="2701647786">
-<Attr>
-<Pos s="1" l="73" c="32"/>
-</Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="73" c="25"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:1:1">
-<Attr>
-<Pos s="13" l="73" c="11"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:1:2">
-<Attr>
-<Pos s="2" l="73" c="27"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:2">
-<Attr>
-<Pos s="3" l="73" c="34"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="73" c="51"/>
-</Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:2:1">
-<Attr>
-<Pos s="9" l="73" c="41"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:2:2">
-<Attr>
-<Pos s="2" l="73" c="53"/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":">
-<Attr>
-<Pos s="1" l="74" c="53"/>
-</Attr>
-<Binary_Exp op="-" typref="2701647786">
-<Attr>
-<Pos s="1" l="74" c="25"/>
-</Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="74" c="20"/>
-</Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:1:1">
-<Attr>
-<Pos s="9" l="74" c="11"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:1:2">
-<Attr>
-<Pos s="2" l="74" c="21"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Binary_Exp op="+" typref="2701647786">
-<Attr>
-<Pos s="1" l="74" c="46"/>
-</Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="74" c="41"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:2:1:1">
-<Attr>
-<Pos s="13" l="74" c="28"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:2:1:2">
-<Attr>
-<Pos s="2" l="74" c="42"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:2:2">
-<Attr>
-<Pos s="3" l="74" c="48"/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
-<Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="74" c="55"/>
-</Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:2:1">
-<Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="74" c="55"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:2:2">
-<Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="74" c="55"/>
-</Attr>
-</Integer_Literal>
-</Binary_Exp>
-</Exp_Comparison>
-</Nary_Pred>
-</Hypothesis>
+<Hypothesis/>
 <Local_Hyp num="1">
 <Nary_Pred op="&amp;"/>
 </Local_Hyp>
-<Simple_Goal>
-<Tag>Invariant is preserved</Tag>
-<Goal>
-<Binary_Pred op="=>">
-<Ref_Hyp num="1"/>
-<Exp_Comparison op=":" goalTag="Invariant is preserved" initialTag="((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000))))))">
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="44" c="19"/>
+<Pos c="17" s="1" l="105"/>
 </Attr>
-<Binary_Exp op="&lt;+" typref="103245008" tag=",/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:1:1:1">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:1:1:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:1,,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1" value="res" typref="1127519748" suffix="1">
 <Attr>
-<Pos s="13" l="77" c="9"/>
+<Pos c="9" s="3" l="104"/>
 </Attr>
 </Id>
-<Nary_Exp op="{">
-<Binary_Exp op="|->">
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:1:1:2">
+<Binary_Exp typref="552749909" op="-->">
 <Attr>
-<Pos s="2" l="77" c="25"/>
+<Pos c="26" s="3" l="105"/>
 </Attr>
-</Id>
-<Binary_Exp op="+" typref="2701647786">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="1" l="77" c="54"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="6" l="105"/>
 </Attr>
-<Binary_Exp op="(" typref="2701647786">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="0" l="77" c="47"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:2:1:1:1">
-<Attr>
-<Pos s="13" l="77" c="33"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:2:1:1:2">
-<Attr>
-<Pos s="2" l="77" c="49"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:2:1:2">
-<Attr>
-<Pos s="3" l="77" c="56"/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Binary_Exp>
-</Nary_Exp>
-</Binary_Exp>
-<Binary_Exp op="-->" typref="3083833907">
-<Attr>
-<Pos s="3" l="44" c="28"/>
-</Attr>
-<Binary_Exp op=".." typref="3603043417">
-<Attr>
-<Pos s="2" f="definitions.def" l="2" expanded="yes" c="17"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
-</Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:1">
-<Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="6" l="105"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="6" l="105"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:2:2" value="BOOL" typref="4282494527">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
+<Pos c="30" s="4" l="105"/>
 </Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:1">
-<Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:2">
-<Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
-</Attr>
-</Integer_Literal>
-</Binary_Exp>
+</Id>
 </Binary_Exp>
 </Exp_Comparison>
-</Binary_Pred>
-</Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
-</Simple_Goal>
-<Simple_Goal>
-<Tag>Invariant is preserved</Tag>
-<Goal>
-<Binary_Pred op="=>">
-<Ref_Hyp num="1"/>
-<Exp_Comparison op=":" goalTag="Invariant is preserved" initialTag="((RequiredAmounts) : (((((1) .. (5))) --> (((0) .. (4000))))))">
+<Exp_Comparison op="=">
 <Attr>
-<Pos s="1" l="46" c="23"/>
+<Pos c="32" s="1" l="106"/>
 </Attr>
-<Binary_Exp op="&lt;+" typref="103245008" tag=",/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:1:1:1">
-<Id value="RequiredAmounts" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:1:1:1">
+<Unary_Exp typref="3603043417" op="dom">
 <Attr>
-<Pos s="15" l="78" c="12"/>
+<Pos c="15" s="3" l="106"/>
+</Attr>
+<Binary_Exp typref="1127519748" op="|>">
+<Attr>
+<Pos c="22" s="2" l="106"/>
+</Attr>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:2:1:1:1,,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1" value="res" typref="1127519748" suffix="1">
+<Attr>
+<Pos c="9" s="3" l="104"/>
 </Attr>
 </Id>
-<Nary_Exp op="{">
-<Binary_Exp op="|->">
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:1:1:2">
+<Nary_Exp typref="4282494527" op="{">
 <Attr>
-<Pos s="2" l="78" c="28"/>
+<Pos c="24" s="1" l="106"/>
 </Attr>
-</Id>
-<Binary_Exp op="-" typref="2701647786">
+<Boolean_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:2:1:1:2:1" value="TRUE" typref="2043437594">
 <Attr>
-<Pos s="1" l="78" c="49"/>
+<Pos c="25" s="4" l="106"/>
 </Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="78" c="44"/>
-</Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:2:1:1:1">
-<Attr>
-<Pos s="9" l="78" c="35"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:2:1:1:2">
-<Attr>
-<Pos s="2" l="78" c="45"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Binary_Exp op="+" typref="2701647786">
-<Attr>
-<Pos s="1" l="78" c="70"/>
-</Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="78" c="65"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:2:1:2:1:1">
-<Attr>
-<Pos s="13" l="78" c="52"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:2:1:2:1:2">
-<Attr>
-<Pos s="2" l="78" c="66"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:2:1:2:2">
-<Attr>
-<Pos s="3" l="78" c="72"/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Binary_Exp>
-</Binary_Exp>
-</Nary_Exp>
-</Binary_Exp>
-<Binary_Exp op="-->" typref="3083833907">
-<Attr>
-<Pos s="3" l="46" c="32"/>
-</Attr>
-<Binary_Exp op=".." typref="3603043417">
-<Attr>
-<Pos s="2" f="definitions.def" l="2" expanded="yes" c="17"/>
-<Pos s="6" f="stock.mch" l="46" c="25"/>
-</Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:1:1">
-<Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="46" c="25"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:1:2">
-<Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="46" c="25"/>
-</Attr>
-</Integer_Literal>
-</Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
-<Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="46" c="36"/>
-</Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:2:1">
-<Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="46" c="36"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:2:2">
-<Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="46" c="36"/>
-</Attr>
-</Integer_Literal>
-</Binary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-</Binary_Pred>
-</Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
-</Simple_Goal>
-<Simple_Goal>
-<Tag>Invariant is preserved</Tag>
-<Goal>
-<Binary_Pred op="=>">
-<Ref_Hyp num="1"/>
-<Exp_Comparison op="=" goalTag="Invariant is preserved" initialTag="((dom(CurrentStocks)) = (dom(MaxStocks)))">
-<Attr>
-<Pos s="1" l="49" c="29"/>
-</Attr>
-<Unary_Exp op="dom" typref="3603043417">
-<Attr>
-<Pos s="3" l="49" c="7"/>
-</Attr>
-<Binary_Exp op="&lt;+" typref="103245008" tag=",/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:4:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:1:1:1">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:1:1:1">
-<Attr>
-<Pos s="13" l="77" c="9"/>
-</Attr>
-</Id>
-<Nary_Exp op="{">
-<Binary_Exp op="|->">
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:1:1:2">
-<Attr>
-<Pos s="2" l="77" c="25"/>
-</Attr>
-</Id>
-<Binary_Exp op="+" typref="2701647786">
-<Attr>
-<Pos s="1" l="77" c="54"/>
-</Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="77" c="47"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:2:1:1:1">
-<Attr>
-<Pos s="13" l="77" c="33"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:2:1:1:2">
-<Attr>
-<Pos s="2" l="77" c="49"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:2:1:2">
-<Attr>
-<Pos s="3" l="77" c="56"/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Binary_Exp>
+</Boolean_Literal>
 </Nary_Exp>
 </Binary_Exp>
 </Unary_Exp>
-<Unary_Exp op="dom" typref="3603043417">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:2:2" value="Shortages" typref="3603043417">
 <Attr>
-<Pos s="3" l="49" c="31"/>
-</Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:4:2:1">
-<Attr>
-<Pos s="9" l="49" c="37"/>
+<Pos c="34" s="9" l="106"/>
 </Attr>
 </Id>
-</Unary_Exp>
 </Exp_Comparison>
-</Binary_Pred>
-</Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
-</Simple_Goal>
+<Exp_Comparison op="=">
+<Attr>
+<Pos c="33" s="1" l="107"/>
+</Attr>
+<Unary_Exp typref="3603043417" op="dom">
+<Attr>
+<Pos c="15" s="3" l="107"/>
+</Attr>
+<Binary_Exp typref="1127519748" op="|>">
+<Attr>
+<Pos c="22" s="2" l="107"/>
+</Attr>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:3:1:1:1,,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1" value="res" typref="1127519748" suffix="1">
+<Attr>
+<Pos c="9" s="3" l="104"/>
+</Attr>
+</Id>
+<Nary_Exp typref="4282494527" op="{">
+<Attr>
+<Pos c="24" s="1" l="107"/>
+</Attr>
+<Boolean_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:3:1:1:2:1" value="FALSE" typref="2043437594">
+<Attr>
+<Pos c="25" s="5" l="107"/>
+</Attr>
+</Boolean_Literal>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Binary_Exp typref="3603043417" op="-">
+<Attr>
+<Pos c="44" s="1" l="107"/>
+</Attr>
+<Binary_Exp typref="3603043417" op="..">
+<Attr>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="6" l="107"/>
+</Attr>
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:3:2:1:1" value="1" typref="2701647786">
+<Attr>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="6" l="107"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:3:2:1:2" value="5" typref="2701647786">
+<Attr>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="6" l="107"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:3:2:2" value="Shortages" typref="3603043417">
+<Attr>
+<Pos c="46" s="9" l="107"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Local_Hyp>
 </Proof_Obligation>
 <Proof_Obligation>
 <Tag>WellDefinednessConstraints</Tag>
@@ -1116,50 +730,50 @@
 <Local_Hyp num="1">
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="36" c="15"/>
+<Pos c="15" s="1" l="36"/>
 </Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:1" value="MaxStocks" typref="103245008">
 <Attr>
-<Pos s="9" l="36" c="5"/>
+<Pos c="5" s="9" l="36"/>
 </Attr>
 </Id>
-<Binary_Exp op="-->" typref="3083833907">
+<Binary_Exp typref="3083833907" op="-->">
 <Attr>
-<Pos s="3" l="36" c="24"/>
+<Pos c="24" s="3" l="36"/>
 </Attr>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="2" expanded="yes" c="17"/>
-<Pos s="6" f="stock.mch" l="36" c="17"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="17" s="6" l="36"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="36" c="17"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="17" s="6" l="36"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:1:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="36" c="17"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="17" s="6" l="36"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="36" c="28"/>
+<Pos f="definitions.def" c="28" s="2" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="28" s="17" l="36"/>
 </Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:2:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:2:1" value="0" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="36" c="28"/>
+<Pos f="definitions.def" c="27" s="1" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="28" s="17" l="36"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:2:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:3:1:1:2:2:2" value="4000" typref="2701647786">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="36" c="28"/>
+<Pos f="definitions.def" c="30" s="4" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="28" s="17" l="36"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
@@ -1177,52 +791,52 @@
 <Definition name="inext"/>
 <Definition name="seext"/>
 <Local_Hyp num="1">
-<Exp_Comparison op=":" initialTag="((RequiredAmounts) : (((((1) .. (5))) --> (((0) .. (4000))))))">
+<Exp_Comparison initialTag="((RequiredAmounts) : (((((1) .. (5))) --> (((0) .. (4000))))))" op=":">
 <Attr>
-<Pos s="1" l="46" c="23"/>
+<Pos c="23" s="1" l="46"/>
 </Attr>
-<Id value="RequiredAmounts" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:1" value="RequiredAmounts" typref="103245008">
 <Attr>
-<Pos s="15" l="46" c="7"/>
+<Pos c="7" s="15" l="46"/>
 </Attr>
 </Id>
-<Binary_Exp op="-->" typref="3083833907">
+<Binary_Exp typref="3083833907" op="-->">
 <Attr>
-<Pos s="3" l="46" c="32"/>
+<Pos c="32" s="3" l="46"/>
 </Attr>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="2" expanded="yes" c="17"/>
-<Pos s="6" f="stock.mch" l="46" c="25"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="25" s="6" l="46"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="46" c="25"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="25" s="6" l="46"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:1:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="46" c="25"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="25" s="6" l="46"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="46" c="36"/>
+<Pos f="definitions.def" c="28" s="2" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="17" l="46"/>
 </Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:2:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:2:1" value="0" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="46" c="36"/>
+<Pos f="definitions.def" c="27" s="1" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="17" l="46"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:2:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:3:2:2:2" value="4000" typref="2701647786">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="46" c="36"/>
+<Pos f="definitions.def" c="30" s="4" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="17" l="46"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
@@ -1230,99 +844,84 @@
 </Exp_Comparison>
 </Local_Hyp>
 <Local_Hyp num="2">
-<Exp_Comparison op=":" initialTag="((Shortages) : (FIN(({1}\/{2}\/{3}\/{4}\/{5}))))">
+<Exp_Comparison initialTag="((Shortages) : (FIN(((1) .. (5)))))" op=":">
 <Attr>
-<Pos s="1" l="45" c="17"/>
+<Pos c="17" s="1" l="45"/>
 </Attr>
-<Id value="Shortages" typref="3603043417" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:1" value="Shortages" typref="3603043417">
 <Attr>
-<Pos s="9" l="45" c="7"/>
+<Pos c="7" s="9" l="45"/>
 </Attr>
 </Id>
-<Unary_Exp op="FIN" typref="949986794">
+<Unary_Exp typref="949986794" op="FIN">
 <Attr>
-<Pos s="3" l="45" c="19"/>
+<Pos c="19" s="3" l="45"/>
 </Attr>
-<Nary_Exp op="{" typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="1" l="45" c="23"/>
+<Pos c="24" s="2" l="45"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" l="45" c="24"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="2" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:2">
-<Attr>
-<Pos s="1" l="45" c="26"/>
+<Pos c="23" s="1" l="45"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="3" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:3">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" l="45" c="28"/>
+<Pos c="26" s="1" l="45"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:4">
-<Attr>
-<Pos s="1" l="45" c="30"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:2:2:1:5">
-<Attr>
-<Pos s="1" l="45" c="32"/>
-</Attr>
-</Integer_Literal>
-</Nary_Exp>
+</Binary_Exp>
 </Unary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
 <Local_Hyp num="3">
-<Exp_Comparison op=":" initialTag="((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000))))))">
+<Exp_Comparison initialTag="((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000))))))" op=":">
 <Attr>
-<Pos s="1" l="44" c="19"/>
+<Pos c="19" s="1" l="44"/>
 </Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:1" value="CurrentStocks" typref="103245008">
 <Attr>
-<Pos s="13" l="44" c="5"/>
+<Pos c="5" s="13" l="44"/>
 </Attr>
 </Id>
-<Binary_Exp op="-->" typref="3083833907">
+<Binary_Exp typref="3083833907" op="-->">
 <Attr>
-<Pos s="3" l="44" c="28"/>
+<Pos c="28" s="3" l="44"/>
 </Attr>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="2" expanded="yes" c="17"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="21" s="6" l="44"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="21" s="6" l="44"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="44" c="21"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="21" s="6" l="44"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
+<Pos f="definitions.def" c="28" s="2" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="32" s="17" l="44"/>
 </Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:1" value="0" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
+<Pos f="definitions.def" c="27" s="1" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="32" s="17" l="44"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:4:1:1:2:2:2" value="4000" typref="2701647786">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="44" c="32"/>
+<Pos f="definitions.def" c="30" s="4" l="3" expanded="yes"/>
+<Pos f="stock.mch" c="32" s="17" l="44"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
@@ -1341,40 +940,40 @@
 <Definition name="seext"/>
 <Local_Hyp num="1">
 <Exp_Comparison op=":">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1" suffix="1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:1:1" value="CurrentStocks" typref="103245008" suffix="1">
 <Attr>
-<Pos s="13" l="60" c="5"/>
+<Pos c="5" s="13" l="60"/>
 </Attr>
 </Id>
-<Binary_Exp op="-->" typref="3083833907">
+<Binary_Exp typref="3083833907" op="-->">
 <Attr>
-<Pos s="3" l="60" c="29"/>
+<Pos c="29" s="3" l="60"/>
 </Attr>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="2" expanded="yes" c="17"/>
-<Pos s="6" f="stock.mch" l="60" c="22"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="22" s="6" l="60"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:1:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="16"/>
-<Pos s="6" f="stock.mch" l="60" c="22"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="22" s="6" l="60"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="5" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:1:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="1" f="definitions.def" l="2" expanded="yes" c="19"/>
-<Pos s="6" f="stock.mch" l="60" c="22"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="22" s="6" l="60"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
-<Nary_Exp op="{" typref="3603043417">
+<Nary_Exp typref="3603043417" op="{">
 <Attr>
-<Pos s="1" l="60" c="33"/>
+<Pos c="33" s="1" l="60"/>
 </Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:2:1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:5:1:1:2:1:2:1" value="0" typref="2701647786">
 <Attr>
-<Pos s="1" l="60" c="35"/>
+<Pos c="35" s="1" l="60"/>
 </Attr>
 </Integer_Literal>
 </Nary_Exp>
@@ -1384,7 +983,7 @@
 </Proof_Obligation>
 <Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
-<Tag>WellDefinedness_Precondition_Put</Tag>
+<Tag>WellDefinedness_Precondition_GetShortage</Tag>
 <Tag>INVARIANT</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -1395,762 +994,299 @@
 <Definition name="seext"/>
 <Definition name="inv"/>
 <Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_GetShortage</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
 <Local_Hyp num="1">
-<Exp_Comparison op="&lt;=">
+<Exp_Comparison op="=">
 <Attr>
-<Pos s="2" l="73" c="38"/>
+<Pos c="32" s="1" l="106"/>
 </Attr>
-<Binary_Exp op="+" typref="2701647786">
+<Unary_Exp typref="3603043417" op="dom">
 <Attr>
-<Pos s="1" l="73" c="32"/>
+<Pos c="15" s="3" l="106"/>
 </Attr>
-<Binary_Exp op="(" typref="2701647786">
+<Binary_Exp typref="1127519748" op="|>">
 <Attr>
-<Pos s="0" l="73" c="25"/>
+<Pos c="22" s="2" l="106"/>
 </Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:1:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:2:1:1:1," value="res" typref="1127519748" suffix="1">
 <Attr>
-<Pos s="13" l="73" c="11"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:1:2">
-<Attr>
-<Pos s="2" l="73" c="27"/>
+<Pos c="9" s="3" l="104"/>
 </Attr>
 </Id>
+<Nary_Exp typref="4282494527" op="{">
+<Attr>
+<Pos c="24" s="1" l="106"/>
+</Attr>
+<Boolean_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:2:1:1:2:1" value="TRUE" typref="2043437594">
+<Attr>
+<Pos c="25" s="4" l="106"/>
+</Attr>
+</Boolean_Literal>
+</Nary_Exp>
 </Binary_Exp>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:2">
+</Unary_Exp>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:2:2" value="Shortages" typref="3603043417">
 <Attr>
-<Pos s="3" l="73" c="34"/>
+<Pos c="34" s="9" l="106"/>
 </Attr>
 </Id>
-</Binary_Exp>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="73" c="51"/>
-</Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:2:1">
-<Attr>
-<Pos s="9" l="73" c="41"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:2:2">
-<Attr>
-<Pos s="2" l="73" c="53"/>
-</Attr>
-</Id>
-</Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
 <Local_Hyp num="2">
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="72" c="38"/>
+<Pos c="17" s="1" l="105"/>
 </Attr>
-<Binary_Exp op="+" typref="2701647786">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:1," value="res" typref="1127519748" suffix="1">
 <Attr>
-<Pos s="1" l="72" c="32"/>
-</Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="72" c="25"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:1:1">
-<Attr>
-<Pos s="13" l="72" c="11"/>
+<Pos c="9" s="3" l="104"/>
 </Attr>
 </Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:1:2">
+<Binary_Exp typref="552749909" op="-->">
 <Attr>
-<Pos s="2" l="72" c="27"/>
+<Pos c="26" s="3" l="105"/>
 </Attr>
-</Id>
-</Binary_Exp>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:2">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="3" l="72" c="34"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="6" l="105"/>
 </Attr>
-</Id>
-</Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:2:1:1" value="1" typref="2701647786">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="72" c="40"/>
-</Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:2:1">
-<Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="72" c="40"/>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="6" l="105"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:2:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="72" c="40"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="6" l="105"/>
 </Attr>
 </Integer_Literal>
+</Binary_Exp>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:2:2" value="BOOL" typref="4282494527">
+<Attr>
+<Pos c="30" s="4" l="105"/>
+</Attr>
+</Id>
 </Binary_Exp>
 </Exp_Comparison>
 </Local_Hyp>
 <Local_Hyp num="3">
+<Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="70" c="15"/>
+<Pos c="17" s="1" l="105"/>
 </Attr>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:1," value="res" typref="1127519748" suffix="1">
 <Attr>
-<Pos s="3" l="70" c="11"/>
+<Pos c="9" s="3" l="104"/>
 </Attr>
 </Id>
-<Binary_Exp op=".." typref="3603043417">
+<Binary_Exp typref="552749909" op="-->">
 <Attr>
-<Pos s="2" l="70" c="19"/>
+<Pos c="26" s="3" l="105"/>
 </Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:2:1">
+<Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="1" l="70" c="17"/>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="6" l="105"/>
+</Attr>
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:2:1:1" value="1" typref="2701647786">
+<Attr>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="6" l="105"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:2:2">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:2:1:2" value="5" typref="2701647786">
 <Attr>
-<Pos s="4" l="70" c="22"/>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="19" s="6" l="105"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:1:2:2" value="BOOL" typref="4282494527">
+<Attr>
+<Pos c="30" s="4" l="105"/>
+</Attr>
+</Id>
+</Binary_Exp>
 </Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos c="32" s="1" l="106"/>
+</Attr>
+<Unary_Exp typref="3603043417" op="dom">
+<Attr>
+<Pos c="15" s="3" l="106"/>
+</Attr>
+<Binary_Exp typref="1127519748" op="|>">
+<Attr>
+<Pos c="22" s="2" l="106"/>
+</Attr>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:2:1:1:1," value="res" typref="1127519748" suffix="1">
+<Attr>
+<Pos c="9" s="3" l="104"/>
+</Attr>
+</Id>
+<Nary_Exp typref="4282494527" op="{">
+<Attr>
+<Pos c="24" s="1" l="106"/>
+</Attr>
+<Boolean_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:2:1:1:2:1" value="TRUE" typref="2043437594">
+<Attr>
+<Pos c="25" s="4" l="106"/>
+</Attr>
+</Boolean_Literal>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:2:2" value="Shortages" typref="3603043417">
+<Attr>
+<Pos c="34" s="9" l="106"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Attr>
+<Pos c="33" s="1" l="107"/>
+</Attr>
+<Unary_Exp typref="3603043417" op="dom">
+<Attr>
+<Pos c="15" s="3" l="107"/>
+</Attr>
+<Binary_Exp typref="1127519748" op="|>">
+<Attr>
+<Pos c="22" s="2" l="107"/>
+</Attr>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1,/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:3:1:1:1," value="res" typref="1127519748" suffix="1">
+<Attr>
+<Pos c="9" s="3" l="104"/>
+</Attr>
+</Id>
+<Nary_Exp typref="4282494527" op="{">
+<Attr>
+<Pos c="24" s="1" l="107"/>
+</Attr>
+<Boolean_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:3:1:1:2:1" value="FALSE" typref="2043437594">
+<Attr>
+<Pos c="25" s="5" l="107"/>
+</Attr>
+</Boolean_Literal>
+</Nary_Exp>
+</Binary_Exp>
+</Unary_Exp>
+<Binary_Exp typref="3603043417" op="-">
+<Attr>
+<Pos c="44" s="1" l="107"/>
+</Attr>
+<Binary_Exp typref="3603043417" op="..">
+<Attr>
+<Pos f="definitions.def" c="17" s="2" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="6" l="107"/>
+</Attr>
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:3:2:1:1" value="1" typref="2701647786">
+<Attr>
+<Pos f="definitions.def" c="16" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="6" l="107"/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:3:2:1:2" value="5" typref="2701647786">
+<Attr>
+<Pos f="definitions.def" c="19" s="1" l="2" expanded="yes"/>
+<Pos f="stock.mch" c="36" s="6" l="107"/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1:3:2:2" value="Shortages" typref="3603043417">
+<Attr>
+<Pos c="46" s="9" l="107"/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
 </Local_Hyp>
-<Local_Hyp num="4">
-<Exp_Comparison op=":">
-<Attr>
-<Pos s="1" l="69" c="12"/>
-</Attr>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1">
-<Attr>
-<Pos s="2" l="69" c="9"/>
-</Attr>
-</Id>
-<Unary_Exp op="dom" typref="3603043417">
-<Attr>
-<Pos s="3" l="69" c="14"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:2:1">
-<Attr>
-<Pos s="13" l="69" c="20"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Exp_Comparison>
-</Local_Hyp>
-<Simple_Goal>
-<Tag>Well definedness</Tag>
-<Goal>
-<Binary_Pred op="=>">
-<Nary_Pred op="&amp;">
-<Ref_Hyp num="4"/>
-<Ref_Hyp num="3"/>
-</Nary_Pred>
-<Exp_Comparison op=":">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:1:1">
-<Attr>
-<Pos s="13" l="72" c="11"/>
-</Attr>
-</Id>
-<Binary_Exp op="+->">
-<Unary_Exp op="dom">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:1:1">
-<Attr>
-<Pos s="13" l="72" c="11"/>
-</Attr>
-</Id>
-</Unary_Exp>
-<Unary_Exp op="ran">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:1:1">
-<Attr>
-<Pos s="13" l="72" c="11"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-</Binary_Pred>
-</Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
-<iapa>
-<status value="Unproved"/>
-</iapa>
-</Simple_Goal>
-<Simple_Goal>
-<Tag>Well definedness</Tag>
-<Goal>
-<Binary_Pred op="=>">
-<Nary_Pred op="&amp;">
-<Ref_Hyp num="4"/>
-<Ref_Hyp num="3"/>
-<Ref_Hyp num="2"/>
-</Nary_Pred>
-<Exp_Comparison op=":">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:1:1">
-<Attr>
-<Pos s="13" l="73" c="11"/>
-</Attr>
-</Id>
-<Binary_Exp op="+->">
-<Unary_Exp op="dom">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:1:1">
-<Attr>
-<Pos s="13" l="73" c="11"/>
-</Attr>
-</Id>
-</Unary_Exp>
-<Unary_Exp op="ran">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:1:1">
-<Attr>
-<Pos s="13" l="73" c="11"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-</Binary_Pred>
-</Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
-<iapa>
-<status value="Unproved"/>
-<status value="Unproved"/>
-</iapa>
-</Simple_Goal>
-<Simple_Goal>
-<Tag>Well definedness</Tag>
-<Goal>
-<Binary_Pred op="=>">
-<Nary_Pred op="&amp;">
-<Ref_Hyp num="4"/>
-<Ref_Hyp num="3"/>
-<Ref_Hyp num="2"/>
-</Nary_Pred>
-<Exp_Comparison op=":">
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:2:2">
-<Attr>
-<Pos s="2" l="73" c="53"/>
-</Attr>
-</Id>
-<Unary_Exp op="dom">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:2:1">
-<Attr>
-<Pos s="9" l="73" c="41"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Exp_Comparison>
-</Binary_Pred>
-</Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
-<iapa>
-<status value="Unproved"/>
-</iapa>
-</Simple_Goal>
-<Simple_Goal>
-<Tag>Well definedness</Tag>
-<Goal>
-<Binary_Pred op="=>">
-<Nary_Pred op="&amp;">
-<Ref_Hyp num="4"/>
-<Ref_Hyp num="3"/>
-<Ref_Hyp num="2"/>
-</Nary_Pred>
-<Exp_Comparison op=":">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:2:1">
-<Attr>
-<Pos s="9" l="73" c="41"/>
-</Attr>
-</Id>
-<Binary_Exp op="+->">
-<Unary_Exp op="dom">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:2:1">
-<Attr>
-<Pos s="9" l="73" c="41"/>
-</Attr>
-</Id>
-</Unary_Exp>
-<Unary_Exp op="ran">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:2:1">
-<Attr>
-<Pos s="9" l="73" c="41"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-</Binary_Pred>
-</Goal>
-<Proof_State passList="Force(1),(?; 0)" methodList="pr" proofState="Proved(1)"/>
-<iapa>
-<status value="Unproved"/>
-</iapa>
-</Simple_Goal>
-<Simple_Goal>
-<Tag>Well definedness</Tag>
-<Goal>
-<Binary_Pred op="=>">
-<Nary_Pred op="&amp;">
-<Ref_Hyp num="4"/>
-<Ref_Hyp num="3"/>
-<Ref_Hyp num="2"/>
-<Ref_Hyp num="1"/>
-</Nary_Pred>
-<Exp_Comparison op=":">
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:1:2">
-<Attr>
-<Pos s="2" l="74" c="21"/>
-</Attr>
-</Id>
-<Unary_Exp op="dom">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:1:1">
-<Attr>
-<Pos s="9" l="74" c="11"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Exp_Comparison>
-</Binary_Pred>
-</Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
-<iapa>
-<status value="Unproved"/>
-<status value="Unproved"/>
-</iapa>
-</Simple_Goal>
-<Simple_Goal>
-<Tag>Well definedness</Tag>
-<Goal>
-<Binary_Pred op="=>">
-<Nary_Pred op="&amp;">
-<Ref_Hyp num="4"/>
-<Ref_Hyp num="3"/>
-<Ref_Hyp num="2"/>
-<Ref_Hyp num="1"/>
-</Nary_Pred>
-<Exp_Comparison op=":">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:1:1">
-<Attr>
-<Pos s="9" l="74" c="11"/>
-</Attr>
-</Id>
-<Binary_Exp op="+->">
-<Unary_Exp op="dom">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:1:1">
-<Attr>
-<Pos s="9" l="74" c="11"/>
-</Attr>
-</Id>
-</Unary_Exp>
-<Unary_Exp op="ran">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:1:1">
-<Attr>
-<Pos s="9" l="74" c="11"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-</Binary_Pred>
-</Goal>
-<Proof_State passList="Force(1),(?; 0)" methodList="pr" proofState="Proved(1)"/>
-<iapa>
-<status value="Unproved"/>
-<status value="Unproved"/>
-</iapa>
-</Simple_Goal>
-<Simple_Goal>
-<Tag>Well definedness</Tag>
-<Goal>
-<Binary_Pred op="=>">
-<Nary_Pred op="&amp;">
-<Ref_Hyp num="4"/>
-<Ref_Hyp num="3"/>
-<Ref_Hyp num="2"/>
-<Ref_Hyp num="1"/>
-</Nary_Pred>
-<Exp_Comparison op=":">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:2:1:1">
-<Attr>
-<Pos s="13" l="74" c="28"/>
-</Attr>
-</Id>
-<Binary_Exp op="+->">
-<Unary_Exp op="dom">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:2:1:1">
-<Attr>
-<Pos s="13" l="74" c="28"/>
-</Attr>
-</Id>
-</Unary_Exp>
-<Unary_Exp op="ran">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:2:1:1">
-<Attr>
-<Pos s="13" l="74" c="28"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-</Binary_Pred>
-</Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
-<iapa>
-<status value="Unproved"/>
-<status value="Unproved"/>
-<status value="Unproved"/>
-</iapa>
-</Simple_Goal>
-</Proof_Obligation>
-<Proof_Obligation>
-<Comment>Operations dans une machine abstraite</Comment>
-<Tag>WellDefinedness_Put</Tag>
-<Tag>INVARIANT</Tag>
-<Definition name="B definitions"/>
-<Definition name="ctx"/>
-<Definition name="cst"/>
-<Definition name="lprp"/>
-<Definition name="inprp"/>
-<Definition name="inext"/>
-<Definition name="seext"/>
-<Definition name="inv"/>
-<Definition name="ass"/>
-<Hypothesis>
-<Nary_Pred op="&amp;">
-<Exp_Comparison op=":">
-<Attr>
-<Pos s="1" l="69" c="12"/>
-</Attr>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:1">
-<Attr>
-<Pos s="2" l="69" c="9"/>
-</Attr>
-</Id>
-<Unary_Exp op="dom" typref="3603043417">
-<Attr>
-<Pos s="3" l="69" c="14"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:1:2:1">
-<Attr>
-<Pos s="13" l="69" c="20"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":">
-<Attr>
-<Pos s="1" l="70" c="15"/>
-</Attr>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:1">
-<Attr>
-<Pos s="3" l="70" c="11"/>
-</Attr>
-</Id>
-<Binary_Exp op=".." typref="3603043417">
-<Attr>
-<Pos s="2" l="70" c="19"/>
-</Attr>
-<Integer_Literal value="1" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:2:1">
-<Attr>
-<Pos s="1" l="70" c="17"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:2:2:2">
-<Attr>
-<Pos s="4" l="70" c="22"/>
-</Attr>
-</Integer_Literal>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":">
-<Attr>
-<Pos s="1" l="72" c="38"/>
-</Attr>
-<Binary_Exp op="+" typref="2701647786">
-<Attr>
-<Pos s="1" l="72" c="32"/>
-</Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="72" c="25"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:1:1">
-<Attr>
-<Pos s="13" l="72" c="11"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:1:2">
-<Attr>
-<Pos s="2" l="72" c="27"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:1:2">
-<Attr>
-<Pos s="3" l="72" c="34"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
-<Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="72" c="40"/>
-</Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:2:1">
-<Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="72" c="40"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:3:2:2">
-<Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="72" c="40"/>
-</Attr>
-</Integer_Literal>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op="&lt;=">
-<Attr>
-<Pos s="2" l="73" c="38"/>
-</Attr>
-<Binary_Exp op="+" typref="2701647786">
-<Attr>
-<Pos s="1" l="73" c="32"/>
-</Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="73" c="25"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:1:1">
-<Attr>
-<Pos s="13" l="73" c="11"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:1:2">
-<Attr>
-<Pos s="2" l="73" c="27"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:1:2">
-<Attr>
-<Pos s="3" l="73" c="34"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="73" c="51"/>
-</Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:2:1">
-<Attr>
-<Pos s="9" l="73" c="41"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:4:2:2">
-<Attr>
-<Pos s="2" l="73" c="53"/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":">
-<Attr>
-<Pos s="1" l="74" c="53"/>
-</Attr>
-<Binary_Exp op="-" typref="2701647786">
-<Attr>
-<Pos s="1" l="74" c="25"/>
-</Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="74" c="20"/>
-</Attr>
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:1:1">
-<Attr>
-<Pos s="9" l="74" c="11"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:1:2">
-<Attr>
-<Pos s="2" l="74" c="21"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Binary_Exp op="+" typref="2701647786">
-<Attr>
-<Pos s="1" l="74" c="46"/>
-</Attr>
-<Binary_Exp op="(" typref="2701647786">
-<Attr>
-<Pos s="0" l="74" c="41"/>
-</Attr>
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:2:1:1">
-<Attr>
-<Pos s="13" l="74" c="28"/>
-</Attr>
-</Id>
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:2:1:2">
-<Attr>
-<Pos s="2" l="74" c="42"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id value="amt" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:1:2:2">
-<Attr>
-<Pos s="3" l="74" c="48"/>
-</Attr>
-</Id>
-</Binary_Exp>
-</Binary_Exp>
-<Binary_Exp op=".." typref="3603043417">
-<Attr>
-<Pos s="2" f="definitions.def" l="3" expanded="yes" c="28"/>
-<Pos s="17" f="stock.mch" l="74" c="55"/>
-</Attr>
-<Integer_Literal value="0" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:2:1">
-<Attr>
-<Pos s="1" f="definitions.def" l="3" expanded="yes" c="27"/>
-<Pos s="17" f="stock.mch" l="74" c="55"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal value="4000" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:2:1:5:2:2">
-<Attr>
-<Pos s="4" f="definitions.def" l="3" expanded="yes" c="30"/>
-<Pos s="17" f="stock.mch" l="74" c="55"/>
-</Attr>
-</Integer_Literal>
-</Binary_Exp>
-</Exp_Comparison>
-</Nary_Pred>
-</Hypothesis>
-<Simple_Goal>
-<Tag>Well definedness</Tag>
-<Goal>
-<Exp_Comparison op=":">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:2:1:1:1">
-<Attr>
-<Pos s="13" l="77" c="33"/>
-</Attr>
-</Id>
-<Binary_Exp op="+->">
-<Unary_Exp op="dom">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:2:1:1:1">
-<Attr>
-<Pos s="13" l="77" c="33"/>
-</Attr>
-</Id>
-</Unary_Exp>
-<Unary_Exp op="ran">
-<Id value="CurrentStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:1:2:1:1:1">
-<Attr>
-<Pos s="13" l="77" c="33"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-</Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
-<iapa>
-<status value="Unproved"/>
-</iapa>
-</Simple_Goal>
-<Simple_Goal>
-<Tag>Well definedness</Tag>
-<Goal>
-<Exp_Comparison op=":">
-<Id value="ii" typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:2:1:1:2">
-<Attr>
-<Pos s="2" l="78" c="45"/>
-</Attr>
-</Id>
-<Unary_Exp op="dom">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:2:1:1:1">
-<Attr>
-<Pos s="9" l="78" c="35"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Exp_Comparison>
-</Goal>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
-</Simple_Goal>
-<Simple_Goal>
-<Tag>Well definedness</Tag>
-<Goal>
-<Exp_Comparison op=":">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:2:1:1:1">
-<Attr>
-<Pos s="9" l="78" c="35"/>
-</Attr>
-</Id>
-<Binary_Exp op="+->">
-<Unary_Exp op="dom">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:2:1:1:1">
-<Attr>
-<Pos s="9" l="78" c="35"/>
-</Attr>
-</Id>
-</Unary_Exp>
-<Unary_Exp op="ran">
-<Id value="MaxStocks" typref="103245008" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:6:1:3:1:2:2:1:1:1">
-<Attr>
-<Pos s="9" l="78" c="35"/>
-</Attr>
-</Id>
-</Unary_Exp>
-</Binary_Exp>
-</Exp_Comparison>
-</Goal>
-<Proof_State passList="Force(1),(?; 0)" methodList="pr" proofState="Proved(1)"/>
-<iapa>
-<status value="Unproved"/>
-</iapa>
-</Simple_Goal>
 </Proof_Obligation>
 <TypeInfos>
 <Type id="103245008">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id value="INTEGER" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:1:1:1:1"/>
-<Id value="INTEGER" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:1:1:1:2"/>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:1:1:1:1" value="INTEGER"/>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:1:1:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Type>
 <Type id="3603043417">
 <Unary_Exp op="POW">
-<Id value="INTEGER" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:2:1:1"/>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:2:1:1" value="INTEGER"/>
 </Unary_Exp>
 </Type>
 <Type id="3083833907">
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
 <Binary_Exp op="*">
-<Id value="INTEGER" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:3:1:1:1:1"/>
-<Id value="INTEGER" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:3:1:1:1:2"/>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:3:1:1:1:1" value="INTEGER"/>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:3:1:1:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Unary_Exp>
 </Unary_Exp>
 </Type>
 <Type id="2701647786">
-<Id value="INTEGER" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:4:1"/>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:4:1" value="INTEGER"/>
 </Type>
 <Type id="3672872563">
 <Binary_Exp op="*">
-<Id value="INTEGER" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:5:1:1"/>
-<Id value="INTEGER" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:5:1:2"/>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:5:1:1" value="INTEGER"/>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:5:1:2" value="INTEGER"/>
 </Binary_Exp>
 </Type>
 <Type id="949986794">
 <Unary_Exp op="POW">
 <Unary_Exp op="POW">
-<Id value="INTEGER" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:6:1:1:1"/>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:6:1:1:1" value="INTEGER"/>
 </Unary_Exp>
 </Unary_Exp>
+</Type>
+<Type id="1127519748">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:7:1:1:1" value="INTEGER"/>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:7:1:1:2" value="BOOL"/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="552749909">
+<Unary_Exp op="POW">
+<Unary_Exp op="POW">
+<Binary_Exp op="*">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:8:1:1:1:1" value="INTEGER"/>
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:8:1:1:1:2" value="BOOL"/>
+</Binary_Exp>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id="4282494527">
+<Unary_Exp op="POW">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:9:1:1" value="BOOL"/>
+</Unary_Exp>
+</Type>
+<Type id="2043437594">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/stock.bxml:1:7:10:1" value="BOOL"/>
 </Type>
 </TypeInfos>
 </Proof_Obligations>

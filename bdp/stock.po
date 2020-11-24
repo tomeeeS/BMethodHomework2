@@ -1,17 +1,4 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(13) & _f(14) & WellDefinedness_Put.3,(_f(34) => _f(37));
-_f(1) & _f(2) & _f(13) & _f(14) & WellDefinedness_Put.2,(_f(34) => _f(36));
-_f(1) & _f(2) & _f(13) & _f(14) & WellDefinedness_Put.1,(_f(34) => _f(35));
-_f(1) & _f(2) & _f(13) & WellDefinedness_Precondition_Put.7,(_f(33) & _f(32) & _f(31) & _f(30) & _f(34) => _f(35));
-_f(1) & _f(2) & _f(13) & WellDefinedness_Precondition_Put.6,(_f(33) & _f(32) & _f(31) & _f(30) & _f(34) => _f(37));
-_f(1) & _f(2) & _f(13) & WellDefinedness_Precondition_Put.5,(_f(33) & _f(32) & _f(31) & _f(30) & _f(34) => _f(36));
-_f(1) & _f(2) & _f(13) & WellDefinedness_Precondition_Put.4,(_f(33) & _f(32) & _f(31) & _f(34) => _f(37));
-_f(1) & _f(2) & _f(13) & WellDefinedness_Precondition_Put.3,(_f(33) & _f(32) & _f(31) & _f(34) => _f(36));
-_f(1) & _f(2) & _f(13) & WellDefinedness_Precondition_Put.2,(_f(33) & _f(32) & _f(31) & _f(34) => _f(35));
-_f(1) & _f(2) & _f(13) & WellDefinedness_Precondition_Put.1,(_f(33) & _f(32) & _f(34) => _f(35));
-_f(1) & _f(2) & _f(13) & _f(14) & Put.3,(_f(6) & _f(11) => _f(18));
-_f(1) & _f(2) & _f(13) & _f(14) & Put.2,(_f(6) & _f(16) => _f(17));
-_f(1) & _f(2) & _f(13) & _f(14) & Put.1,(_f(6) & _f(7) => _f(15));
 _f(1) & _f(2) & Initialisation.3,(_f(3) & _f(4) & _f(5) & _f(6) & _f(11) => _f(12));
 _f(1) & _f(2) & Initialisation.2,(_f(3) & _f(4) & _f(5) & _f(6) & _f(9) => _f(10));
 _f(1) & _f(2) & Initialisation.1,(_f(3) & _f(4) & _f(5) & _f(6) & _f(7) => _f(8))
@@ -26,35 +13,27 @@ dom(CurrentStocks$1) = ((1) .. (5));
 "Invariant is preserved";
 "Check invariant ((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000))))))";
 ((CurrentStocks$1) : (((((1) .. (5))) --> (((0) .. (4000))))));
-"Check invariant ((Shortages) : (FIN(({1}\/{2}\/{3}\/{4}\/{5}))))";
-((((1) .. (5))) : (FIN(({1}\/{2}\/{3}\/{4}\/{5}))));
+"Check invariant ((Shortages) : (FIN(((1) .. (5)))))";
+((((1) .. (5))) : (FIN(((1) .. (5)))));
 "Check invariant ((dom(CurrentStocks)) = (dom(MaxStocks)))";
 ((dom(CurrentStocks$1)) = (dom(MaxStocks)));
-CurrentStocks : ((1) .. (5)) +-> ((0) .. (4000)) & dom(CurrentStocks) = ((1) .. (5)) & ((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000)))))) & ((Shortages) : (FIN(({1}\/{2}\/{3}\/{4}\/{5})))) & RequiredAmounts : ((1) .. (5)) +-> ((0) .. (4000)) & dom(RequiredAmounts) = ((1) .. (5)) & ((RequiredAmounts) : (((((1) .. (5))) --> (((0) .. (4000)))))) & ((dom(CurrentStocks)) = (dom(MaxStocks)));
-((ii) : (dom(CurrentStocks))) & ((amt) : (((1) .. (4000)))) & ((((CurrentStocks )(ii) + amt)) : (((0) .. (4000)))) & (((CurrentStocks )(ii) + amt) <= (MaxStocks )(ii)) & ((((MaxStocks )(ii) - ((CurrentStocks )(ii) + amt))) : (((0) .. (4000))));
-((((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))})))) : (((((1) .. (5))) --> (((0) .. (4000))))));
-"Check invariant ((RequiredAmounts) : (((((1) .. (5))) --> (((0) .. (4000))))))";
-((((RequiredAmounts) <+ (({((ii) |-> (((MaxStocks )(ii) - ((CurrentStocks )(ii) + amt))))})))) : (((((1) .. (5))) --> (((0) .. (4000))))));
-((dom(((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))}))))) = (dom(MaxStocks)));
+CurrentStocks : ((1) .. (5)) +-> ((0) .. (4000)) & dom(CurrentStocks) = ((1) .. (5)) & ((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000)))))) & ((Shortages) : (FIN(((1) .. (5))))) & RequiredAmounts : ((1) .. (5)) +-> ((0) .. (4000)) & dom(RequiredAmounts) = ((1) .. (5)) & ((RequiredAmounts) : (((((1) .. (5))) --> (((0) .. (4000)))))) & ((dom(CurrentStocks)) = (dom(MaxStocks)));
 btrue;
+res$1 : ((1) .. (5)) +-> BOOL;
+dom(res$1) = ((1) .. (5));
+((res$1) : (((((1) .. (5))) --> (BOOL))));
+((dom(((res$1) |> (({TRUE}))))) = (Shortages));
+((dom(((res$1) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages)));
 MaxStocks : ((1) .. (5)) +-> ((0) .. (4000));
 dom(MaxStocks) = ((1) .. (5));
 ((MaxStocks) : (((((1) .. (5))) --> (((0) .. (4000))))));
 RequiredAmounts : ((1) .. (5)) +-> ((0) .. (4000));
 dom(RequiredAmounts) = ((1) .. (5));
 ((RequiredAmounts) : (((((1) .. (5))) --> (((0) .. (4000))))));
-((Shortages) : (FIN(({1}\/{2}\/{3}\/{4}\/{5}))));
+((Shortages) : (FIN(((1) .. (5)))));
 CurrentStocks : ((1) .. (5)) +-> ((0) .. (4000));
 dom(CurrentStocks) = ((1) .. (5));
-((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000))))));
-(((CurrentStocks )(ii) + amt) <= (MaxStocks )(ii));
-((((CurrentStocks )(ii) + amt)) : (((0) .. (4000))));
-((amt) : (((1) .. (4000))));
-((ii) : (dom(CurrentStocks)));
-"Well definedness";
-((CurrentStocks) : (((dom(CurrentStocks)) +-> (ran(CurrentStocks)))));
-((ii) : (dom(MaxStocks)));
-((MaxStocks) : (((dom(MaxStocks)) +-> (ran(MaxStocks)))))
+((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000))))))
 END
 &
 THEORY EnumerateX
