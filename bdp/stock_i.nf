@@ -53,7 +53,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Implementation(stock_i))==(btrue);
   Abstract_List_Invariant(Implementation(stock_i))==(CurrentStocks: 1..5 --> 0..4000 & Shortages: FIN(1..5) & RequiredAmounts: 1..5 --> 0..4000 & dom(CurrentStocks) = dom(MaxStocks));
   Context_List_Invariant(Implementation(stock_i))==(btrue);
-  List_Invariant(Implementation(stock_i))==(cCurrentStocks: 1..5 --> 0..4000 & cRequiredAmounts: 1..5 --> 0..4000 & cShortages: 1..5 --> BOOL & cCurrentStocks = CurrentStocks & dom(cShortages|>{TRUE}) = Shortages & cRequiredAmounts = RequiredAmounts)
+  List_Invariant(Implementation(stock_i))==(cCurrentStocks: 1..5 --> 0..4000 & cRequiredAmounts: 1..5 --> 0..4000 & cShortages: 1..5 --> BOOL & cCurrentStocks = CurrentStocks & dom(cShortages|>{TRUE}) = Shortages & dom(cShortages|>{FALSE}) = (1..5)-Shortages & cRequiredAmounts = RequiredAmounts)
 END
 &
 THEORY ListAssertionsX IS

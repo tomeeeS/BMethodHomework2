@@ -30,6 +30,7 @@ INVARIANT
     // ties to abstract variables
     & cCurrentStocks = CurrentStocks
     & dom ( cShortages |> { TRUE } ) = Shortages
+    & dom ( cShortages |> { FALSE } ) = ( ( 1 .. 5 ) ) - Shortages
     & cRequiredAmounts = RequiredAmounts
 
     /*& STOCKS( cCurrentStocks ) = STOCKS( MaxStocks )

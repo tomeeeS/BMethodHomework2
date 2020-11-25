@@ -1,12 +1,11 @@
 ﻿THEORY BalanceX IS
-  stock_i,6,1,0,4,0,0,0;
-  GetShortage,1,0,0,0,0,0,0;
-  Initialisation,4,0,0,4,0,0,0;
+  stock_i,6,1,0,5,0,0,0;
+  Initialisation,5,0,0,5,0,0,0;
   ValuesLemmas,1,1,0,0,0,0,0
 END
 &
 THEORY ProofState IS
-  Unproved;
+  Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
@@ -15,7 +14,7 @@ THEORY ProofState IS
 END
 &
 THEORY MethodList IS
-  ?;
+  pr;
   pr;
   pr;
   pr;
@@ -24,7 +23,7 @@ THEORY MethodList IS
 END
 &
 THEORY PassList IS
-  Force(0),(?;0;1;2;3);
+  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;

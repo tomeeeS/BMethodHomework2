@@ -1,5 +1,5 @@
 THEORY ProofList IS
-_f(1) & _f(5) & _f(6) & _f(15) & _f(16) & _f(18) & GetShortage.1,(_f(7) => _f(19));
+_f(1) & _f(5) & _f(6) & Initialisation.5,(_f(7) & _f(15) => _f(16));
 _f(1) & _f(5) & _f(6) & Initialisation.4,(_f(7) & _f(13) => _f(14));
 _f(1) & _f(5) & _f(6) & Initialisation.3,(_f(7) & _f(11) => _f(12));
 _f(1) & _f(5) & _f(6) & Initialisation.2,(_f(7) & _f(9) => _f(10));
@@ -22,8 +22,10 @@ MaxStocks : ((1) .. (5)) +-> ((0) .. (4000)) & dom(MaxStocks) = ((1) .. (5)) & (
 (((((1) .. (5)) * ({TRUE}))) : (((((1) .. (5))) --> (BOOL))));
 "Check invariant ((dom(((cShortages$1) |> (({TRUE}))))) = (Shortages))";
 ((dom((((((1) .. (5)) * ({TRUE}))) |> (({TRUE}))))) = (((1) .. (5))));
+"Check invariant ((dom(((cShortages$1) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages)))";
+((dom((((((1) .. (5)) * ({TRUE}))) |> (({FALSE}))))) = ((((1) .. (5)) - ((1) .. (5)))));
 CurrentStocks : ((1) .. (5)) +-> ((0) .. (4000)) & dom(CurrentStocks) = ((1) .. (5)) & ((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000)))))) & ((Shortages) : (FIN(((1) .. (5))))) & RequiredAmounts : ((1) .. (5)) +-> ((0) .. (4000)) & dom(RequiredAmounts) = ((1) .. (5)) & ((RequiredAmounts) : (((((1) .. (5))) --> (((0) .. (4000)))))) & ((dom(CurrentStocks)) = (dom(MaxStocks)));
-cCurrentStocks$1 : ((1) .. (5)) +-> ((0) .. (4000)) & dom(cCurrentStocks$1) = ((1) .. (5)) & ((cCurrentStocks$1) : (((((1) .. (5))) --> (((0) .. (4000)))))) & cRequiredAmounts$1 : ((1) .. (5)) +-> ((0) .. (4000)) & dom(cRequiredAmounts$1) = ((1) .. (5)) & ((cRequiredAmounts$1) : (((((1) .. (5))) --> (((0) .. (4000)))))) & cShortages$1 : ((1) .. (5)) +-> BOOL & dom(cShortages$1) = ((1) .. (5)) & ((cShortages$1) : (((((1) .. (5))) --> (BOOL)))) & ((cCurrentStocks$1) = (CurrentStocks)) & ((dom(((cShortages$1) |> (({TRUE}))))) = (Shortages)) & ((cRequiredAmounts$1) = (RequiredAmounts));
+cCurrentStocks$1 : ((1) .. (5)) +-> ((0) .. (4000)) & dom(cCurrentStocks$1) = ((1) .. (5)) & ((cCurrentStocks$1) : (((((1) .. (5))) --> (((0) .. (4000)))))) & cRequiredAmounts$1 : ((1) .. (5)) +-> ((0) .. (4000)) & dom(cRequiredAmounts$1) = ((1) .. (5)) & ((cRequiredAmounts$1) : (((((1) .. (5))) --> (((0) .. (4000)))))) & cShortages$1 : ((1) .. (5)) +-> BOOL & dom(cShortages$1) = ((1) .. (5)) & ((cShortages$1) : (((((1) .. (5))) --> (BOOL)))) & ((cCurrentStocks$1) = (CurrentStocks)) & ((dom(((cShortages$1) |> (({TRUE}))))) = (Shortages)) & ((dom(((cShortages$1) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages))) & ((cRequiredAmounts$1) = (RequiredAmounts));
 ((res) = (res));
 ((res$1) = (res));
 ((dom(((cShortages$1) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages)));
