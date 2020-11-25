@@ -25,11 +25,11 @@ INVARIANT
     // types
     cCurrentStocks : STOCKS --> NUM_OF_STOCK_TYPE
     & cRequiredAmounts : STOCKS --> NUM_OF_STOCK_TYPE
-    & cShortages : FIN(1..5)
+    & cShortages : (1..5) --> BOOL
     
-    // which abstract vars do these refer to
+    // ties to abstract variables
     & cCurrentStocks = CurrentStocks
-    & cShortages = Shortages
+    & dom(cShortages |> {TRUE}) = Shortages
     & cRequiredAmounts = RequiredAmounts
     
     /*& STOCKS( cCurrentStocks ) = STOCKS( MaxStocks )
@@ -40,7 +40,7 @@ INVARIANT
 */
 INITIALISATION
     cCurrentStocks := STOCKS * {0} ;
-    cShortages := STOCKS ;
+    cShortages := STOCKS * {TRUE} ;
     cRequiredAmounts := MaxStocks
 
 OPERATIONS
@@ -67,27 +67,7 @@ OPERATIONS
     
     res <-- GetShortage = //Feladat3
     BEGIN
-        res := STOCKS * {FALSE};
-        VAR ii, ii_until IN
-		    ii := 1;
-            ii_until := 6;
-            
-            WHILE ii /= ii_until DO
-                res(ii) := bool(ii : cShortages);
-                ii := ii + 1
-
-            INVARIANT
-                ii : 1..ii_until
-                & res: 1..5 --> BOOL
-                & !xx.(xx : 1..(ii - 1) =>
-                    dom(res |> {FALSE}) = (1..5) - Shortages
-                    & dom(res |> {TRUE}) =  Shortages
-                )
-                
-            VARIANT
-                ii_until - ii
-            END 
-        END
+        res := cShortages
     END
 /*
     ;

@@ -1,55 +1,57 @@
-﻿THEORY BalanceX IS
-  stock_i,11,1,0,7,0,0,0;
-  GetShortage,7,0,0,4,0,0,0;
-  Initialisation,3,0,0,3,0,0,0;
-  ValuesLemmas,1,1,0,0,0,0,0
+THEORY BalanceX IS
+stock_i,14,1,0,10,0,0,0;
+GetShortage,10,0,0,7,0,0,0;
+Initialisation,3,0,0,3,0,0,0;
+ValuesLemmas,1,1,0,0,0,0,0
 END
 &
 THEORY ProofState IS
-  Unproved;
-  Unproved;
-  Unproved;
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(Util)
+Unproved;
+Unproved;
+Proved(0);
+Unproved;
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(0);
+Proved(Util)
 END
 &
 THEORY MethodList IS
-  ?;
-  ?;
-  ?;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  dd & pr & p0 & pr & pr & pr & p0 & pr & pr & pr & p0 & pr & pr & pp & pp & pr
+?;
+?;
+pr;
+?;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+pr;
+dd & pr & p0 & pr & pr & pr & p0 & pr & pr & pr & p0 & pr & pr & pp & pp & pr
 END
 &
 THEORY PassList IS
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1;2)
-END
-&
-THEORY ManForms 
-END
-&
-THEORY Version IS
-  PRVersion("svn")(CLT == "svn")
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),?;
+Force(0),(?; 0; 1; 2);
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),?;
+Force(0),(?; 0; 1; 2)
 END

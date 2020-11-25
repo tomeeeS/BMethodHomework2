@@ -1,16 +1,6 @@
 THEORY ProofList IS
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.12,(_f(18) & _f(19) & _f(20) & _f(21) & _f(22) & _f(25) & _f(42) => _f(44));
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.11,(_f(18) & _f(19) & _f(20) & _f(21) & _f(22) & _f(25) & _f(42) => _f(43));
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.10,(_f(18) & _f(19) & _f(20) & _f(21) & _f(22) & _f(24) & _f(40) => _f(41));
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.9,(_f(18) & _f(19) & _f(20) & _f(21) & _f(22) & _f(24) & _f(23) & _f(35) => _f(39));
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.8,(_f(18) & _f(19) & _f(20) & _f(21) & _f(22) & _f(24) & _f(23) & _f(35) => _f(38));
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.7,(_f(18) & _f(19) & _f(20) & _f(21) & _f(22) & _f(24) & _f(35) & _f(29) => _f(37));
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.6,(_f(18) & _f(19) & _f(20) & _f(21) & _f(22) & _f(24) & _f(35) & _f(27) => _f(36));
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.5,(_f(18) & _f(19) & _f(20) & _f(21) & _f(22) & _f(33) => _f(34));
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.4,(_f(17) & _f(26) => _f(32));
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.3,(_f(17) & _f(26) => _f(31));
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.2,(_f(26) & _f(29) => _f(30));
-_f(1) & _f(5) & _f(6) & _f(13) & _f(14) & _f(16) & GetShortage.1,(_f(26) & _f(27) => _f(28));
+_f(1) & _f(5) & _f(6) & _f(15) & _f(16) & _f(18) & GetShortage.1,(_f(7) => _f(19));
+_f(1) & _f(5) & _f(6) & Initialisation.4,(_f(7) & _f(13) => _f(14));
 _f(1) & _f(5) & _f(6) & Initialisation.3,(_f(7) & _f(11) => _f(12));
 _f(1) & _f(5) & _f(6) & Initialisation.2,(_f(7) & _f(9) => _f(10));
 _f(1) & _f(5) & _f(6) & Initialisation.1,(_f(7) => _f(8));
@@ -28,53 +18,26 @@ MaxStocks : ((1) .. (5)) +-> ((0) .. (4000)) & dom(MaxStocks) = ((1) .. (5)) & (
 (((((1) .. (5)) * ({0}))) : (((((1) .. (5))) --> (({0})))));
 "Check invariant ((cCurrentStocks$1) : (((((1) .. (5))) --> (((0) .. (4000))))))";
 (((((1) .. (5)) * ({0}))) : (((((1) .. (5))) --> (((0) .. (4000))))));
-"Check invariant ((cShortages$1) : (FIN(((1) .. (5)))))";
-((((1) .. (5))) : (FIN(((1) .. (5)))));
+"Check invariant ((cShortages$1) : (((((1) .. (5))) --> (BOOL))))";
+(((((1) .. (5)) * ({TRUE}))) : (((((1) .. (5))) --> (BOOL))));
+"Check invariant ((dom(((cShortages$1) |> (({TRUE}))))) = (Shortages))";
+((dom((((((1) .. (5)) * ({TRUE}))) |> (({TRUE}))))) = (((1) .. (5))));
 CurrentStocks : ((1) .. (5)) +-> ((0) .. (4000)) & dom(CurrentStocks) = ((1) .. (5)) & ((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000)))))) & ((Shortages) : (FIN(((1) .. (5))))) & RequiredAmounts : ((1) .. (5)) +-> ((0) .. (4000)) & dom(RequiredAmounts) = ((1) .. (5)) & ((RequiredAmounts) : (((((1) .. (5))) --> (((0) .. (4000)))))) & ((dom(CurrentStocks)) = (dom(MaxStocks)));
-cCurrentStocks$1 : ((1) .. (5)) +-> ((0) .. (4000)) & dom(cCurrentStocks$1) = ((1) .. (5)) & ((cCurrentStocks$1) : (((((1) .. (5))) --> (((0) .. (4000)))))) & cRequiredAmounts$1 : ((1) .. (5)) +-> ((0) .. (4000)) & dom(cRequiredAmounts$1) = ((1) .. (5)) & ((cRequiredAmounts$1) : (((((1) .. (5))) --> (((0) .. (4000)))))) & ((cShortages$1) : (FIN(((1) .. (5))))) & ((cCurrentStocks$1) = (CurrentStocks)) & ((cShortages$1) = (Shortages)) & ((cRequiredAmounts$1) = (RequiredAmounts));
+cCurrentStocks$1 : ((1) .. (5)) +-> ((0) .. (4000)) & dom(cCurrentStocks$1) = ((1) .. (5)) & ((cCurrentStocks$1) : (((((1) .. (5))) --> (((0) .. (4000)))))) & cRequiredAmounts$1 : ((1) .. (5)) +-> ((0) .. (4000)) & dom(cRequiredAmounts$1) = ((1) .. (5)) & ((cRequiredAmounts$1) : (((((1) .. (5))) --> (((0) .. (4000)))))) & cShortages$1 : ((1) .. (5)) +-> BOOL & dom(cShortages$1) = ((1) .. (5)) & ((cShortages$1) : (((((1) .. (5))) --> (BOOL)))) & ((cCurrentStocks$1) = (CurrentStocks)) & ((dom(((cShortages$1) |> (({TRUE}))))) = (Shortages)) & ((cRequiredAmounts$1) = (RequiredAmounts));
 ((res) = (res));
 ((res$1) = (res));
-((xx) : (((1) .. ((1 - 1)))));
-((ii$1) : (((1) .. (6))));
-res$3 : ((1) .. (5)) +-> BOOL;
-dom(res$3) = ((1) .. (5));
-((res$3) : (((((1) .. (5))) --> (BOOL))));
-!(xx).(((((xx) : (((1) .. ((ii$1 - 1)))))) => (((dom(((res$3) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages))) & ((dom(((res$3) |> (({TRUE}))))) = (Shortages)))));
-((xx) : (((1) .. (((ii$1 + 1) - 1)))));
-not(ii$1 = 6);
-not(not(ii$1 = 6));
-"Loop initialisation";
-"Check invariant ((ii) : (((1) .. (ii_until))))";
-((1) : (((1) .. (6))));
-"Check invariant ((res$1) : (((((1) .. (5))) --> (BOOL))))";
-(((((1) .. (5)) * ({FALSE}))) : (((((1) .. (5))) --> (BOOL))));
-((dom((((((1) .. (5)) * ({FALSE}))) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages)));
-((dom((((((1) .. (5)) * ({FALSE}))) |> (({TRUE}))))) = (Shortages));
-"Loop variant is positive";
-(0 <= (6 - ii$1));
-"Loop invariant is preserved";
-(((ii$1 + 1)) : (((1) .. (6))));
-((((res$3) <+ (({((ii$1) |-> (bool(((ii$1) : (cShortages$1)))))})))) : (((((1) .. (5))) --> (BOOL))));
-((dom(((((res$3) <+ (({((ii$1) |-> (bool(((ii$1) : (cShortages$1)))))})))) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages)));
-((dom(((((res$3) <+ (({((ii$1) |-> (bool(((ii$1) : (cShortages$1)))))})))) |> (({TRUE}))))) = (Shortages));
-"Variant is decreasing";
-((6 - (ii$1 + 1)) +1 <= (6 - ii$1));
-"End of loop";
-((dom(((res$3) |> (({TRUE}))))) = (Shortages));
-((dom(((res$3) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages)));
-((cShortages$1) = (Shortages));
+((dom(((cShortages$1) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages)));
+((dom(((cShortages$1) |> (({TRUE}))))) = (Shortages));
 ((cCurrentStocks$1) = (CurrentStocks));
-((cShortages$1) : (FIN(((1) .. (5)))));
+cShortages$1 : ((1) .. (5)) +-> BOOL;
+dom(cShortages$1) = ((1) .. (5));
+((cShortages$1) : (((((1) .. (5))) --> (BOOL))));
 cRequiredAmounts$1 : ((1) .. (5)) +-> ((0) .. (4000));
 dom(cRequiredAmounts$1) = ((1) .. (5));
 ((cRequiredAmounts$1) : (((((1) .. (5))) --> (((0) .. (4000))))));
 cCurrentStocks$1 : ((1) .. (5)) +-> ((0) .. (4000));
 dom(cCurrentStocks$1) = ((1) .. (5));
-((cCurrentStocks$1) : (((((1) .. (5))) --> (((0) .. (4000))))));
-((((xx) : (((1) .. ((1 - 1)))))) => (((((dom((((((1) .. (5)) * ({FALSE}))) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages)))) => (btrue))));
-(((1) .. (5)) * ({FALSE})) : ((1) .. (5)) +-> BOOL;
-dom((((1) .. (5)) * ({FALSE}))) = ((1) .. (5));
-!(xx).(((((xx) : (((1) .. ((1 - 1)))))) => (((dom((((((1) .. (5)) * ({FALSE}))) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages))) & ((dom((((((1) .. (5)) * ({FALSE}))) |> (({TRUE}))))) = (Shortages)))))
+((cCurrentStocks$1) : (((((1) .. (5))) --> (((0) .. (4000))))))
 END
 &
 THEORY EnumerateX
