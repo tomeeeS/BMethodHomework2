@@ -29,37 +29,42 @@ INVARIANT
 
     // ties to abstract variables
     & cCurrentStocks = CurrentStocks
+    & cRequiredAmounts = RequiredAmounts
     & dom ( cShortages |> { TRUE } ) = Shortages
     & dom ( cShortages |> { FALSE } ) = ( ( 1 .. 5 ) ) - Shortages
-    & cRequiredAmounts = RequiredAmounts
 
-    /*& STOCKS( cCurrentStocks ) = STOCKS( MaxStocks )
-    & !ii.( ii : STOCKS( cCurrentStocks ) => cCurrentStocks( ii ) : 0 .. MaxStocks( ii ) )
-    & !xx.(xx : cShortages => cCurrentStocks(xx) < MaxStocks( xx ) / 2)
-    & !xx.((xx : STOCKS(cCurrentStocks) & cCurrentStocks(xx) < MaxStocks(xx) / 2) => xx : cShortages)
-    & !ii.( ii : STOCKS(cRequiredAmounts) => cRequiredAmounts(ii) = MaxStocks(ii) - cCurrentStocks(ii))
-*/
+    // cCurrentStocks
+    & dom ( cCurrentStocks ) = dom ( MaxStocks )
+    & ! ii . ( ii : dom ( cCurrentStocks ) => cCurrentStocks ( ii ) : 0 .. MaxStocks ( ii ) )
+
+    // cShortages
+    & ! xx . ( xx : dom ( cShortages |> { TRUE } ) => cCurrentStocks ( xx ) < MaxStocks ( xx ) / 2 )
+    & ! xx . ( ( xx : dom ( cCurrentStocks ) & cCurrentStocks ( xx ) < MaxStocks ( xx ) / 2 ) => xx : dom ( cShortages |> { TRUE } ) )
+
+    // cRequiredAmounts
+    & ! ii . ( ii : dom ( cRequiredAmounts ) => cRequiredAmounts ( ii ) = MaxStocks ( ii ) - cCurrentStocks ( ii ) )
+
 INITIALISATION
     cCurrentStocks := ( 1 .. 5 ) * { 0 } ;
     cShortages := ( 1 .. 5 ) * { TRUE } ;
     cRequiredAmounts := MaxStocks
 
 OPERATIONS
-    /*
+
     Put ( ii , amt ) = //Feladat1
     BEGIN
-        cCurrentStocks( ii ) := cCurrentStocks( ii ) + amt;
-        cRequiredAmounts(ii) := MaxStocks(ii) - (cCurrentStocks(ii) + amt)
-        //cShortages := {xx | xx : STOCKS(cCurrentStocks) & (cCurrentStocks<+{ii|->cCurrentStocks(ii)+amt})(xx) < MaxStocks(xx) / 2}
+        cCurrentStocks ( ii ) := cCurrentStocks ( ii ) + amt ;
+        cRequiredAmounts ( ii ) := MaxStocks ( ii ) - ( cCurrentStocks ( ii ) + amt ) ;
+        cShortages ( ii ) := bool ( cCurrentStocks ( ii ) + amt < MaxStocks ( ii ) / 2 )
     END
     ;
 
-
+/*
     Pop ( ii , amt ) = //Feladat2
     BEGIN
         cCurrentStocks( ii ) := cCurrentStocks( ii ) - amt;
         cRequiredAmounts(ii) := MaxStocks(ii) - (cCurrentStocks(ii) - amt);
-        cShortages := {xx | xx : STOCKS(cCurrentStocks) & (cCurrentStocks<+{ii|->cCurrentStocks(ii)-amt})(xx) < MaxStocks(xx) / 2}
+        cShortages := {xx | xx : dom(cCurrentStocks) & (cCurrentStocks<+{ii|->cCurrentStocks(ii)-amt})(xx) < MaxStocks(xx) / 2}
     END
     ;
 

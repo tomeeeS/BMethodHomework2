@@ -1,10 +1,39 @@
 ﻿THEORY BalanceX IS
-  stock_i,6,1,0,5,0,0,0;
-  Initialisation,5,0,0,5,0,0,0;
-  ValuesLemmas,1,1,0,0,0,0,0
+  stock_i,33,1,0,21,3,0,0;
+  Initialisation,10,0,0,8,2,0,0;
+  Put,15,0,0,7,0,0,0;
+  ValuesLemmas,1,1,0,0,0,0,0;
+  WellDefinedness_Put,7,0,0,6,1,0,0
 END
 &
 THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(1);
   Proved(0);
   Proved(0);
   Proved(0);
@@ -19,10 +48,64 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  ?;
+  ?;
+  ?;
+  ?;
+  pr;
+  ?;
+  ?;
+  ?;
+  pr;
+  pr;
+  ?;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
   dd & pr & p0 & pr & pr & pr & p0 & pr & pr & pr & p0 & pr & pr & pp & pp & pr
 END
 &
 THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2);
+  Force(0),(?;0;1;2);
+  Force(0),(?;0;1;2);
+  Force(0),(?;0;1;2);
+  Force(0),?;
+  Force(0),(?;0;1;2);
+  Force(0),(?;0;1;2);
+  Force(0),(?;0;1;2);
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
+  Force(1),(?;0);
   Force(0),?;
   Force(0),?;
   Force(0),?;
