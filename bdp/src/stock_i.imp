@@ -9,6 +9,10 @@ REFINES stock
 
 
 
+IMPORTS
+    forklift ,
+    shortage_classifier
+
 VALUES
     MaxStocks = {
         1 |-> 1000 ,
@@ -53,9 +57,16 @@ OPERATIONS
 
     Put ( ii , amt ) = //Feladat1
     BEGIN
-        cCurrentStocks ( ii ) := cCurrentStocks ( ii ) + amt ;
-        cRequiredAmounts ( ii ) := MaxStocks ( ii ) - ( cCurrentStocks ( ii ) + amt ) ;
-        cShortages ( ii ) := bool ( cCurrentStocks ( ii ) + amt < MaxStocks ( ii ) / 2 )
+        VAR currentTmp , requiredTmp IN
+            currentTmp , requiredTmp <--
+                bring_into_warehouse ( cCurrentStocks ( ii ) , amt , MaxStocks ( ii ) ) ;
+            cCurrentStocks ( ii ) := currentTmp ;
+            cRequiredAmounts ( ii ) := requiredTmp ;
+
+            // this into new machine op too? need to prove it's true and it's false 
+            // exactly when bool(..) is
+            cShortages ( ii ) := bool ( cCurrentStocks ( ii ) + amt < MaxStocks ( ii ) / 2 )
+        END
     END
     ;
 

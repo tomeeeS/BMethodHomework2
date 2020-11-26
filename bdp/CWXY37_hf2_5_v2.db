@@ -4,6 +4,18 @@
     <project decomp_dir="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/expand_src" old_decomp_dir="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/src">
         <!-- Definition directory list -->
         <!-- Component file list -->
+        <component_file path="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/src" name="forklift" suffix="mch" user="tomi">
+            <component name="forklift" type="specification" />
+        </component_file>
+        <component_file path="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/src" name="forklift_i" suffix="imp" user="tomi">
+            <component name="forklift_i" type="implementation" />
+        </component_file>
+        <component_file path="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/src" name="shortage_classifier" suffix="mch" user="tomi">
+            <component name="shortage_classifier" type="specification" />
+        </component_file>
+        <component_file path="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/src" name="shortage_classifier_i" suffix="imp" user="tomi">
+            <component name="shortage_classifier_i" type="implementation" />
+        </component_file>
         <component_file path="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/src" name="stock" suffix="mch" user="tomi">
             <component name="stock" type="specification" />
         </component_file>

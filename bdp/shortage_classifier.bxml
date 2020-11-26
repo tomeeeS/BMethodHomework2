@@ -1,0 +1,7 @@
+<Machine name='shortage_classifier' type='abstraction'>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos/>
+
+</Machine>

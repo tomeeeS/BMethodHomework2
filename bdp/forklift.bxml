@@ -1,0 +1,629 @@
+<Machine name='forklift' type='abstraction'>
+<Abstract_Variables>
+<Attr>
+<Pos l='7' c='1' s='18'/>
+</Attr>
+<Id value='CurrentStockCount' typref='2701647786'>
+<Attr>
+<Pos l='8' c='5' s='17'/>
+</Attr>
+</Id>
+<Id value='RequiredStockCount' typref='2701647786'>
+<Attr>
+<Pos l='8' c='24' s='18'/>
+</Attr>
+</Id>
+<Id value='MaxStockCount' typref='2701647786'>
+<Attr>
+<Pos l='8' c='44' s='13'/>
+</Attr>
+</Id>
+</Abstract_Variables>
+<Invariant>
+<Attr>
+<Pos l='10' c='1' s='9'/>
+</Attr>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='12' c='23' s='1'/>
+</Attr>
+<Id value='CurrentStockCount' typref='2701647786'>
+<Attr>
+<Pos l='12' c='5' s='17'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos f='definitions.def' l='3' c='28' s='2' expanded='yes'/>
+<Pos f='forklift.mch' l='12' c='25' s='17'/>
+</Attr>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='27' s='1' expanded='yes'/>
+<Pos f='forklift.mch' l='12' c='25' s='17'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='4000' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='30' s='4' expanded='yes'/>
+<Pos f='forklift.mch' l='12' c='25' s='17'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='13' c='26' s='1'/>
+</Attr>
+<Id value='RequiredStockCount' typref='2701647786'>
+<Attr>
+<Pos l='13' c='7' s='18'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos f='definitions.def' l='3' c='28' s='2' expanded='yes'/>
+<Pos f='forklift.mch' l='13' c='28' s='17'/>
+</Attr>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='27' s='1' expanded='yes'/>
+<Pos f='forklift.mch' l='13' c='28' s='17'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='4000' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='30' s='4' expanded='yes'/>
+<Pos f='forklift.mch' l='13' c='28' s='17'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='14' c='21' s='1'/>
+</Attr>
+<Id value='MaxStockCount' typref='2701647786'>
+<Attr>
+<Pos l='14' c='7' s='13'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos f='definitions.def' l='3' c='28' s='2' expanded='yes'/>
+<Pos f='forklift.mch' l='14' c='23' s='17'/>
+</Attr>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='27' s='1' expanded='yes'/>
+<Pos f='forklift.mch' l='14' c='23' s='17'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='4000' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='30' s='4' expanded='yes'/>
+<Pos f='forklift.mch' l='14' c='23' s='17'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='16' c='25' s='1'/>
+</Attr>
+<Id value='CurrentStockCount' typref='2701647786'>
+<Attr>
+<Pos l='16' c='7' s='17'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos l='16' c='28' s='2'/>
+</Attr>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos l='16' c='27' s='1'/>
+</Attr>
+</Integer_Literal>
+<Id value='MaxStockCount' typref='2701647786'>
+<Attr>
+<Pos l='16' c='30' s='13'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='17' c='26' s='1'/>
+</Attr>
+<Id value='RequiredStockCount' typref='2701647786'>
+<Attr>
+<Pos l='17' c='7' s='18'/>
+</Attr>
+</Id>
+<Binary_Exp op='-' typref='2701647786'>
+<Attr>
+<Pos l='17' c='42' s='1'/>
+</Attr>
+<Id value='MaxStockCount' typref='2701647786'>
+<Attr>
+<Pos l='17' c='28' s='13'/>
+</Attr>
+</Id>
+<Id value='CurrentStockCount' typref='2701647786'>
+<Attr>
+<Pos l='17' c='44' s='17'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='19' c='1' s='14'/>
+</Attr>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='20' c='23' s='2'/>
+</Attr>
+<Variables>
+<Id value='CurrentStockCount' typref='2701647786'>
+<Attr>
+<Pos l='20' c='5' s='17'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos l='20' c='26' s='1'/>
+</Attr>
+</Integer_Literal>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='21' c='27' s='2'/>
+</Attr>
+<Variables>
+<Id value='RequiredStockCount' typref='2701647786'>
+<Attr>
+<Pos l='21' c='8' s='18'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos l='21' c='30' s='1'/>
+</Attr>
+</Integer_Literal>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='22' c='22' s='2'/>
+</Attr>
+<Variables>
+<Id value='MaxStockCount' typref='2701647786'>
+<Attr>
+<Pos l='22' c='8' s='13'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos l='22' c='25' s='1'/>
+</Attr>
+</Integer_Literal>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='bring_into_warehouse'>
+<Attr>
+<Pos l='26' c='5' s='10' endLine='46'/>
+</Attr>
+<Output_Parameters>
+<Id value='newCurrent' typref='2701647786'>
+<Attr>
+<Pos l='26' c='5' s='10'/>
+</Attr>
+</Id>
+<Id value='newRequired' typref='2701647786'>
+<Attr>
+<Pos l='26' c='17' s='11'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='CurrentStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='27' c='9' s='20'/>
+</Attr>
+</Id>
+<Id value='amt' typref='2701647786'>
+<Attr>
+<Pos l='28' c='9' s='3'/>
+</Attr>
+</Id>
+<Id value='MaxStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='29' c='9' s='16'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='32' c='30' s='1'/>
+</Attr>
+<Id value='CurrentStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='32' c='9' s='20'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos f='definitions.def' l='3' c='28' s='2' expanded='yes'/>
+<Pos f='forklift.mch' l='32' c='32' s='17'/>
+</Attr>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='27' s='1' expanded='yes'/>
+<Pos f='forklift.mch' l='32' c='32' s='17'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='4000' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='30' s='4' expanded='yes'/>
+<Pos f='forklift.mch' l='32' c='32' s='17'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='33' c='28' s='1'/>
+</Attr>
+<Id value='MaxStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='33' c='11' s='16'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos f='definitions.def' l='3' c='28' s='2' expanded='yes'/>
+<Pos f='forklift.mch' l='33' c='30' s='17'/>
+</Attr>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='27' s='1' expanded='yes'/>
+<Pos f='forklift.mch' l='33' c='30' s='17'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='4000' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='30' s='4' expanded='yes'/>
+<Pos f='forklift.mch' l='33' c='30' s='17'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='34' c='15' s='1'/>
+</Attr>
+<Id value='amt' typref='2701647786'>
+<Attr>
+<Pos l='34' c='11' s='3'/>
+</Attr>
+</Id>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos l='34' c='19' s='2'/>
+</Attr>
+<Integer_Literal value='1' typref='2701647786'>
+<Attr>
+<Pos l='34' c='17' s='1'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='4000' typref='2701647786'>
+<Attr>
+<Pos l='34' c='22' s='4'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='36' c='35' s='1'/>
+</Attr>
+<Binary_Exp op='+' typref='2701647786'>
+<Attr>
+<Pos l='36' c='29' s='1'/>
+</Attr>
+<Id value='CurrentStockCount' typref='2701647786'>
+<Attr>
+<Pos l='36' c='11' s='17'/>
+</Attr>
+</Id>
+<Id value='amt' typref='2701647786'>
+<Attr>
+<Pos l='36' c='31' s='3'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos f='definitions.def' l='3' c='28' s='2' expanded='yes'/>
+<Pos f='forklift.mch' l='36' c='37' s='17'/>
+</Attr>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='27' s='1' expanded='yes'/>
+<Pos f='forklift.mch' l='36' c='37' s='17'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='4000' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='30' s='4' expanded='yes'/>
+<Pos f='forklift.mch' l='36' c='37' s='17'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op='&lt;='>
+<Attr>
+<Pos l='37' c='35' s='2'/>
+</Attr>
+<Binary_Exp op='+' typref='2701647786'>
+<Attr>
+<Pos l='37' c='29' s='1'/>
+</Attr>
+<Id value='CurrentStockCount' typref='2701647786'>
+<Attr>
+<Pos l='37' c='11' s='17'/>
+</Attr>
+</Id>
+<Id value='amt' typref='2701647786'>
+<Attr>
+<Pos l='37' c='31' s='3'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Id value='MaxStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='37' c='38' s='16'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='38' c='59' s='1'/>
+</Attr>
+<Binary_Exp op='-' typref='2701647786'>
+<Attr>
+<Pos l='38' c='28' s='1'/>
+</Attr>
+<Id value='MaxStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='38' c='11' s='16'/>
+</Attr>
+</Id>
+<Binary_Exp op='+' typref='2701647786'>
+<Attr>
+<Pos l='38' c='52' s='1'/>
+</Attr>
+<Id value='CurrentStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='38' c='31' s='20'/>
+</Attr>
+</Id>
+<Id value='amt' typref='2701647786'>
+<Attr>
+<Pos l='38' c='54' s='3'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+<Binary_Exp op='..' typref='3603043417'>
+<Attr>
+<Pos f='definitions.def' l='3' c='28' s='2' expanded='yes'/>
+<Pos f='forklift.mch' l='38' c='61' s='17'/>
+</Attr>
+<Integer_Literal value='0' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='27' s='1' expanded='yes'/>
+<Pos f='forklift.mch' l='38' c='61' s='17'/>
+</Attr>
+</Integer_Literal>
+<Integer_Literal value='4000' typref='2701647786'>
+<Attr>
+<Pos f='definitions.def' l='3' c='30' s='4' expanded='yes'/>
+<Pos f='forklift.mch' l='38' c='61' s='17'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Precondition>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='40' c='27' s='2'/>
+</Attr>
+<Variables>
+<Id value='CurrentStockCount' typref='2701647786'>
+<Attr>
+<Pos l='40' c='9' s='17'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='+' typref='2701647786'>
+<Attr>
+<Pos l='40' c='51' s='1'/>
+</Attr>
+<Id value='CurrentStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='40' c='30' s='20'/>
+</Attr>
+</Id>
+<Id value='amt' typref='2701647786'>
+<Attr>
+<Pos l='40' c='53' s='3'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='41' c='31' s='2'/>
+</Attr>
+<Variables>
+<Id value='RequiredStockCount' typref='2701647786'>
+<Attr>
+<Pos l='41' c='12' s='18'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-' typref='2701647786'>
+<Attr>
+<Pos l='41' c='51' s='1'/>
+</Attr>
+<Id value='MaxStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='41' c='34' s='16'/>
+</Attr>
+</Id>
+<Binary_Exp op='+' typref='2701647786'>
+<Attr>
+<Pos l='41' c='75' s='1'/>
+</Attr>
+<Id value='CurrentStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='41' c='54' s='20'/>
+</Attr>
+</Id>
+<Id value='amt' typref='2701647786'>
+<Attr>
+<Pos l='41' c='77' s='3'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='42' c='26' s='2'/>
+</Attr>
+<Variables>
+<Id value='MaxStockCount' typref='2701647786'>
+<Attr>
+<Pos l='42' c='12' s='13'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='MaxStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='42' c='29' s='16'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='44' c='23' s='2'/>
+</Attr>
+<Variables>
+<Id value='newCurrent' typref='2701647786'>
+<Attr>
+<Pos l='44' c='12' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='+' typref='2701647786'>
+<Attr>
+<Pos l='44' c='47' s='1'/>
+</Attr>
+<Id value='CurrentStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='44' c='26' s='20'/>
+</Attr>
+</Id>
+<Id value='amt' typref='2701647786'>
+<Attr>
+<Pos l='44' c='49' s='3'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='45' c='24' s='2'/>
+</Attr>
+<Variables>
+<Id value='newRequired' typref='2701647786'>
+<Attr>
+<Pos l='45' c='12' s='11'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='-' typref='2701647786'>
+<Attr>
+<Pos l='45' c='44' s='1'/>
+</Attr>
+<Id value='MaxStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='45' c='27' s='16'/>
+</Attr>
+</Id>
+<Binary_Exp op='+' typref='2701647786'>
+<Attr>
+<Pos l='45' c='68' s='1'/>
+</Attr>
+<Id value='CurrentStockCount_in' typref='2701647786'>
+<Attr>
+<Pos l='45' c='47' s='20'/>
+</Attr>
+</Id>
+<Id value='amt' typref='2701647786'>
+<Attr>
+<Pos l='45' c='70' s='3'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='3603043417'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

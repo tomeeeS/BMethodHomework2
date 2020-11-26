@@ -9,6 +9,10 @@ REFINES stock
 DEFINITIONS
     "definitions.def"
     
+IMPORTS
+    forklift,
+    shortage_classifier
+    
 VALUES
     MaxStocks = {
         1 |-> 1000 ,
@@ -34,15 +38,15 @@ INVARIANT
     & dom(cShortages |> {FALSE}) = (STOCKS) - Shortages
     
     // cCurrentStocks
-    & dom( cCurrentStocks ) = dom( MaxStocks )
-    & !ii.( ii : dom( cCurrentStocks ) => cCurrentStocks( ii ) : 0 .. MaxStocks( ii ) )
+    & dom(cCurrentStocks) = dom(MaxStocks)
+    & !ii.(ii: dom(cCurrentStocks) => cCurrentStocks(ii) : 0..MaxStocks(ii) )
     
     // cShortages
     & !xx.(xx : dom(cShortages |> {TRUE}) => cCurrentStocks(xx) < MaxStocks(xx) / 2)
     & !xx.((xx : dom(cCurrentStocks) & cCurrentStocks(xx) < MaxStocks(xx) / 2) => xx : dom(cShortages |> {TRUE}))
     
     // cRequiredAmounts
-    & !ii.( ii : dom(cRequiredAmounts) => cRequiredAmounts(ii) = MaxStocks(ii) - cCurrentStocks(ii))
+    & !ii.(ii: dom(cRequiredAmounts) => cRequiredAmounts(ii) = MaxStocks(ii) - cCurrentStocks(ii))
 
 INITIALISATION
     cCurrentStocks := STOCKS * {0} ;
@@ -51,18 +55,25 @@ INITIALISATION
 
 OPERATIONS
     
-    Put ( ii , amt ) = //Feladat1
+    Put (ii, amt ) = //Feladat1
     BEGIN
-        cCurrentStocks( ii ) := cCurrentStocks( ii ) + amt;
-        cRequiredAmounts(ii) := MaxStocks(ii) - (cCurrentStocks(ii) + amt);
-        cShortages(ii) := bool(cCurrentStocks(ii) + amt < MaxStocks(ii) / 2)
+        VAR currentTmp, requiredTmp IN
+            currentTmp, requiredTmp <--
+                bring_into_warehouse(cCurrentStocks(ii), amt, MaxStocks(ii));
+            cCurrentStocks(ii) := currentTmp;
+            cRequiredAmounts(ii) := requiredTmp;
+    
+            // this into new machine op too? need to prove it's true and it's false 
+            // exactly when bool(..) is
+            cShortages(ii) := bool(cCurrentStocks(ii) + amt < MaxStocks(ii) / 2) 
+        END 
     END
     ;
 
 /*
-    Pop ( ii , amt ) = //Feladat2
+    Pop (ii, amt ) = //Feladat2
     BEGIN
-        cCurrentStocks( ii ) := cCurrentStocks( ii ) - amt;
+        cCurrentStocks(ii) := cCurrentStocks(ii) - amt;
         cRequiredAmounts(ii) := MaxStocks(ii) - (cCurrentStocks(ii) - amt);
         cShortages := {xx | xx : dom(cCurrentStocks) & (cCurrentStocks<+{ii|->cCurrentStocks(ii)-amt})(xx) < MaxStocks(xx) / 2}
     END
@@ -85,7 +96,7 @@ OPERATIONS
     END
     ;
 
-    res <-- GetRequiredAmount( ii ) = // Feladat5
+    res <-- GetRequiredAmount(ii) = // Feladat5
     BEGIN
        res := cRequiredAmounts(ii)
     END

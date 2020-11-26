@@ -1,0 +1,6 @@
+
+IMPLEMENTATION shortage_classifier_i
+REFINES shortage_classifier
+
+
+ END

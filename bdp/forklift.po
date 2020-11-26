@@ -1,0 +1,35 @@
+THEORY ProofList IS
+_f(1) & _f(9) & _f(10) & bring_into_warehouse.2,(_f(2) & _f(5) => _f(12));
+_f(1) & _f(9) & _f(10) & bring_into_warehouse.1,(_f(2) & _f(3) => _f(11));
+_f(1) & Initialisation.3,(_f(2) & _f(7) => _f(8));
+_f(1) & Initialisation.2,(_f(2) & _f(5) => _f(6));
+_f(1) & Initialisation.1,(_f(2) & _f(3) => _f(4))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483648) .. (2147483647))));
+"Invariant is preserved";
+"Check invariant ((CurrentStockCount) : (((0) .. (4000))))";
+((0) : (((0) .. (4000))));
+"Check invariant ((CurrentStockCount) : (((0) .. (MaxStockCount))))";
+((0) : (((0) .. (0))));
+"Check invariant ((RequiredStockCount) = ((MaxStockCount - CurrentStockCount)))";
+((0) = ((0 - 0)));
+((CurrentStockCount) : (((0) .. (4000)))) & ((RequiredStockCount) : (((0) .. (4000)))) & ((MaxStockCount) : (((0) .. (4000)))) & ((CurrentStockCount) : (((0) .. (MaxStockCount)))) & ((RequiredStockCount) = ((MaxStockCount - CurrentStockCount)));
+((CurrentStockCount_in) : (((0) .. (4000)))) & ((MaxStockCount_in) : (((0) .. (4000)))) & ((amt) : (((1) .. (4000)))) & (((CurrentStockCount + amt)) : (((0) .. (4000)))) & ((CurrentStockCount + amt) <= MaxStockCount_in) & (((MaxStockCount_in - (CurrentStockCount_in + amt))) : (((0) .. (4000))));
+(((CurrentStockCount_in + amt)) : (((0) .. (4000))));
+(((CurrentStockCount_in + amt)) : (((0) .. (MaxStockCount_in))));
+btrue;
+((CurrentStockCount) : (((0) .. (MaxStockCount))));
+((MaxStockCount) : (((0) .. (4000))));
+((RequiredStockCount) : (((0) .. (4000))));
+((CurrentStockCount) : (((0) .. (4000))));
+((CurrentStockCount + amt) <= MaxStockCount_in);
+(((CurrentStockCount + amt)) : (((0) .. (4000))));
+((amt) : (((1) .. (4000))));
+((MaxStockCount_in) : (((0) .. (4000))));
+((CurrentStockCount_in) : (((0) .. (4000))))
+END
+&
+THEORY EnumerateX
+END

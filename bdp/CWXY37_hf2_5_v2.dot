@@ -1,4 +1,9 @@
 digraph {
+forklift [ label=" forklift " shape= box ]
+forklift_i [ label=" forklift_i " shape= boxshape= rhombcolor= pink ]
+shortage_classifier_i [ label=" shortage_classifier\nshortage_classifier_i " shape= box ]
 stock_i [ label=" stock\nstock_i " shape= box ]
 
+"stock_i" -> "forklift" []
+"stock_i" -> "shortage_classifier_i" []
 }
