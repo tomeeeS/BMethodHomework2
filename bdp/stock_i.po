@@ -1,15 +1,14 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.10,(_f(93) => _f(96));
-_f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.9,(_f(93) => _f(95));
-_f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.8,(_f(93) => _f(12));
-_f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.7,(_f(93) => _f(94));
-_f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.6,(_f(93) => _f(63));
+_f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.10,(_f(92) => _f(95));
+_f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.9,(_f(92) => _f(94));
+_f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.8,(_f(92) => _f(12));
+_f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.7,(_f(92) => _f(93));
+_f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.6,(_f(92) => _f(63));
 _f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.5,(_f(43) => _f(48));
 _f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.4,(_f(43) => _f(47));
 _f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.3,(_f(43) => _f(46));
 _f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.2,(_f(43) => _f(45));
 _f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(32) & WellDefinedness_Put.1,(_f(43) => _f(44));
-_f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(4) & Put.20,(_f(38) & _f(39) & _f(40) & _f(41) & _f(42) & _f(62) => _f(64));
 _f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(4) & Put.19,(_f(38) & _f(39) & _f(40) & _f(41) & _f(42) & _f(62) => _f(12));
 _f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(4) & Put.18,(_f(38) & _f(39) & _f(40) & _f(41) & _f(42) & _f(62) => _f(63));
 _f(1) & _f(2) & _f(3) & _f(7) & _f(30) & _f(31) & _f(4) & Put.17,(_f(38) & _f(39) & _f(40) & _f(41) & _f(42) & _f(37) & _f(16) => _f(61));
@@ -76,7 +75,7 @@ CurrentStocks : ((1) .. (5)) +-> ((0) .. (4000)) & dom(CurrentStocks) = ((1) .. 
 cCurrentStocks$1 : ((1) .. (5)) +-> ((0) .. (4000)) & dom(cCurrentStocks$1) = ((1) .. (5)) & ((cCurrentStocks$1) : (((((1) .. (5))) --> (((0) .. (4000)))))) & cRequiredAmounts$1 : ((1) .. (5)) +-> ((0) .. (4000)) & dom(cRequiredAmounts$1) = ((1) .. (5)) & ((cRequiredAmounts$1) : (((((1) .. (5))) --> (((0) .. (4000)))))) & cShortages$1 : ((1) .. (5)) +-> BOOL & dom(cShortages$1) = ((1) .. (5)) & ((cShortages$1) : (((((1) .. (5))) --> (BOOL)))) & ((cCurrentStocks$1) = (CurrentStocks)) & ((cRequiredAmounts$1) = (RequiredAmounts)) & ((dom(((cShortages$1) |> (({TRUE}))))) = (Shortages)) & ((dom(((cShortages$1) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages))) & ((dom(cCurrentStocks$1)) = (dom(MaxStocks))) & !(ii).(((((ii) : (dom(cCurrentStocks$1)))) => (((cCurrentStocks$1 )(ii) <= (MaxStocks )(ii))))) & !(xx).(((((xx) : (dom(((cShortages$1) |> (({TRUE}))))))) => (((cCurrentStocks$1 )(xx) +1 <= ((MaxStocks )(xx) / 2))))) & !(xx).(((((xx) : (dom(cCurrentStocks$1))) & ((cCurrentStocks$1 )(xx) +1 <= ((MaxStocks )(xx) / 2))) => (((xx) : (dom(((cShortages$1) |> (({TRUE}))))))))) & !(ii).(((((ii) : (dom(cRequiredAmounts$1)))) => ((((cRequiredAmounts$1 )(ii)) = (((MaxStocks )(ii) - (cCurrentStocks$1 )(ii)))))));
 ((ii) : (dom(CurrentStocks))) & ((amt) : (((1) .. (4000)))) & ((((CurrentStocks )(ii) + amt)) : (((0) .. (4000)))) & (((CurrentStocks )(ii) + amt) <= (MaxStocks )(ii)) & ((((MaxStocks )(ii) - ((CurrentStocks )(ii) + amt))) : (((0) .. (4000))));
 ((ii$1) : (dom(((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))))));
-((xx) : (dom(((((cShortages$1) <+ (({((ii) |-> (bool((((((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))) )(ii) + amt) +1 <= ((MaxStocks )(ii) / 2)))))})))) |> (({TRUE}))))));
+((xx) : (dom(((((cShortages$1) <+ (({((ii) |-> (bool((((cCurrentStocks$1 )(ii) + amt) +1 <= ((MaxStocks )(ii) / 2)))))})))) |> (({TRUE}))))));
 ((xx) : (dom(((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))))));
 ((((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))) )(xx) +1 <= ((MaxStocks )(xx) / 2));
 ((ii$1) : (dom(((cRequiredAmounts$1) <+ (({((ii) |-> (((MaxStocks )(ii) - ((cCurrentStocks$1 )(ii) + amt))))}))))));
@@ -94,18 +93,17 @@ cCurrentStocks$1 : ((1) .. (5)) +-> ((0) .. (4000)) & dom(cCurrentStocks$1) = ((
 ((((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))})))) : (((((1) .. (5))) --> (((0) .. (4000))))));
 "Check invariant ((cRequiredAmounts$1) : (((((1) .. (5))) --> (((0) .. (4000))))))";
 ((((cRequiredAmounts$1) <+ (({((ii) |-> (((MaxStocks )(ii) - ((cCurrentStocks$1 )(ii) + amt))))})))) : (((((1) .. (5))) --> (((0) .. (4000))))));
-((((cShortages$1) <+ (({((ii) |-> (bool((((((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))) )(ii) + amt) +1 <= ((MaxStocks )(ii) / 2)))))})))) : (((((1) .. (5))) --> (BOOL))));
+((((cShortages$1) <+ (({((ii) |-> (bool((((cCurrentStocks$1 )(ii) + amt) +1 <= ((MaxStocks )(ii) / 2)))))})))) : (((((1) .. (5))) --> (BOOL))));
 "Check invariant ((cCurrentStocks$1) = (CurrentStocks))";
 ((((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))})))) = (((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))})))));
 "Check invariant ((cRequiredAmounts$1) = (RequiredAmounts))";
 ((((cRequiredAmounts$1) <+ (({((ii) |-> (((MaxStocks )(ii) - ((cCurrentStocks$1 )(ii) + amt))))})))) = (((RequiredAmounts) <+ (({((ii) |-> (((MaxStocks )(ii) - ((CurrentStocks )(ii) + amt))))})))));
-((dom(((((cShortages$1) <+ (({((ii) |-> (bool((((((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))) )(ii) + amt) +1 <= ((MaxStocks )(ii) / 2)))))})))) |> (({TRUE}))))) = (SET(xx).(((xx) : (dom(CurrentStocks))) & ((((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))}))) )(xx) +1 <= ((MaxStocks )(xx) / 2)))));
-((dom(((((cShortages$1) <+ (({((ii) |-> (bool((((((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))) )(ii) + amt) +1 <= ((MaxStocks )(ii) / 2)))))})))) |> (({FALSE}))))) = ((((1) .. (5)) - SET(xx).(((xx) : (dom(CurrentStocks))) & ((((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))}))) )(xx) +1 <= ((MaxStocks )(xx) / 2))))));
+((dom(((((cShortages$1) <+ (({((ii) |-> (bool((((cCurrentStocks$1 )(ii) + amt) +1 <= ((MaxStocks )(ii) / 2)))))})))) |> (({TRUE}))))) = (SET(xx).(((xx) : (dom(CurrentStocks))) & ((((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))}))) )(xx) +1 <= ((MaxStocks )(xx) / 2)))));
+((dom(((((cShortages$1) <+ (({((ii) |-> (bool((((cCurrentStocks$1 )(ii) + amt) +1 <= ((MaxStocks )(ii) / 2)))))})))) |> (({FALSE}))))) = ((((1) .. (5)) - SET(xx).(((xx) : (dom(CurrentStocks))) & ((((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))}))) )(xx) +1 <= ((MaxStocks )(xx) / 2))))));
 ((dom(((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))))) = (dom(MaxStocks)));
 ((((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))) )(ii$1) <= (MaxStocks )(ii$1));
 (((((cRequiredAmounts$1) <+ (({((ii) |-> (((MaxStocks )(ii) - ((cCurrentStocks$1 )(ii) + amt))))}))) )(ii$1)) = (((MaxStocks )(ii$1) - (((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))) )(ii$1))));
 "Instruction Well Definess";
-((ii) : (dom(((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))))));
 ((ii) : (dom(cCurrentStocks$1)));
 ((res) = (res));
 ((res$1) = (res));
@@ -136,7 +134,7 @@ dom(cCurrentStocks$1) = ((1) .. (5));
 ((MaxStockCount_in) : (((0) .. (4000))));
 ((amt) : (((0) .. (4000))));
 "Well definedness";
-((((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))})))) : (((dom(((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))))) +-> (ran(((cCurrentStocks$1) <+ (({((ii) |-> (((cCurrentStocks$1 )(ii) + amt)))}))))))));
+((cCurrentStocks$1) : (((dom(cCurrentStocks$1)) +-> (ran(cCurrentStocks$1)))));
 ((MaxStocks) : (((dom(MaxStocks)) +-> (ran(MaxStocks)))));
 not(((2) = (0)))
 END

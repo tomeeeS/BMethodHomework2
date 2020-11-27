@@ -59,13 +59,12 @@ OPERATIONS
     BEGIN
         VAR currentTmp, requiredTmp IN
             currentTmp, requiredTmp <--
-                bring_into_warehouse(cCurrentStocks(ii), amt, MaxStocks(ii));
+                BringIntoWarehouse(cCurrentStocks(ii), amt, MaxStocks(ii));
+            //shortageTmp <-- IsOnShortage(cCurrentStocks(ii), amt, MaxStocks(ii));
+            cShortages(ii) := bool(cCurrentStocks(ii) + amt < MaxStocks(ii) / 2);
             cCurrentStocks(ii) := currentTmp;
-            cRequiredAmounts(ii) := requiredTmp;
-    
-            // this into new machine op too? need to prove it's true and it's false 
-            // exactly when bool(..) is
-            cShortages(ii) := bool(cCurrentStocks(ii) + amt < MaxStocks(ii) / 2) 
+            cRequiredAmounts(ii) := requiredTmp    
+            //cShortages(ii) := shortageTmp
         END 
     END
     ;

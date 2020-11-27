@@ -1,11 +1,9 @@
 ﻿THEORY BalanceX IS
-  forklift,4,0,0,4,0,0,0;
-  Initialisation,3,0,0,3,0,0,0;
-  bring_into_warehouse,1,0,0,1,0,0,0
+  forklift,3,0,0,3,0,0,0;
+  Initialisation,3,0,0,3,0,0,0
 END
 &
 THEORY ProofState IS
-  Proved(0);
   Proved(0);
   Proved(0);
   Proved(0)
@@ -14,12 +12,10 @@ END
 THEORY MethodList IS
   pr;
   pr;
-  pr;
   pr
 END
 &
 THEORY PassList IS
-  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?

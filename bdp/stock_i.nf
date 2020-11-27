@@ -122,8 +122,8 @@ END
 &
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Implementation(stock_i),GetShortage)==(btrue | res:=cShortages);
-  Expanded_List_Substitution(Implementation(stock_i),Put)==(ii: dom(CurrentStocks) & amt: 1..4000 & CurrentStocks(ii)+amt: 0..4000 & CurrentStocks(ii)+amt<=MaxStocks(ii) & MaxStocks(ii)-(CurrentStocks(ii)+amt): 0..4000 | @(currentTmp,requiredTmp).((ii: dom(cCurrentStocks) & ii: dom(MaxStocks) & cCurrentStocks(ii): 0..4000 & MaxStocks(ii): 0..4000 & amt: 1..4000 & cCurrentStocks(ii)+amt: 0..4000 & cCurrentStocks(ii)+amt<=MaxStocks(ii) & MaxStocks(ii)-(cCurrentStocks(ii)+amt): 0..4000 | CurrentStockCount,RequiredStockCount,MaxStockCount,currentTmp,requiredTmp:=cCurrentStocks(ii)+amt,MaxStocks(ii)-(cCurrentStocks(ii)+amt),MaxStocks(ii),cCurrentStocks(ii)+amt,MaxStocks(ii)-(cCurrentStocks(ii)+amt));(ii: dom(cCurrentStocks) & currentTmp: INT | cCurrentStocks:=cCurrentStocks<+{ii|->currentTmp});(ii: dom(cRequiredAmounts) & requiredTmp: INT | cRequiredAmounts:=cRequiredAmounts<+{ii|->requiredTmp});(ii: dom(cShortages) & ii: dom(cCurrentStocks) & cCurrentStocks(ii)+amt: INT & cCurrentStocks(ii): INT & amt: INT & ii: dom(MaxStocks) & MaxStocks(ii)/2: INT & MaxStocks(ii): INT & 2: INT & not(2 = 0) | cShortages:=cShortages<+{ii|->bool(cCurrentStocks(ii)+amt<MaxStocks(ii)/2)})));
-  List_Substitution(Implementation(stock_i),Put)==(VAR currentTmp,requiredTmp IN currentTmp,requiredTmp <-- bring_into_warehouse(cCurrentStocks(ii),amt,MaxStocks(ii));cCurrentStocks(ii):=currentTmp;cRequiredAmounts(ii):=requiredTmp;cShortages(ii):=bool(cCurrentStocks(ii)+amt<MaxStocks(ii)/2) END);
+  Expanded_List_Substitution(Implementation(stock_i),Put)==(ii: dom(CurrentStocks) & amt: 1..4000 & CurrentStocks(ii)+amt: 0..4000 & CurrentStocks(ii)+amt<=MaxStocks(ii) & MaxStocks(ii)-(CurrentStocks(ii)+amt): 0..4000 | @(currentTmp,requiredTmp).((ii: dom(cCurrentStocks) & ii: dom(MaxStocks) & cCurrentStocks(ii): 0..4000 & MaxStocks(ii): 0..4000 & amt: 1..4000 & cCurrentStocks(ii)+amt: 0..4000 & cCurrentStocks(ii)+amt<=MaxStocks(ii) & MaxStocks(ii)-(cCurrentStocks(ii)+amt): 0..4000 | currentTmp,requiredTmp:=cCurrentStocks(ii)+amt,MaxStocks(ii)-(cCurrentStocks(ii)+amt));(ii: dom(cShortages) & ii: dom(cCurrentStocks) & cCurrentStocks(ii)+amt: INT & cCurrentStocks(ii): INT & amt: INT & ii: dom(MaxStocks) & MaxStocks(ii)/2: INT & MaxStocks(ii): INT & 2: INT & not(2 = 0) | cShortages:=cShortages<+{ii|->bool(cCurrentStocks(ii)+amt<MaxStocks(ii)/2)});(ii: dom(cCurrentStocks) & currentTmp: INT | cCurrentStocks:=cCurrentStocks<+{ii|->currentTmp});(ii: dom(cRequiredAmounts) & requiredTmp: INT | cRequiredAmounts:=cRequiredAmounts<+{ii|->requiredTmp})));
+  List_Substitution(Implementation(stock_i),Put)==(VAR currentTmp,requiredTmp IN currentTmp,requiredTmp <-- BringIntoWarehouse(cCurrentStocks(ii),amt,MaxStocks(ii));cShortages(ii):=bool(cCurrentStocks(ii)+amt<MaxStocks(ii)/2);cCurrentStocks(ii):=currentTmp;cRequiredAmounts(ii):=requiredTmp END);
   List_Substitution(Implementation(stock_i),GetShortage)==(res:=cShortages)
 END
 &
@@ -170,7 +170,8 @@ END
 THEORY ListSeenInfoX END
 &
 THEORY ListIncludedOperationsX IS
-  List_Included_Operations(Implementation(stock_i),Machine(forklift))==(bring_into_warehouse)
+  List_Included_Operations(Implementation(stock_i),Machine(shortage_classifier))==(bring_into_warehouse);
+  List_Included_Operations(Implementation(stock_i),Machine(forklift))==(BringIntoWarehouse)
 END
 &
 THEORY InheritedEnvX IS
@@ -187,12 +188,12 @@ THEORY ListOfIdsX IS
   List_Of_VisibleCst_Ids(Implementation(stock_i)) == (?);
   List_Of_VisibleVar_Ids(Implementation(stock_i)) == (cRequiredAmounts,cShortages,cCurrentStocks | ?);
   List_Of_Ids_SeenBNU(Implementation(stock_i)) == (?: ?);
-  List_Of_Ids(Machine(shortage_classifier)) == (? | ? | ? | ? | ? | ? | ? | ? | shortage_classifier);
+  List_Of_Ids(Machine(shortage_classifier)) == (? | ? | MaxStockCount,RequiredStockCount,CurrentStockCount | ? | bring_into_warehouse | ? | ? | ? | shortage_classifier);
   List_Of_HiddenCst_Ids(Machine(shortage_classifier)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(shortage_classifier)) == (?);
   List_Of_VisibleVar_Ids(Machine(shortage_classifier)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(shortage_classifier)) == (?: ?);
-  List_Of_Ids(Machine(forklift)) == (? | ? | MaxStockCount,RequiredStockCount,CurrentStockCount | ? | bring_into_warehouse | ? | ? | ? | forklift);
+  List_Of_Ids(Machine(forklift)) == (? | ? | ? | ? | BringIntoWarehouse | ? | ? | ? | forklift);
   List_Of_HiddenCst_Ids(Machine(forklift)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(forklift)) == (?);
   List_Of_VisibleVar_Ids(Machine(forklift)) == (? | ?);
@@ -244,9 +245,9 @@ THEORY TypingPredicateX IS
 END
 &
 THEORY ImportedVariablesListX IS
-  ImportedVariablesList(Implementation(stock_i),Machine(forklift))==(MaxStockCount,RequiredStockCount,CurrentStockCount);
+  ImportedVariablesList(Implementation(stock_i),Machine(forklift))==(?);
   ImportedVisVariablesList(Implementation(stock_i),Machine(forklift))==(?);
-  ImportedVariablesList(Implementation(stock_i),Machine(shortage_classifier))==(?);
+  ImportedVariablesList(Implementation(stock_i),Machine(shortage_classifier))==(MaxStockCount,RequiredStockCount,CurrentStockCount);
   ImportedVisVariablesList(Implementation(stock_i),Machine(shortage_classifier))==(?)
 END
 &
