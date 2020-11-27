@@ -108,30 +108,20 @@
 </Integer_Literal>
 </Binary_Exp>
 </Exp_Comparison>
-<Exp_Comparison op=':'>
+<Exp_Comparison op='&lt;='>
 <Attr>
-<Pos l='16' c='25' s='1'/>
+<Pos l='16' c='25' s='2'/>
 </Attr>
 <Id value='CurrentStockCount' typref='2701647786'>
 <Attr>
 <Pos l='16' c='7' s='17'/>
 </Attr>
 </Id>
-<Binary_Exp op='..' typref='3603043417'>
-<Attr>
-<Pos l='16' c='28' s='2'/>
-</Attr>
-<Integer_Literal value='0' typref='2701647786'>
-<Attr>
-<Pos l='16' c='27' s='1'/>
-</Attr>
-</Integer_Literal>
 <Id value='MaxStockCount' typref='2701647786'>
 <Attr>
-<Pos l='16' c='30' s='13'/>
+<Pos l='16' c='28' s='13'/>
 </Attr>
 </Id>
-</Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
@@ -343,64 +333,64 @@
 </Exp_Comparison>
 <Exp_Comparison op=':'>
 <Attr>
-<Pos l='36' c='35' s='1'/>
+<Pos l='36' c='38' s='1'/>
 </Attr>
 <Binary_Exp op='+' typref='2701647786'>
 <Attr>
-<Pos l='36' c='29' s='1'/>
+<Pos l='36' c='32' s='1'/>
 </Attr>
-<Id value='CurrentStockCount' typref='2701647786'>
+<Id value='CurrentStockCount_in' typref='2701647786'>
 <Attr>
-<Pos l='36' c='11' s='17'/>
+<Pos l='36' c='11' s='20'/>
 </Attr>
 </Id>
 <Id value='amt' typref='2701647786'>
 <Attr>
-<Pos l='36' c='31' s='3'/>
+<Pos l='36' c='34' s='3'/>
 </Attr>
 </Id>
 </Binary_Exp>
 <Binary_Exp op='..' typref='3603043417'>
 <Attr>
 <Pos f='definitions.def' l='3' c='28' s='2' expanded='yes'/>
-<Pos f='forklift.mch' l='36' c='37' s='17'/>
+<Pos f='forklift.mch' l='36' c='40' s='17'/>
 </Attr>
 <Integer_Literal value='0' typref='2701647786'>
 <Attr>
 <Pos f='definitions.def' l='3' c='27' s='1' expanded='yes'/>
-<Pos f='forklift.mch' l='36' c='37' s='17'/>
+<Pos f='forklift.mch' l='36' c='40' s='17'/>
 </Attr>
 </Integer_Literal>
 <Integer_Literal value='4000' typref='2701647786'>
 <Attr>
 <Pos f='definitions.def' l='3' c='30' s='4' expanded='yes'/>
-<Pos f='forklift.mch' l='36' c='37' s='17'/>
+<Pos f='forklift.mch' l='36' c='40' s='17'/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op='&lt;='>
 <Attr>
-<Pos l='37' c='35' s='2'/>
+<Pos l='37' c='38' s='2'/>
 </Attr>
 <Binary_Exp op='+' typref='2701647786'>
 <Attr>
-<Pos l='37' c='29' s='1'/>
+<Pos l='37' c='32' s='1'/>
 </Attr>
-<Id value='CurrentStockCount' typref='2701647786'>
+<Id value='CurrentStockCount_in' typref='2701647786'>
 <Attr>
-<Pos l='37' c='11' s='17'/>
+<Pos l='37' c='11' s='20'/>
 </Attr>
 </Id>
 <Id value='amt' typref='2701647786'>
 <Attr>
-<Pos l='37' c='31' s='3'/>
+<Pos l='37' c='34' s='3'/>
 </Attr>
 </Id>
 </Binary_Exp>
 <Id value='MaxStockCount_in' typref='2701647786'>
 <Attr>
-<Pos l='37' c='38' s='16'/>
+<Pos l='37' c='41' s='16'/>
 </Attr>
 </Id>
 </Exp_Comparison>

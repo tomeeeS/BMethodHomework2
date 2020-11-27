@@ -63,7 +63,6 @@ INITIALISATION
 
 OPERATIONS
 
-
     Put ( ii , amt ) = //Feladat1
     PRE
         ii : dom ( CurrentStocks )
@@ -77,8 +76,8 @@ OPERATIONS
         || RequiredAmounts ( ii ) := MaxStocks ( ii ) - ( CurrentStocks ( ii ) + amt )
         || Shortages := { xx | xx : dom ( CurrentStocks ) & ( CurrentStocks <+ { ii |-> CurrentStocks ( ii ) + amt } ) ( xx ) < MaxStocks ( xx ) / 2 }
     END
-
     ;
+
     /*
     Pop ( ii , amt ) = //Feladat2
     PRE

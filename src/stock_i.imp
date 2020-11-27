@@ -39,7 +39,7 @@ INVARIANT
     
     // cCurrentStocks
     & dom(cCurrentStocks) = dom(MaxStocks)
-    & !ii.(ii: dom(cCurrentStocks) => cCurrentStocks(ii) : 0..MaxStocks(ii) )
+    & !ii.(ii: dom(cCurrentStocks) => cCurrentStocks(ii) <= MaxStocks(ii) )
     
     // cShortages
     & !xx.(xx : dom(cShortages |> {TRUE}) => cCurrentStocks(xx) < MaxStocks(xx) / 2)
@@ -55,7 +55,7 @@ INITIALISATION
 
 OPERATIONS
     
-    Put (ii, amt ) = //Feladat1
+    Put(ii, amt) = //Feladat1
     BEGIN
         VAR currentTmp, requiredTmp IN
             currentTmp, requiredTmp <--
@@ -83,9 +83,7 @@ OPERATIONS
 
     
     res <-- GetShortage = //Feladat3
-    BEGIN
         res := cShortages
-    END
 /*
     ;
 

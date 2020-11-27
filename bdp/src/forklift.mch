@@ -13,7 +13,7 @@ INVARIANT
     & RequiredStockCount : ( 0 .. 4000 )
     & MaxStockCount : ( 0 .. 4000 )
 
-    & CurrentStockCount : 0 .. MaxStockCount
+    & CurrentStockCount <= MaxStockCount
     & RequiredStockCount = MaxStockCount - CurrentStockCount
 
 INITIALISATION
@@ -33,8 +33,8 @@ OPERATIONS
         & MaxStockCount_in : ( 0 .. 4000 )
         & amt : 1 .. 4000
 
-        & CurrentStockCount + amt : ( 0 .. 4000 )
-        & CurrentStockCount + amt <= MaxStockCount_in
+        & CurrentStockCount_in + amt : ( 0 .. 4000 )
+        & CurrentStockCount_in + amt <= MaxStockCount_in
         & MaxStockCount_in - ( CurrentStockCount_in + amt ) : ( 0 .. 4000 )
     THEN
         CurrentStockCount := CurrentStockCount_in + amt
