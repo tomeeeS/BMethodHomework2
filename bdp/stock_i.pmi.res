@@ -1,2 +1,1 @@
-﻿ECHEC
-
+﻿BADTYPE

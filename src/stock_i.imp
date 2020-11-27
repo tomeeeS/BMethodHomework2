@@ -57,14 +57,22 @@ OPERATIONS
     
     Put(ii, amt) = //Feladat1
     BEGIN
-        VAR currentTmp, requiredTmp IN
+        VAR currentTmp, requiredTmp, shortageTmp IN
+
             currentTmp, requiredTmp <--
                 BringIntoWarehouse(cCurrentStocks(ii), amt, MaxStocks(ii));
-            //shortageTmp <-- IsOnShortage(cCurrentStocks(ii), amt, MaxStocks(ii));
-            cShortages(ii) := bool(cCurrentStocks(ii) + amt < MaxStocks(ii) / 2);
+                
+            shortageTmp <-- IsOnShortage(
+                cShortages,
+                cCurrentStocks,
+                ii,
+                amt,
+                MaxStocks
+            );
+            
             cCurrentStocks(ii) := currentTmp;
-            cRequiredAmounts(ii) := requiredTmp    
-            //cShortages(ii) := shortageTmp
+            cRequiredAmounts(ii) := requiredTmp;
+            cShortages(ii) := shortageTmp
         END 
     END
     ;

@@ -37,9 +37,9 @@ THEORY ListVariablesX IS
   External_Context_List_Variables(Machine(shortage_classifier))==(?);
   Context_List_Variables(Machine(shortage_classifier))==(?);
   Abstract_List_Variables(Machine(shortage_classifier))==(?);
-  Local_List_Variables(Machine(shortage_classifier))==(MaxStockCount,RequiredStockCount,CurrentStockCount);
-  List_Variables(Machine(shortage_classifier))==(MaxStockCount,RequiredStockCount,CurrentStockCount);
-  External_List_Variables(Machine(shortage_classifier))==(MaxStockCount,RequiredStockCount,CurrentStockCount)
+  Local_List_Variables(Machine(shortage_classifier))==(?);
+  List_Variables(Machine(shortage_classifier))==(?);
+  External_List_Variables(Machine(shortage_classifier))==(?)
 END
 &
 THEORY ListVisibleVariablesX IS
@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(shortage_classifier))==(btrue);
   Abstract_List_Invariant(Machine(shortage_classifier))==(btrue);
   Context_List_Invariant(Machine(shortage_classifier))==(btrue);
-  List_Invariant(Machine(shortage_classifier))==(CurrentStockCount: 0..4000 & RequiredStockCount: 0..4000 & MaxStockCount: 0..4000 & CurrentStockCount<=MaxStockCount & RequiredStockCount = MaxStockCount-CurrentStockCount)
+  List_Invariant(Machine(shortage_classifier))==(btrue)
 END
 &
 THEORY ListAssertionsX IS
@@ -76,9 +76,9 @@ THEORY ListExclusivityX IS
 END
 &
 THEORY ListInitialisationX IS
-  Expanded_List_Initialisation(Machine(shortage_classifier))==(CurrentStockCount,RequiredStockCount,MaxStockCount:=0,0,0);
+  Expanded_List_Initialisation(Machine(shortage_classifier))==(skip);
   Context_List_Initialisation(Machine(shortage_classifier))==(skip);
-  List_Initialisation(Machine(shortage_classifier))==(CurrentStockCount:=0 || RequiredStockCount:=0 || MaxStockCount:=0)
+  List_Initialisation(Machine(shortage_classifier))==(skip)
 END
 &
 THEORY ListParametersX IS
@@ -93,31 +93,31 @@ THEORY ListConstraintsX IS
 END
 &
 THEORY ListOperationsX IS
-  Internal_List_Operations(Machine(shortage_classifier))==(bring_into_warehouse);
-  List_Operations(Machine(shortage_classifier))==(bring_into_warehouse)
+  Internal_List_Operations(Machine(shortage_classifier))==(IsOnShortage);
+  List_Operations(Machine(shortage_classifier))==(IsOnShortage)
 END
 &
 THEORY ListInputX IS
-  List_Input(Machine(shortage_classifier),bring_into_warehouse)==(CurrentStockCount_in,amt,MaxStockCount_in)
+  List_Input(Machine(shortage_classifier),IsOnShortage)==(Shortages,CurrentStocks,ii,amt,MaxStocks)
 END
 &
 THEORY ListOutputX IS
-  List_Output(Machine(shortage_classifier),bring_into_warehouse)==(newCurrent,newRequired)
+  List_Output(Machine(shortage_classifier),IsOnShortage)==(res)
 END
 &
 THEORY ListHeaderX IS
-  List_Header(Machine(shortage_classifier),bring_into_warehouse)==(newCurrent,newRequired <-- bring_into_warehouse(CurrentStockCount_in,amt,MaxStockCount_in))
+  List_Header(Machine(shortage_classifier),IsOnShortage)==(res <-- IsOnShortage(Shortages,CurrentStocks,ii,amt,MaxStocks))
 END
 &
 THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
-  List_Precondition(Machine(shortage_classifier),bring_into_warehouse)==(CurrentStockCount_in: 0..4000 & MaxStockCount_in: 0..4000 & amt: 1..4000 & CurrentStockCount_in+amt: 0..4000 & CurrentStockCount_in+amt<=MaxStockCount_in & MaxStockCount_in-(CurrentStockCount_in+amt): 0..4000)
+  List_Precondition(Machine(shortage_classifier),IsOnShortage)==(Shortages: 1..5 --> BOOL & CurrentStocks: 1..5 --> 0..4000 & ii: dom(CurrentStocks) & MaxStocks: 1..5 --> 0..4000 & amt: 1..4000 & res: 1..5 --> BOOL & CurrentStocks(ii)+amt: 0..4000 & !xx.(xx: dom(Shortages|>{TRUE}) => CurrentStocks(xx)<MaxStocks(xx)/2) & !xx.(xx: dom(CurrentStocks) & CurrentStocks(xx)<MaxStocks(xx)/2 => xx: dom(Shortages|>{TRUE})))
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(shortage_classifier),bring_into_warehouse)==(CurrentStockCount_in: 0..4000 & MaxStockCount_in: 0..4000 & amt: 1..4000 & CurrentStockCount_in+amt: 0..4000 & CurrentStockCount_in+amt<=MaxStockCount_in & MaxStockCount_in-(CurrentStockCount_in+amt): 0..4000 | CurrentStockCount,RequiredStockCount,MaxStockCount,newCurrent,newRequired:=CurrentStockCount_in+amt,MaxStockCount_in-(CurrentStockCount_in+amt),MaxStockCount_in,CurrentStockCount_in+amt,MaxStockCount_in-(CurrentStockCount_in+amt));
-  List_Substitution(Machine(shortage_classifier),bring_into_warehouse)==(CurrentStockCount:=CurrentStockCount_in+amt || RequiredStockCount:=MaxStockCount_in-(CurrentStockCount_in+amt) || MaxStockCount:=MaxStockCount_in || newCurrent:=CurrentStockCount_in+amt || newRequired:=MaxStockCount_in-(CurrentStockCount_in+amt))
+  Expanded_List_Substitution(Machine(shortage_classifier),IsOnShortage)==(Shortages: 1..5 --> BOOL & CurrentStocks: 1..5 --> 0..4000 & ii: dom(CurrentStocks) & MaxStocks: 1..5 --> 0..4000 & amt: 1..4000 & res: 1..5 --> BOOL & CurrentStocks(ii)+amt: 0..4000 & !xx.(xx: dom(Shortages|>{TRUE}) => CurrentStocks(xx)<MaxStocks(xx)/2) & !xx.(xx: dom(CurrentStocks) & CurrentStocks(xx)<MaxStocks(xx)/2 => xx: dom(Shortages|>{TRUE})) | res:=Shortages<+{ii|->bool(CurrentStocks(ii)+amt<MaxStocks(ii)/2)});
+  List_Substitution(Machine(shortage_classifier),IsOnShortage)==(res:=Shortages<+{ii|->bool(CurrentStocks(ii)+amt<MaxStocks(ii)/2)})
 END
 &
 THEORY ListConstantsX IS
@@ -156,23 +156,20 @@ END
 THEORY ListSeenInfoX END
 &
 THEORY ListANYVarX IS
-  List_ANY_Var(Machine(shortage_classifier),bring_into_warehouse)==(?)
+  List_ANY_Var(Machine(shortage_classifier),IsOnShortage)==(?)
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(shortage_classifier)) == (? | ? | MaxStockCount,RequiredStockCount,CurrentStockCount | ? | bring_into_warehouse | ? | ? | ? | shortage_classifier);
+  List_Of_Ids(Machine(shortage_classifier)) == (? | ? | ? | ? | IsOnShortage | ? | ? | ? | shortage_classifier);
   List_Of_HiddenCst_Ids(Machine(shortage_classifier)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(shortage_classifier)) == (?);
   List_Of_VisibleVar_Ids(Machine(shortage_classifier)) == (? | ?);
   List_Of_Ids_SeenBNU(Machine(shortage_classifier)) == (?: ?)
 END
 &
-THEORY VariablesEnvX IS
-  Variables(Machine(shortage_classifier)) == (Type(MaxStockCount) == Mvl(btype(INTEGER,?,?));Type(RequiredStockCount) == Mvl(btype(INTEGER,?,?));Type(CurrentStockCount) == Mvl(btype(INTEGER,?,?)))
-END
-&
 THEORY OperationsEnvX IS
-  Operations(Machine(shortage_classifier)) == (Type(bring_into_warehouse) == Cst(btype(INTEGER,?,?)*btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?)*btype(INTEGER,?,?)))
+  Operations(Machine(shortage_classifier)) == (Type(IsOnShortage) == Cst(SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1)),SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1))*SetOf(btype(INTEGER,1,5)*btype(INTEGER,0,4000))*btype(INTEGER,?,?)*btype(INTEGER,?,?)*SetOf(btype(INTEGER,1,5)*btype(INTEGER,0,4000))));
+  Observers(Machine(shortage_classifier)) == (Type(IsOnShortage) == Cst(SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1)),SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1))*SetOf(btype(INTEGER,1,5)*btype(INTEGER,0,4000))*btype(INTEGER,?,?)*btype(INTEGER,?,?)*SetOf(btype(INTEGER,1,5)*btype(INTEGER,0,4000))))
 END
 &
 THEORY TCIntRdX IS

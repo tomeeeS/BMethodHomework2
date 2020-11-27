@@ -4,54 +4,29 @@ MACHINE
 DEFINITIONS
     "definitions.def"
     
-ABSTRACT_VARIABLES
-    CurrentStockCount, RequiredStockCount, MaxStockCount
-    
-INVARIANT
-    // types
-    CurrentStockCount : NUM_OF_STOCK_TYPE
-    & RequiredStockCount : NUM_OF_STOCK_TYPE
-    & MaxStockCount : NUM_OF_STOCK_TYPE
-    
-    & CurrentStockCount <= MaxStockCount
-    & RequiredStockCount = MaxStockCount - CurrentStockCount
-    
-INITIALISATION
-    CurrentStockCount := 0
-    || RequiredStockCount := 0
-    || MaxStockCount := 0
-    
 OPERATIONS
-    //bool(cCurrentStocks(ii) + amt < MaxStocks(ii) / 2) 
     
-    
-    newCurrent, newRequired <-- bring_into_warehouse(
-        CurrentStockCount_in,
+    res <-- IsOnShortage(
+        Shortages,
+        CurrentStocks,
+        ii,
         amt,
-        MaxStockCount_in
+        MaxStocks
     ) =
     PRE
-        CurrentStockCount_in : NUM_OF_STOCK_TYPE
-        & MaxStockCount_in : NUM_OF_STOCK_TYPE
+        Shortages : (1..5) --> BOOL
+        & CurrentStocks : STOCKS --> NUM_OF_STOCK_TYPE
+        & ii : dom(CurrentStocks)
+        & MaxStocks : STOCKS --> NUM_OF_STOCK_TYPE
         & amt : 1 .. 4000
+        & res : BOOL
         
-        & CurrentStockCount_in + amt : NUM_OF_STOCK_TYPE
-        & CurrentStockCount_in + amt <= MaxStockCount_in
-        & MaxStockCount_in - (CurrentStockCount_in + amt) : NUM_OF_STOCK_TYPE
+        & CurrentStocks(ii) + amt : NUM_OF_STOCK_TYPE
+        & !xx.(xx : dom(Shortages |> {TRUE}) => CurrentStocks(xx) < MaxStocks(xx) / 2)
+        & !xx.((xx : dom(CurrentStocks) & CurrentStocks(xx) < MaxStocks(xx) / 2) =>
+            xx : dom(Shortages |> {TRUE}))
     THEN
-        CurrentStockCount := CurrentStockCount_in + amt
-        || RequiredStockCount := MaxStockCount_in - (CurrentStockCount_in + amt)
-        || MaxStockCount := MaxStockCount_in
-        
-        || newCurrent := CurrentStockCount_in + amt
-        || newRequired := MaxStockCount_in - (CurrentStockCount_in + amt)
+        res := bool(CurrentStocks(ii) + amt < MaxStocks(ii) / 2)
     END
-    /*;
     
-    
-    ret <-- load_delivery_truck(CurrentStocks, ii, amt) 
-    BEGIN
-        ;
-    END
-    */
 END
