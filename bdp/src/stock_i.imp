@@ -42,8 +42,10 @@ INVARIANT
     & ! ii . ( ii : dom ( cCurrentStocks ) => cCurrentStocks ( ii ) <= MaxStocks ( ii ) )
 
     // cShortages
-    & ! xx . ( xx : dom ( cShortages |> { TRUE } ) => cCurrentStocks ( xx ) < MaxStocks ( xx ) / 2 )
-    & ! xx . ( ( xx : dom ( cCurrentStocks ) & cCurrentStocks ( xx ) < MaxStocks ( xx ) / 2 ) => xx : dom ( cShortages |> { TRUE } ) )
+    & ! xx . ( xx : dom ( cShortages |> { TRUE } ) =>
+        cCurrentStocks ( xx ) < MaxStocks ( xx ) / 2 )
+    & ! xx . ( ( xx : dom ( cCurrentStocks ) & cCurrentStocks ( xx ) < MaxStocks ( xx ) / 2 ) =>
+        xx : dom ( cShortages |> { TRUE } ) )
 
     // cRequiredAmounts
     & ! ii . ( ii : dom ( cRequiredAmounts ) => cRequiredAmounts ( ii ) = MaxStocks ( ii ) - cCurrentStocks ( ii ) )
@@ -60,7 +62,7 @@ OPERATIONS
         VAR currentTmp , requiredTmp , shortageTmp IN
 
             shortageTmp <-- IsOnShortage (
-                cShortages ,
+                dom ( cShortages |> { TRUE } ) ,
                 cCurrentStocks ,
                 ii ,
                 amt ,
