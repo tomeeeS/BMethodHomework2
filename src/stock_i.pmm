@@ -1,9 +1,10 @@
 THEORY User_Pass IS
-// for shortage well-definedness
+Pattern(dom(a|>{b}) = SET(c).(c : dom(d) & (d<+{e|->d(e)+f})(c)+g<=h(c)/i)) 
+	& ff(0) & eh(cCurrentStocks$1,_h,Goal);
 Pattern(a(b)+c<=d(b)/e) 
 	& ff(0) & eh(MaxStocks,_h,Goal) & dd & pr;
-	
-// CONCRETE_CONSTANTS MaxStocks proof
+Pattern((a<+{b|->a(b)+c})(d)+e<=f(d)/g) 
+	& ff(0) & eh(MaxStocks,_h,Goal) & dd & pr;
 Pattern({a|->b}\/{c|->d}\/{e|->f}\/{g|->h}\/{i|->j} : a..i --> k..j) 
 	& ff(0) & dd & pr & p0 & pr & pr & pr & p0 & pr & pr & pr & p0 & pr & pr & pp & pp & pr
 END 

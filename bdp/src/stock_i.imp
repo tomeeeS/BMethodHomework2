@@ -36,6 +36,10 @@ INVARIANT
     & cRequiredAmounts = RequiredAmounts
     & dom ( cShortages |> { TRUE } ) = Shortages
     & dom ( cShortages |> { FALSE } ) = ( ( 1 .. 5 ) ) - Shortages
+    /*& !xx.(xx : Shortages =>
+        cShortages(xx) = TRUE)
+    & !xx.(xx : (STOCKS - Shortages) =>
+        cShortages(xx) = FALSE)*/
 
     // cCurrentStocks
     & dom ( cCurrentStocks ) = dom ( MaxStocks )
@@ -62,7 +66,7 @@ OPERATIONS
         VAR currentTmp , requiredTmp , shortageTmp IN
 
             shortageTmp <-- IsOnShortage (
-                dom ( cShortages |> { TRUE } ) ,
+                cShortages ,
                 cCurrentStocks ,
                 ii ,
                 amt ,
