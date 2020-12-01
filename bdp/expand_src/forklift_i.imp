@@ -1,19 +1,19 @@
-
+﻿
 IMPLEMENTATION forklift_i
 REFINES forklift
 DEFINITIONS
     "definitions.def"
-    
+
 OPERATIONS
-    
-    newCurrent, newRequired <-- BringIntoWarehouse(
-        CurrentStockCount_in,
-        amt,
+
+    newCurrent , newRequired <-- BringIntoWarehouse (
+        CurrentStockCount_in ,
+        amt ,
         MaxStockCount_in
     ) =
     BEGIN
-        newCurrent := CurrentStockCount_in + amt;
-        newRequired := MaxStockCount_in - (CurrentStockCount_in + amt)
+        newCurrent := CurrentStockCount_in + amt ;
+        newRequired := MaxStockCount_in - ( CurrentStockCount_in + amt )
     END
     /*;
     

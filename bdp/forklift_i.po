@@ -1,0 +1,19 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483648) .. (2147483647))));
+btrue;
+((CurrentStockCount_in) : (((0) .. (4000)))) & ((MaxStockCount_in) : (((0) .. (4000)))) & ((amt) : (((1) .. (4000)))) & (((CurrentStockCount_in + amt)) : (((0) .. (4000)))) & ((CurrentStockCount_in + amt) <= MaxStockCount_in) & (((MaxStockCount_in - (CurrentStockCount_in + amt))) : (((0) .. (4000)))) & ((newCurrent) = (newCurrent)) & ((newRequired) = (newRequired));
+((newCurrent$1) = (newCurrent)) & ((newRequired$1) = (newRequired));
+((CurrentStockCount_in) : (((0) .. (4000))));
+((MaxStockCount_in) : (((0) .. (4000))));
+((amt) : (((1) .. (4000))));
+(((CurrentStockCount_in + amt)) : (((0) .. (4000))));
+((CurrentStockCount_in + amt) <= MaxStockCount_in);
+(((MaxStockCount_in - (CurrentStockCount_in + amt))) : (((0) .. (4000))));
+((CurrentStockCount_in) : (((0) .. (4000)))) & ((MaxStockCount_in) : (((0) .. (4000)))) & ((amt) : (((1) .. (4000)))) & (((CurrentStockCount_in + amt)) : (((0) .. (4000)))) & ((CurrentStockCount_in + amt) <= MaxStockCount_in) & (((MaxStockCount_in - (CurrentStockCount_in + amt))) : (((0) .. (4000))))
+END
+&
+THEORY EnumerateX
+END

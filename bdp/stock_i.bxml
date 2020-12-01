@@ -930,7 +930,7 @@
 <Operations>
 <Operation name='Put'>
 <Attr>
-<Pos l='60' c='5' s='3' endLine='79'/>
+<Pos l='60' c='5' s='3' endLine='76'/>
 </Attr>
 <Input_Parameters>
 <Id value='ii' typref='2701647786'>
@@ -960,124 +960,53 @@
 <Pos l='62' c='25' s='11'/>
 </Attr>
 </Id>
-<Id value='shortageTmp' typref='1127519748'>
-<Attr>
-<Pos l='62' c='38' s='11'/>
-</Attr>
-</Id>
 </Variables>
 <Body>
 <Nary_Sub op=';'>
 <Operation_Call>
 <Attr>
-<Pos l='64' c='25' s='3'/>
-</Attr>
-<Name>
-<Id value='IsOnShortage'>
-<Attr>
-<Pos l='64' c='29' s='12'/>
-</Attr>
-</Id>
-</Name>
-<Input_Parameters>
-<Unary_Exp op='dom' typref='3603043417'>
-<Attr>
-<Pos l='65' c='17' s='3'/>
-</Attr>
-<Binary_Exp op='|&gt;' typref='1127519748'>
-<Attr>
-<Pos l='65' c='32' s='2'/>
-</Attr>
-<Id value='cShortages' typref='1127519748'>
-<Attr>
-<Pos l='65' c='21' s='10'/>
-</Attr>
-</Id>
-<Nary_Exp op='{' typref='4282494527'>
-<Attr>
-<Pos l='65' c='35' s='1'/>
-</Attr>
-<Boolean_Literal value='TRUE' typref='2043437594'>
-<Attr>
-<Pos l='65' c='36' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Nary_Exp>
-</Binary_Exp>
-</Unary_Exp>
-<Id value='cCurrentStocks' typref='103245008'>
-<Attr>
-<Pos l='66' c='17' s='14'/>
-</Attr>
-</Id>
-<Id value='ii' typref='2701647786'>
-<Attr>
-<Pos l='67' c='17' s='2'/>
-</Attr>
-</Id>
-<Id value='amt' typref='2701647786'>
-<Attr>
-<Pos l='68' c='17' s='3'/>
-</Attr>
-</Id>
-<Id value='MaxStocks' typref='103245008'>
-<Attr>
-<Pos l='69' c='17' s='9'/>
-</Attr>
-</Id>
-</Input_Parameters>
-<Output_Parameters>
-<Id value='shortageTmp' typref='1127519748'>
-<Attr>
-<Pos l='64' c='13' s='11'/>
-</Attr>
-</Id>
-</Output_Parameters>
-</Operation_Call>
-<Operation_Call>
-<Attr>
-<Pos l='72' c='37' s='3'/>
+<Pos l='64' c='37' s='3'/>
 </Attr>
 <Name>
 <Id value='BringIntoWarehouse'>
 <Attr>
-<Pos l='73' c='17' s='18'/>
+<Pos l='65' c='17' s='18'/>
 </Attr>
 </Id>
 </Name>
 <Input_Parameters>
 <Binary_Exp op='(' typref='2701647786'>
 <Attr>
-<Pos l='73' c='50' s='0'/>
+<Pos l='65' c='50' s='0'/>
 </Attr>
 <Id value='cCurrentStocks' typref='103245008'>
 <Attr>
-<Pos l='73' c='36' s='14'/>
+<Pos l='65' c='36' s='14'/>
 </Attr>
 </Id>
 <Id value='ii' typref='2701647786'>
 <Attr>
-<Pos l='73' c='51' s='2'/>
+<Pos l='65' c='51' s='2'/>
 </Attr>
 </Id>
 </Binary_Exp>
 <Id value='amt' typref='2701647786'>
 <Attr>
-<Pos l='73' c='56' s='3'/>
+<Pos l='65' c='56' s='3'/>
 </Attr>
 </Id>
 <Binary_Exp op='(' typref='2701647786'>
 <Attr>
-<Pos l='73' c='70' s='0'/>
+<Pos l='65' c='70' s='0'/>
 </Attr>
 <Id value='MaxStocks' typref='103245008'>
 <Attr>
-<Pos l='73' c='61' s='9'/>
+<Pos l='65' c='61' s='9'/>
 </Attr>
 </Id>
 <Id value='ii' typref='2701647786'>
 <Attr>
-<Pos l='73' c='71' s='2'/>
+<Pos l='65' c='71' s='2'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -1085,33 +1014,147 @@
 <Output_Parameters>
 <Id value='currentTmp' typref='2701647786'>
 <Attr>
-<Pos l='72' c='13' s='10'/>
+<Pos l='64' c='13' s='10'/>
 </Attr>
 </Id>
 <Id value='requiredTmp' typref='2701647786'>
 <Attr>
-<Pos l='72' c='25' s='11'/>
+<Pos l='64' c='25' s='11'/>
 </Attr>
 </Id>
 </Output_Parameters>
 </Operation_Call>
-<Assignement_Sub>
+<If_Sub elseif='no'>
 <Attr>
-<Pos l='75' c='32' s='2'/>
+<Pos l='67' c='13' s='2'/>
 </Attr>
-<Variables>
+<Condition>
+<Exp_Comparison op='&lt;'>
+<Attr>
+<Pos l='67' c='35' s='1'/>
+</Attr>
 <Binary_Exp op='(' typref='2701647786'>
 <Attr>
-<Pos l='75' c='27' s='0'/>
+<Pos l='67' c='30' s='0'/>
 </Attr>
 <Id value='cCurrentStocks' typref='103245008'>
 <Attr>
-<Pos l='75' c='13' s='14'/>
+<Pos l='67' c='16' s='14'/>
 </Attr>
 </Id>
 <Id value='ii' typref='2701647786'>
 <Attr>
-<Pos l='75' c='28' s='2'/>
+<Pos l='67' c='31' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp op='/' typref='2701647786'>
+<Attr>
+<Pos l='67' c='51' s='1'/>
+</Attr>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='67' c='46' s='0'/>
+</Attr>
+<Id value='MaxStocks' typref='103245008'>
+<Attr>
+<Pos l='67' c='37' s='9'/>
+</Attr>
+</Id>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='67' c='47' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Integer_Literal value='2' typref='2701647786'>
+<Attr>
+<Pos l='67' c='53' s='1'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Attr>
+<Pos l='68' c='32' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2043437594'>
+<Attr>
+<Pos l='68' c='27' s='0'/>
+</Attr>
+<Id value='cShortages' typref='1127519748'>
+<Attr>
+<Pos l='68' c='17' s='10'/>
+</Attr>
+</Id>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='68' c='28' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Boolean_Literal value='TRUE' typref='2043437594'>
+<Attr>
+<Pos l='68' c='35' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<Assignement_Sub>
+<Attr>
+<Pos l='70' c='32' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2043437594'>
+<Attr>
+<Pos l='70' c='27' s='0'/>
+</Attr>
+<Id value='cShortages' typref='1127519748'>
+<Attr>
+<Pos l='70' c='17' s='10'/>
+</Attr>
+</Id>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='70' c='28' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'>
+<Attr>
+<Pos l='70' c='35' s='5'/>
+</Attr>
+</Boolean_Literal>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='73' c='32' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='73' c='27' s='0'/>
+</Attr>
+<Id value='cCurrentStocks' typref='103245008'>
+<Attr>
+<Pos l='73' c='13' s='14'/>
+</Attr>
+</Id>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='73' c='28' s='2'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -1119,28 +1162,28 @@
 <Values>
 <Id value='currentTmp' typref='2701647786'>
 <Attr>
-<Pos l='75' c='35' s='10'/>
+<Pos l='73' c='35' s='10'/>
 </Attr>
 </Id>
 </Values>
 </Assignement_Sub>
 <Assignement_Sub>
 <Attr>
-<Pos l='76' c='34' s='2'/>
+<Pos l='74' c='34' s='2'/>
 </Attr>
 <Variables>
 <Binary_Exp op='(' typref='2701647786'>
 <Attr>
-<Pos l='76' c='29' s='0'/>
+<Pos l='74' c='29' s='0'/>
 </Attr>
 <Id value='cRequiredAmounts' typref='103245008'>
 <Attr>
-<Pos l='76' c='13' s='16'/>
+<Pos l='74' c='13' s='16'/>
 </Attr>
 </Id>
 <Id value='ii' typref='2701647786'>
 <Attr>
-<Pos l='76' c='30' s='2'/>
+<Pos l='74' c='30' s='2'/>
 </Attr>
 </Id>
 </Binary_Exp>
@@ -1148,26 +1191,7 @@
 <Values>
 <Id value='requiredTmp' typref='2701647786'>
 <Attr>
-<Pos l='76' c='37' s='11'/>
-</Attr>
-</Id>
-</Values>
-</Assignement_Sub>
-<Assignement_Sub>
-<Attr>
-<Pos l='77' c='24' s='2'/>
-</Attr>
-<Variables>
-<Id value='cShortages' typref='1127519748'>
-<Attr>
-<Pos l='77' c='13' s='10'/>
-</Attr>
-</Id>
-</Variables>
-<Values>
-<Id value='shortageTmp' typref='1127519748'>
-<Attr>
-<Pos l='77' c='27' s='11'/>
+<Pos l='74' c='37' s='11'/>
 </Attr>
 </Id>
 </Values>
@@ -1179,31 +1203,31 @@
 </Operation>
 <Operation name='GetShortage'>
 <Attr>
-<Pos l='94' c='5' s='3'/>
+<Pos l='91' c='5' s='3'/>
 </Attr>
 <Output_Parameters>
 <Id value='res' typref='1127519748'>
 <Attr>
-<Pos l='94' c='5' s='3'/>
+<Pos l='91' c='5' s='3'/>
 </Attr>
 </Id>
 </Output_Parameters>
 <Body>
 <Assignement_Sub>
 <Attr>
-<Pos l='95' c='13' s='2'/>
+<Pos l='92' c='13' s='2'/>
 </Attr>
 <Variables>
 <Id value='res' typref='1127519748'>
 <Attr>
-<Pos l='95' c='9' s='3'/>
+<Pos l='92' c='9' s='3'/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Id value='cShortages' typref='1127519748'>
 <Attr>
-<Pos l='95' c='16' s='10'/>
+<Pos l='92' c='16' s='10'/>
 </Attr>
 </Id>
 </Values>
