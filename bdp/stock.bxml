@@ -1471,6 +1471,78 @@
 </Becomes_Such_That>
 </Body>
 </Operation>
+<Operation name='GetRequiredAmount'>
+<Attr>
+<Pos l='119' c='5' s='3' endLine='124'/>
+</Attr>
+<Output_Parameters>
+<Id value='res' typref='2701647786'>
+<Attr>
+<Pos l='119' c='5' s='3'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='119' c='33' s='2'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Precondition>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='121' c='12' s='1'/>
+</Attr>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='121' c='9' s='2'/>
+</Attr>
+</Id>
+<Unary_Exp op='dom' typref='3603043417'>
+<Attr>
+<Pos l='121' c='14' s='3'/>
+</Attr>
+<Id value='RequiredAmounts' typref='103245008'>
+<Attr>
+<Pos l='121' c='20' s='15'/>
+</Attr>
+</Id>
+</Unary_Exp>
+</Exp_Comparison>
+</Precondition>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='123' c='12' s='2'/>
+</Attr>
+<Variables>
+<Id value='res' typref='2701647786'>
+<Attr>
+<Pos l='123' c='8' s='3'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='123' c='30' s='0'/>
+</Attr>
+<Id value='RequiredAmounts' typref='103245008'>
+<Attr>
+<Pos l='123' c='15' s='15'/>
+</Attr>
+</Id>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='123' c='31' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
 </Operations>
 <TypeInfos>
 <Type id='103245008'>

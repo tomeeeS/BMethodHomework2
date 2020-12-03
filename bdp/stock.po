@@ -1,20 +1,21 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.9,(_f(66) & _f(63) => _f(69));
-_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.8,(_f(66) & _f(63) => _f(65));
-_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.7,(_f(66) & _f(63) => _f(68));
-_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.6,(_f(66) & _f(63) => _f(67));
-_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.5,(_f(66) & _f(63) => _f(24));
-_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.4,(_f(66) & _f(63) => _f(64));
-_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.3,(_f(63) => _f(65));
-_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.2,(_f(63) => _f(7));
-_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.1,(_f(63) => _f(64));
-_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.7,(_f(62) & _f(61) & _f(60) & _f(59) & _f(63) => _f(64));
-_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.6,(_f(62) & _f(61) & _f(60) & _f(59) & _f(63) => _f(65));
-_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.5,(_f(62) & _f(61) & _f(60) & _f(59) & _f(63) => _f(7));
-_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.4,(_f(62) & _f(61) & _f(60) & _f(63) => _f(65));
-_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.3,(_f(62) & _f(61) & _f(60) & _f(63) => _f(7));
-_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.2,(_f(62) & _f(61) & _f(60) & _f(63) => _f(64));
-_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.1,(_f(62) & _f(61) & _f(63) => _f(64));
+_f(1) & _f(2) & _f(20) & _f(40) & WellDefinedness_GetRequiredAmount.1,(_f(64) => _f(71));
+_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.9,(_f(67) & _f(64) => _f(70));
+_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.8,(_f(67) & _f(64) => _f(66));
+_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.7,(_f(67) & _f(64) => _f(69));
+_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.6,(_f(67) & _f(64) => _f(68));
+_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.5,(_f(67) & _f(64) => _f(24));
+_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.4,(_f(67) & _f(64) => _f(65));
+_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.3,(_f(64) => _f(66));
+_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.2,(_f(64) => _f(7));
+_f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.1,(_f(64) => _f(65));
+_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.7,(_f(63) & _f(62) & _f(61) & _f(60) & _f(64) => _f(65));
+_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.6,(_f(63) & _f(62) & _f(61) & _f(60) & _f(64) => _f(66));
+_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.5,(_f(63) & _f(62) & _f(61) & _f(60) & _f(64) => _f(7));
+_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.4,(_f(63) & _f(62) & _f(61) & _f(64) => _f(66));
+_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.3,(_f(63) & _f(62) & _f(61) & _f(64) => _f(7));
+_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.2,(_f(63) & _f(62) & _f(61) & _f(64) => _f(65));
+_f(1) & _f(2) & _f(20) & WellDefinedness_Precondition_Put.1,(_f(63) & _f(62) & _f(64) => _f(65));
 _f(1) & _f(2) & _f(20) & _f(21) & Put.8,(_f(26) & _f(11) => _f(33));
 _f(1) & _f(2) & _f(20) & _f(21) & Put.7,(_f(24) & _f(25) & _f(11) => _f(23));
 _f(1) & _f(2) & _f(20) & _f(21) & Put.6,(_f(23) & _f(11) => _f(25));
@@ -72,6 +73,7 @@ dom(res$1) = ((1) .. (5));
 ((res$1) : (((((1) .. (5))) --> (BOOL))));
 ((dom(((res$1) |> (({TRUE}))))) = (Shortages));
 ((dom(((res$1) |> (({FALSE}))))) = ((((1) .. (5)) - Shortages)));
+((ii) : (dom(RequiredAmounts)));
 MaxStocks : ((1) .. (5)) +-> ((0) .. (4000));
 dom(MaxStocks) = ((1) .. (5));
 ((MaxStocks) : (((((1) .. (5))) --> (((0) .. (4000))))));
@@ -101,7 +103,8 @@ dom(CurrentStocks) = ((1) .. (5));
 ((xx) : (dom(CurrentStocks)));
 ((((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))})))) : (((dom(((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))}))))) +-> (ran(((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))}))))))));
 ((xx) : (dom(MaxStocks)));
-not(((2) = (0)))
+not(((2) = (0)));
+((RequiredAmounts) : (((dom(RequiredAmounts)) +-> (ran(RequiredAmounts)))))
 END
 &
 THEORY EnumerateX

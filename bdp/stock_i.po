@@ -1,14 +1,18 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.10,(_f(94) => _f(97));
-_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.9,(_f(94) => _f(96));
-_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.8,(_f(94) => _f(11));
-_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.7,(_f(94) => _f(95));
-_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.6,(_f(94) => _f(65));
+_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(69) & WellDefinedness_GetRequiredAmount.2,(_f(98) => _f(102));
+_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(69) & WellDefinedness_GetRequiredAmount.1,(_f(98) => _f(71));
+_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.10,(_f(98) => _f(101));
+_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.9,(_f(98) => _f(100));
+_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.8,(_f(98) => _f(11));
+_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.7,(_f(98) => _f(99));
+_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.6,(_f(98) => _f(65));
 _f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.5,(_f(42) => _f(47));
 _f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.4,(_f(42) => _f(46));
 _f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.3,(_f(42) => _f(45));
 _f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.2,(_f(42) => _f(44));
 _f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(28) & WellDefinedness_Put.1,(_f(42) => _f(43));
+_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(67) & GetRequiredAmount.2,(_f(69) & _f(64) => _f(71));
+_f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(67) & GetRequiredAmount.1,(_f(69) & _f(12) => _f(70));
 _f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(4) & Put.31,(_f(37) & _f(38) & _f(39) & _f(40) & _f(41) & _f(64) => _f(11));
 _f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(4) & Put.30,(_f(37) & _f(38) & _f(39) & _f(40) & _f(41) & _f(64) => _f(65));
 _f(1) & _f(2) & _f(3) & _f(26) & _f(27) & _f(4) & Put.29,(_f(37) & _f(38) & _f(39) & _f(40) & _f(41) & _f(36) & _f(33) & _f(12) => _f(60));
@@ -121,6 +125,10 @@ not(((cCurrentStocks$1 )(ii) +1 <= ((MaxStocks )(ii) / 2)));
 ((ii) : (dom(cCurrentStocks$1)));
 ((res) = (res));
 ((res$1) = (res));
+((ii) : (dom(RequiredAmounts))) & ((res) = (res));
+((ii) : (dom(RequiredAmounts)));
+(((cRequiredAmounts$1 )(ii)) = ((RequiredAmounts )(ii)));
+((ii) : (dom(cRequiredAmounts$1)));
 ((((ii) : (dom(cCurrentStocks$1)))) => (((ii) : (dom(cCurrentStocks$1))) & ((cCurrentStocks$1) : (((dom(cCurrentStocks$1)) +-> (ran(cCurrentStocks$1))))) & ((ii) : (dom(MaxStocks))) & ((MaxStocks) : (((dom(MaxStocks)) +-> (ran(MaxStocks)))))));
 ((((xx) : (dom(((cShortages$1) |> (({TRUE}))))))) => (((xx) : (dom(cCurrentStocks$1))) & ((cCurrentStocks$1) : (((dom(cCurrentStocks$1)) +-> (ran(cCurrentStocks$1))))) & ((xx) : (dom(MaxStocks))) & ((MaxStocks) : (((dom(MaxStocks)) +-> (ran(MaxStocks))))) & not(((2) = (0)))));
 ((((xx) : (dom(cCurrentStocks$1)))) => (((xx) : (dom(cCurrentStocks$1))) & ((cCurrentStocks$1) : (((dom(cCurrentStocks$1)) +-> (ran(cCurrentStocks$1))))) & ((xx) : (dom(MaxStocks))) & ((MaxStocks) : (((dom(MaxStocks)) +-> (ran(MaxStocks))))) & not(((2) = (0)))));
@@ -150,7 +158,8 @@ dom(cCurrentStocks$1) = ((1) .. (5));
 "Well definedness";
 ((cCurrentStocks$1) : (((dom(cCurrentStocks$1)) +-> (ran(cCurrentStocks$1)))));
 ((MaxStocks) : (((dom(MaxStocks)) +-> (ran(MaxStocks)))));
-not(((2) = (0)))
+not(((2) = (0)));
+((cRequiredAmounts$1) : (((dom(cRequiredAmounts$1)) +-> (ran(cRequiredAmounts$1)))))
 END
 &
 THEORY EnumerateX

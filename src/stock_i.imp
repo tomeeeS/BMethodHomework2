@@ -34,8 +34,21 @@ INVARIANT
     // ties to abstract variables
     & cCurrentStocks = CurrentStocks
     & cRequiredAmounts = RequiredAmounts
-    & dom(cShortages |> {TRUE}) = Shortages
-    & dom(cShortages |> {FALSE}) = (STOCKS) - Shortages
+    
+    & dom(cShortages|>{TRUE}) = Shortages
+    & dom(cShortages|>{FALSE}) = (STOCKS) - Shortages
+            
+    /*        
+    & !xx.(xx : Shortages => cShortages(xx) = TRUE)
+    & !xx.(xx : ((STOCKS) - Shortages) => cShortages(xx) = FALSE)
+    & !xx.(xx : dom(cShortages) & cShortages(xx) = TRUE =>
+        xx : Shortages)
+    & !xx.(xx : dom(cShortages) & cShortages(xx) = FALSE =>
+        xx : (STOCKS) - Shortages)
+        
+        */
+    //& dom(cShortages |> {TRUE}) = Shortages
+    //& dom(cShortages |> {FALSE}) = Shortages
     
     // cCurrentStocks
     & dom(cCurrentStocks) = dom(MaxStocks)
@@ -97,7 +110,7 @@ OPERATIONS
     sum <-- GetSum = //Feladat4
     BEGIN
         sum := SIGMA ( xx ) . ( xx : dom( cCurrentStocks ) | cCurrentStocks ( xx ) )
-    END
+    END */
     ;
 
     res <-- GetRequiredAmount(ii) = // Feladat5
@@ -105,5 +118,5 @@ OPERATIONS
        res := cRequiredAmounts(ii)
     END
 
-    */
+   
  END

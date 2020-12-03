@@ -1,7 +1,7 @@
 ﻿THEORY BalanceX IS
-  stock,31,0,0,24,7,0,0;
+  stock,31,0,0,24,6,0,0;
   Initialisation,7,0,0,5,2,0,0;
-  Put,8,0,0,7,1,0,0;
+  Put,8,0,0,7,0,0,0;
   WellDefinedness_Precondition_Put,7,0,0,5,2,0,0;
   WellDefinedness_Put,9,0,0,7,2,0,0
 END
@@ -26,7 +26,7 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(0);
-  Proved(1);
+  Unproved;
   Proved(0);
   Proved(0);
   Proved(0);
@@ -60,7 +60,7 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  pr;
+  ?;
   pr;
   pr;
   pr;
@@ -94,7 +94,7 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(1),(?;0);
+  Force(0),(?;0;1;2;3);
   Force(0),?;
   Force(0),?;
   Force(0),?;

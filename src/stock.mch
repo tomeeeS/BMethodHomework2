@@ -112,6 +112,7 @@ OPERATIONS
     BEGIN
         sum := SIGMA ( xx ) . ( xx : dom ( CurrentStocks ) | CurrentStocks ( xx ) )
     END
+    */
     ;
 
 
@@ -122,7 +123,6 @@ OPERATIONS
        res := RequiredAmounts(ii)
     END
     
-    */
 END
 
 

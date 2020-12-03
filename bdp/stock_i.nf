@@ -94,37 +94,44 @@ THEORY ListConstraintsX IS
 END
 &
 THEORY ListOperationsX IS
-  Internal_List_Operations(Implementation(stock_i))==(Put,GetShortage);
-  List_Operations(Implementation(stock_i))==(Put,GetShortage)
+  Internal_List_Operations(Implementation(stock_i))==(Put,GetShortage,GetRequiredAmount);
+  List_Operations(Implementation(stock_i))==(Put,GetShortage,GetRequiredAmount)
 END
 &
 THEORY ListInputX IS
   List_Input(Implementation(stock_i),Put)==(ii,amt);
-  List_Input(Implementation(stock_i),GetShortage)==(?)
+  List_Input(Implementation(stock_i),GetShortage)==(?);
+  List_Input(Implementation(stock_i),GetRequiredAmount)==(ii)
 END
 &
 THEORY ListOutputX IS
   List_Output(Implementation(stock_i),Put)==(?);
-  List_Output(Implementation(stock_i),GetShortage)==(res)
+  List_Output(Implementation(stock_i),GetShortage)==(res);
+  List_Output(Implementation(stock_i),GetRequiredAmount)==(res)
 END
 &
 THEORY ListHeaderX IS
   List_Header(Implementation(stock_i),Put)==(Put(ii,amt));
-  List_Header(Implementation(stock_i),GetShortage)==(res <-- GetShortage)
+  List_Header(Implementation(stock_i),GetShortage)==(res <-- GetShortage);
+  List_Header(Implementation(stock_i),GetRequiredAmount)==(res <-- GetRequiredAmount(ii))
 END
 &
 THEORY ListPreconditionX IS
   Own_Precondition(Implementation(stock_i),Put)==(btrue);
   List_Precondition(Implementation(stock_i),Put)==(ii: dom(CurrentStocks) & amt: 1..4000 & CurrentStocks(ii)+amt: 0..4000 & CurrentStocks(ii)+amt<=MaxStocks(ii) & MaxStocks(ii)-(CurrentStocks(ii)+amt): 0..4000);
   Own_Precondition(Implementation(stock_i),GetShortage)==(btrue);
-  List_Precondition(Implementation(stock_i),GetShortage)==(btrue)
+  List_Precondition(Implementation(stock_i),GetShortage)==(btrue);
+  Own_Precondition(Implementation(stock_i),GetRequiredAmount)==(btrue);
+  List_Precondition(Implementation(stock_i),GetRequiredAmount)==(ii: dom(RequiredAmounts))
 END
 &
 THEORY ListSubstitutionX IS
+  Expanded_List_Substitution(Implementation(stock_i),GetRequiredAmount)==(ii: dom(RequiredAmounts) & cRequiredAmounts(ii): INT & ii: dom(cRequiredAmounts) | res:=cRequiredAmounts(ii));
   Expanded_List_Substitution(Implementation(stock_i),GetShortage)==(btrue | res:=cShortages);
   Expanded_List_Substitution(Implementation(stock_i),Put)==(ii: dom(CurrentStocks) & amt: 1..4000 & CurrentStocks(ii)+amt: 0..4000 & CurrentStocks(ii)+amt<=MaxStocks(ii) & MaxStocks(ii)-(CurrentStocks(ii)+amt): 0..4000 | @(currentTmp,requiredTmp).((ii: dom(cCurrentStocks) & ii: dom(MaxStocks) & cCurrentStocks(ii): 0..4000 & MaxStocks(ii): 0..4000 & amt: 1..4000 & cCurrentStocks(ii)+amt: 0..4000 & cCurrentStocks(ii)+amt<=MaxStocks(ii) & MaxStocks(ii)-(cCurrentStocks(ii)+amt): 0..4000 | currentTmp,requiredTmp:=cCurrentStocks(ii)+amt,MaxStocks(ii)-(cCurrentStocks(ii)+amt));(cCurrentStocks(ii)<MaxStocks(ii)/2 ==> (ii: dom(cShortages) | cShortages:=cShortages<+{ii|->TRUE}) [] not(cCurrentStocks(ii)<MaxStocks(ii)/2) ==> (ii: dom(cShortages) | cShortages:=cShortages<+{ii|->FALSE}));(ii: dom(cCurrentStocks) & currentTmp: INT | cCurrentStocks:=cCurrentStocks<+{ii|->currentTmp});(ii: dom(cRequiredAmounts) & requiredTmp: INT | cRequiredAmounts:=cRequiredAmounts<+{ii|->requiredTmp})));
   List_Substitution(Implementation(stock_i),Put)==(VAR currentTmp,requiredTmp IN currentTmp,requiredTmp <-- BringIntoWarehouse(cCurrentStocks(ii),amt,MaxStocks(ii));IF cCurrentStocks(ii)<MaxStocks(ii)/2 THEN cShortages(ii):=TRUE ELSE cShortages(ii):=FALSE END;cCurrentStocks(ii):=currentTmp;cRequiredAmounts(ii):=requiredTmp END);
-  List_Substitution(Implementation(stock_i),GetShortage)==(res:=cShortages)
+  List_Substitution(Implementation(stock_i),GetShortage)==(res:=cShortages);
+  List_Substitution(Implementation(stock_i),GetRequiredAmount)==(res:=cRequiredAmounts(ii))
 END
 &
 THEORY ListConstantsX IS
@@ -176,14 +183,14 @@ END
 &
 THEORY InheritedEnvX IS
   VisibleVariables(Implementation(stock_i))==(Type(cCurrentStocks) == Mvv(SetOf(btype(INTEGER,1,5)*btype(INTEGER,0,4000)));Type(cShortages) == Mvv(SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1)));Type(cRequiredAmounts) == Mvv(SetOf(btype(INTEGER,1,5)*btype(INTEGER,0,4000))));
-  Operations(Implementation(stock_i))==(Type(GetShortage) == Cst(SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1)),No_type);Type(Put) == Cst(No_type,btype(INTEGER,?,?)*btype(INTEGER,?,?)));
+  Operations(Implementation(stock_i))==(Type(GetRequiredAmount) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?));Type(GetShortage) == Cst(SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1)),No_type);Type(Put) == Cst(No_type,btype(INTEGER,?,?)*btype(INTEGER,?,?)));
   Constants(Implementation(stock_i))==(Type(MaxStocks) == Cst(SetOf(btype(INTEGER,1,5)*btype(INTEGER,0,4000))))
 END
 &
 THEORY ListVisibleStaticX END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Implementation(stock_i)) == (? | ? | ? | ? | Put,GetShortage | ? | imported(Machine(forklift)),imported(Machine(shortage_classifier)) | ? | stock_i);
+  List_Of_Ids(Implementation(stock_i)) == (? | ? | ? | ? | Put,GetShortage,GetRequiredAmount | ? | imported(Machine(forklift)),imported(Machine(shortage_classifier)) | ? | stock_i);
   List_Of_HiddenCst_Ids(Implementation(stock_i)) == (? | ?);
   List_Of_VisibleCst_Ids(Implementation(stock_i)) == (?);
   List_Of_VisibleVar_Ids(Implementation(stock_i)) == (cRequiredAmounts,cShortages,cCurrentStocks | ?);
