@@ -55,10 +55,6 @@ INVARIANT
     & ! ii . ( ii : dom ( cCurrentStocks ) => cCurrentStocks ( ii ) <= MaxStocks ( ii ) )
 
     // cShortages
-    & ! xx . ( xx : dom ( cShortages |> { TRUE } ) =>
-        cCurrentStocks ( xx ) < MaxStocks ( xx ) / 2 )
-    & ! xx . ( ( xx : dom ( cCurrentStocks ) & cCurrentStocks ( xx ) < MaxStocks ( xx ) / 2 ) =>
-        xx : dom ( cShortages |> { TRUE } ) )
 
     // cRequiredAmounts
     & ! ii . ( ii : dom ( cRequiredAmounts ) => cRequiredAmounts ( ii ) = MaxStocks ( ii ) - cCurrentStocks ( ii ) )
@@ -103,14 +99,27 @@ OPERATIONS
 
     res <-- GetShortage = //Feladat3
         res := cShortages
-/*
     ;
 
 
     sum <-- GetSum = //Feladat4
     BEGIN
-        sum := SIGMA ( xx ) . ( xx : dom( cCurrentStocks ) | cCurrentStocks ( xx ) )
-    END */
+        VAR ii IN
+            ii := 0 ;
+            sum := 0 ;
+
+            WHILE ii < 5 DO
+                ii := ii + 1 ;
+                sum := sum + cCurrentStocks ( ii )
+            INVARIANT
+                ii : 0 .. 5
+                & sum : 0 .. ( ii * 4000 )
+                & sum = SIGMA ( xx ) . ( xx : 1 .. ii | cCurrentStocks ( xx ) )
+            VARIANT
+                6 - ii
+            END
+        END
+    END
     ;
 
     res <-- GetRequiredAmount ( ii ) = // Feladat5

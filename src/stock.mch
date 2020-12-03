@@ -105,14 +105,13 @@ OPERATIONS
             & dom(res|>{FALSE}) = (STOCKS) - Shortages
         )
     END
-    
+    ;
 
-/*
+
     sum <-- GetSum = //Feladat4
     BEGIN
         sum := SIGMA ( xx ) . ( xx : dom ( CurrentStocks ) | CurrentStocks ( xx ) )
     END
-    */
     ;
 
 

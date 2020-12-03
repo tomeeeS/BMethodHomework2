@@ -1,5 +1,7 @@
 THEORY ProofList IS
-_f(1) & _f(2) & _f(20) & _f(40) & WellDefinedness_GetRequiredAmount.1,(_f(64) => _f(71));
+_f(1) & _f(2) & _f(20) & _f(40) & WellDefinedness_GetRequiredAmount.1,(_f(64) => _f(72));
+_f(1) & _f(2) & _f(20) & _f(34) & WellDefinedness_GetSum.2,(_f(67) & _f(64) => _f(65));
+_f(1) & _f(2) & _f(20) & _f(34) & WellDefinedness_GetSum.1,(_f(64) => _f(71));
 _f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.9,(_f(67) & _f(64) => _f(70));
 _f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.8,(_f(67) & _f(64) => _f(66));
 _f(1) & _f(2) & _f(20) & _f(21) & WellDefinedness_Put.7,(_f(67) & _f(64) => _f(69));
@@ -104,6 +106,7 @@ dom(CurrentStocks) = ((1) .. (5));
 ((((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))})))) : (((dom(((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))}))))) +-> (ran(((CurrentStocks) <+ (({((ii) |-> (((CurrentStocks )(ii) + amt)))}))))))));
 ((xx) : (dom(MaxStocks)));
 not(((2) = (0)));
+((SET(xx).(((xx) : (dom(CurrentStocks))))) : (FIN(SET(xx).(((xx) : (dom(CurrentStocks)))))));
 ((RequiredAmounts) : (((dom(RequiredAmounts)) +-> (ran(RequiredAmounts)))))
 END
 &

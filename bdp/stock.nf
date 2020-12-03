@@ -93,25 +93,28 @@ THEORY ListConstraintsX IS
 END
 &
 THEORY ListOperationsX IS
-  Internal_List_Operations(Machine(stock))==(Put,GetShortage,GetRequiredAmount);
-  List_Operations(Machine(stock))==(Put,GetShortage,GetRequiredAmount)
+  Internal_List_Operations(Machine(stock))==(Put,GetShortage,GetSum,GetRequiredAmount);
+  List_Operations(Machine(stock))==(Put,GetShortage,GetSum,GetRequiredAmount)
 END
 &
 THEORY ListInputX IS
   List_Input(Machine(stock),Put)==(ii,amt);
   List_Input(Machine(stock),GetShortage)==(?);
+  List_Input(Machine(stock),GetSum)==(?);
   List_Input(Machine(stock),GetRequiredAmount)==(ii)
 END
 &
 THEORY ListOutputX IS
   List_Output(Machine(stock),Put)==(?);
   List_Output(Machine(stock),GetShortage)==(res);
+  List_Output(Machine(stock),GetSum)==(sum);
   List_Output(Machine(stock),GetRequiredAmount)==(res)
 END
 &
 THEORY ListHeaderX IS
   List_Header(Machine(stock),Put)==(Put(ii,amt));
   List_Header(Machine(stock),GetShortage)==(res <-- GetShortage);
+  List_Header(Machine(stock),GetSum)==(sum <-- GetSum);
   List_Header(Machine(stock),GetRequiredAmount)==(res <-- GetRequiredAmount(ii))
 END
 &
@@ -120,15 +123,18 @@ THEORY ListOperationGuardX END
 THEORY ListPreconditionX IS
   List_Precondition(Machine(stock),Put)==(ii: dom(CurrentStocks) & amt: 1..4000 & CurrentStocks(ii)+amt: 0..4000 & CurrentStocks(ii)+amt<=MaxStocks(ii) & MaxStocks(ii)-(CurrentStocks(ii)+amt): 0..4000);
   List_Precondition(Machine(stock),GetShortage)==(btrue);
+  List_Precondition(Machine(stock),GetSum)==(btrue);
   List_Precondition(Machine(stock),GetRequiredAmount)==(ii: dom(RequiredAmounts))
 END
 &
 THEORY ListSubstitutionX IS
   Expanded_List_Substitution(Machine(stock),GetRequiredAmount)==(ii: dom(RequiredAmounts) | res:=RequiredAmounts(ii));
+  Expanded_List_Substitution(Machine(stock),GetSum)==(btrue | sum:=SIGMA(xx).(xx: dom(CurrentStocks) | CurrentStocks(xx)));
   Expanded_List_Substitution(Machine(stock),GetShortage)==(btrue | @(res$1).(res$1: 1..5 --> BOOL & dom(res$1|>{TRUE}) = Shortages & dom(res$1|>{FALSE}) = (1..5)-Shortages ==> res:=res$1));
   Expanded_List_Substitution(Machine(stock),Put)==(ii: dom(CurrentStocks) & amt: 1..4000 & CurrentStocks(ii)+amt: 0..4000 & CurrentStocks(ii)+amt<=MaxStocks(ii) & MaxStocks(ii)-(CurrentStocks(ii)+amt): 0..4000 | CurrentStocks,RequiredAmounts,Shortages:=CurrentStocks<+{ii|->CurrentStocks(ii)+amt},RequiredAmounts<+{ii|->MaxStocks(ii)-(CurrentStocks(ii)+amt)},{xx | xx: dom(CurrentStocks) & (CurrentStocks<+{ii|->CurrentStocks(ii)+amt})(xx)<MaxStocks(xx)/2});
   List_Substitution(Machine(stock),Put)==(CurrentStocks(ii):=CurrentStocks(ii)+amt || RequiredAmounts(ii):=MaxStocks(ii)-(CurrentStocks(ii)+amt) || Shortages:={xx | xx: dom(CurrentStocks) & (CurrentStocks<+{ii|->CurrentStocks(ii)+amt})(xx)<MaxStocks(xx)/2});
   List_Substitution(Machine(stock),GetShortage)==(res: (res: 1..5 --> BOOL & dom(res|>{TRUE}) = Shortages & dom(res|>{FALSE}) = (1..5)-Shortages));
+  List_Substitution(Machine(stock),GetSum)==(sum:=SIGMA(xx).(xx: dom(CurrentStocks) | CurrentStocks(xx)));
   List_Substitution(Machine(stock),GetRequiredAmount)==(res:=RequiredAmounts(ii))
 END
 &
@@ -170,11 +176,12 @@ THEORY ListSeenInfoX END
 THEORY ListANYVarX IS
   List_ANY_Var(Machine(stock),Put)==(?);
   List_ANY_Var(Machine(stock),GetShortage)==(?);
+  List_ANY_Var(Machine(stock),GetSum)==(?);
   List_ANY_Var(Machine(stock),GetRequiredAmount)==(?)
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(stock)) == (MaxStocks | ? | RequiredAmounts,Shortages,CurrentStocks | ? | Put,GetShortage,GetRequiredAmount | ? | ? | ? | stock);
+  List_Of_Ids(Machine(stock)) == (MaxStocks | ? | RequiredAmounts,Shortages,CurrentStocks | ? | Put,GetShortage,GetSum,GetRequiredAmount | ? | ? | ? | stock);
   List_Of_HiddenCst_Ids(Machine(stock)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(stock)) == (MaxStocks);
   List_Of_VisibleVar_Ids(Machine(stock)) == (? | ?);
@@ -190,8 +197,8 @@ THEORY VariablesEnvX IS
 END
 &
 THEORY OperationsEnvX IS
-  Operations(Machine(stock)) == (Type(GetRequiredAmount) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?));Type(GetShortage) == Cst(SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1)),No_type);Type(Put) == Cst(No_type,btype(INTEGER,?,?)*btype(INTEGER,?,?)));
-  Observers(Machine(stock)) == (Type(GetRequiredAmount) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?));Type(GetShortage) == Cst(SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1)),No_type))
+  Operations(Machine(stock)) == (Type(GetRequiredAmount) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?));Type(GetSum) == Cst(btype(INTEGER,?,?),No_type);Type(GetShortage) == Cst(SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1)),No_type);Type(Put) == Cst(No_type,btype(INTEGER,?,?)*btype(INTEGER,?,?)));
+  Observers(Machine(stock)) == (Type(GetRequiredAmount) == Cst(btype(INTEGER,?,?),btype(INTEGER,?,?));Type(GetSum) == Cst(btype(INTEGER,?,?),No_type);Type(GetShortage) == Cst(SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1)),No_type))
 END
 &
 THEORY TCIntRdX IS
