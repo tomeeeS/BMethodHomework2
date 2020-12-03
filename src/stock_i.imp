@@ -37,25 +37,15 @@ INVARIANT
     
     & dom(cShortages|>{TRUE}) = Shortages
     & dom(cShortages|>{FALSE}) = (STOCKS) - Shortages
-            
-    /*        
-    & !xx.(xx : Shortages => cShortages(xx) = TRUE)
-    & !xx.(xx : ((STOCKS) - Shortages) => cShortages(xx) = FALSE)
-    & !xx.(xx : dom(cShortages) & cShortages(xx) = TRUE =>
-        xx : Shortages)
-    & !xx.(xx : dom(cShortages) & cShortages(xx) = FALSE =>
-        xx : (STOCKS) - Shortages)
-        
-        */
-    //& dom(cShortages |> {TRUE}) = Shortages
-    //& dom(cShortages |> {FALSE}) = Shortages
-    
+       
     // cCurrentStocks
     & dom(cCurrentStocks) = dom(MaxStocks)
     & !ii.(ii: dom(cCurrentStocks) => cCurrentStocks(ii) <= MaxStocks(ii) )
-    
+        
     // cShortages
-
+    & !xx.(xx : dom(cShortages |> {TRUE}) => cCurrentStocks(xx) < MaxStocks(xx) / 2)
+    & !xx.((xx : dom(cCurrentStocks) & cCurrentStocks(xx) < MaxStocks(xx) / 2) => xx : dom(cShortages |> {TRUE}))
+    
     // cRequiredAmounts
     & !ii.(ii: dom(cRequiredAmounts) => cRequiredAmounts(ii) = MaxStocks(ii) - cCurrentStocks(ii))
 
@@ -68,19 +58,17 @@ OPERATIONS
     
     Put(ii, amt) = //Feladat1
     BEGIN
-        VAR currentTmp, requiredTmp IN
+        VAR currentTmp, requiredTmp, shortageTmp IN
 
             currentTmp, requiredTmp <--
                 BringIntoWarehouse(cCurrentStocks(ii), amt, MaxStocks(ii));
                 
-            IF cCurrentStocks(ii) < MaxStocks(ii) / 2 THEN
-                cShortages(ii) := TRUE
-            ELSE
-                cShortages(ii) := FALSE
-            END;
-            
+            shortageTmp <-- 
+                IsOnShortage(cCurrentStocks(ii) + amt, MaxStocks(ii));
+
             cCurrentStocks(ii) := currentTmp;
-            cRequiredAmounts(ii) := requiredTmp
+            cRequiredAmounts(ii) := requiredTmp;
+            cShortages(ii) := shortageTmp
         END 
     END
     ;

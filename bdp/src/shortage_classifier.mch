@@ -7,33 +7,22 @@
 OPERATIONS
 
     res <-- IsOnShortage (
-        ShortageSet ,
-        CurrentStocks ,
-        ii ,
-        amt ,
-        MaxStocks
+        CurrentStock ,
+        MaxStock
     ) =
     PRE
-        /* Shortages : (1..5) --> BOOL
-        & */ CurrentStocks : ( 1 .. 5 ) --> ( 0 .. 4000 )
-        & ii : dom ( CurrentStocks )
-        & MaxStocks : ( 1 .. 5 ) --> ( 0 .. 4000 )
-        & amt : 1 .. 4000
-        & ShortageSet : FIN ( 1 .. 5 )
-        & res : ( 1 .. 5 ) --> BOOL
+        CurrentStock : ( 0 .. 4000 )
+        & MaxStock : ( 0 .. 4000 )
 
-        & CurrentStocks ( ii ) + amt : ( 0 .. 4000 )
-        & ! xx . ( xx : ShortageSet => CurrentStocks ( xx ) < MaxStocks ( xx ) / 2 )
-        & ! xx . ( ( xx : dom ( CurrentStocks ) & CurrentStocks ( xx ) < MaxStocks ( xx ) / 2 ) => xx : ShortageSet )
     THEN
         res : (
-            dom ( res |> { TRUE } ) = ShortageSet
-            & dom ( res |> { FALSE } ) = ( ( 1 .. 5 ) ) - ShortageSet
-            & ! xx . ( xx : dom ( res |> { TRUE } ) =>
-                CurrentStocks ( xx ) < MaxStocks ( xx ) / 2 )
-    & ! xx . ( ( xx : dom ( CurrentStocks ) & CurrentStocks ( xx ) < MaxStocks ( xx ) / 2 ) =>
-        xx : dom ( res |> { TRUE } ) )
+            res : BOOL
+            & ( CurrentStock < MaxStock / 2 =>
+                res = TRUE )
+            & ( not ( CurrentStock < MaxStock / 2 ) =>
+                res = FALSE )
         )
     END
+
 
 END
