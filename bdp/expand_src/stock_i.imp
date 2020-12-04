@@ -69,7 +69,7 @@ OPERATIONS
             ) ;
 
             currentTmp , requiredTmp <--
-                BringIntoWarehouse ( cCurrentStocks ( ii ) , amt , MaxStocks ( ii ) ) ;
+                MoveStock ( cCurrentStocks ( ii ) + amt , MaxStocks ( ii ) ) ;
 
             cCurrentStocks ( ii ) := currentTmp ;
             cRequiredAmounts ( ii ) := requiredTmp ;
@@ -78,16 +78,28 @@ OPERATIONS
     END
     ;
 
-/*
-    Pop (ii, amt ) = //Feladat2
+
+    Pop ( ii , amt ) = //Feladat2
     BEGIN
-        cCurrentStocks(ii) := cCurrentStocks(ii) - amt;
-        cRequiredAmounts(ii) := MaxStocks(ii) - (cCurrentStocks(ii) - amt);
-        cShortages := {xx | xx : dom(cCurrentStocks) & (cCurrentStocks<+{ii|->cCurrentStocks(ii)-amt})(xx) < MaxStocks(xx) / 2}
+        VAR currentTmp , requiredTmp , shortageTmp IN
+
+            shortageTmp <-- IsOnShortage (
+                cShortages ,
+                cCurrentStocks ,
+                ii ,
+                cCurrentStocks ( ii ) - amt ,
+                MaxStocks
+            ) ;
+
+            currentTmp , requiredTmp <--
+                MoveStock ( cCurrentStocks ( ii ) - amt , MaxStocks ( ii ) ) ;
+
+            cCurrentStocks ( ii ) := currentTmp ;
+            cRequiredAmounts ( ii ) := requiredTmp ;
+            cShortages := shortageTmp
+        END
     END
     ;
-
-    */
 
 
     res <-- GetShortage = //Feladat3

@@ -1,0 +1,58 @@
+THEORY ProofList IS
+_f(1) & _f(33) & WellDefinedness_IsOnShortage.4,(_f(34) => _f(37));
+_f(1) & _f(33) & WellDefinedness_IsOnShortage.3,(_f(34) => _f(36));
+_f(1) & _f(33) & WellDefinedness_IsOnShortage.2,(_f(34) => _f(32));
+_f(1) & _f(33) & WellDefinedness_IsOnShortage.1,(_f(34) => _f(35));
+_f(1) & _f(4) & IsOnShortage.9,(_f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(20) & _f(21) & _f(31) => _f(32));
+_f(1) & _f(4) & IsOnShortage.8,(_f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(20) & _f(21) & _f(8) & _f(5) & _f(6) & _f(22) => _f(30));
+_f(1) & _f(4) & IsOnShortage.7,(_f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(20) & _f(21) & _f(8) & _f(22) => _f(29));
+_f(1) & _f(4) & IsOnShortage.6,(_f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(20) & _f(21) & _f(8) & _f(22) => _f(28));
+_f(1) & _f(4) & IsOnShortage.5,(_f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(20) & _f(21) & _f(8) & _f(22) => _f(27));
+_f(1) & _f(4) & IsOnShortage.4,(_f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(20) & _f(21) & _f(7) & _f(5) & _f(6) & _f(22) => _f(26));
+_f(1) & _f(4) & IsOnShortage.3,(_f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(20) & _f(21) & _f(7) & _f(22) => _f(25));
+_f(1) & _f(4) & IsOnShortage.2,(_f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(20) & _f(21) & _f(7) & _f(22) => _f(24));
+_f(1) & _f(4) & IsOnShortage.1,(_f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) & _f(18) & _f(19) & _f(20) & _f(21) & _f(7) & _f(22) => _f(23))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483648) .. (2147483647))));
+btrue;
+CurrentStocks : ((1) .. (5)) +-> ((0) .. (4000)) & dom(CurrentStocks) = ((1) .. (5)) & ((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000)))))) & ((ii) : (dom(CurrentStocks))) & MaxStocks : ((1) .. (5)) +-> ((0) .. (4000)) & dom(MaxStocks) = ((1) .. (5)) & ((MaxStocks) : (((((1) .. (5))) --> (((0) .. (4000)))))) & Shortages : ((1) .. (5)) +-> BOOL & dom(Shortages) = ((1) .. (5)) & ((Shortages) : (((((1) .. (5))) --> (BOOL)))) & ((NewCurrentStock) : (((0) .. (4000)))) & !(xx).(((((xx) : (dom(((Shortages) |> (({TRUE}))))))) => (((CurrentStocks )(xx) +1 <= ((MaxStocks )(xx) / 2))))) & !(xx).(((((xx) : (dom(CurrentStocks))) & ((CurrentStocks )(xx) +1 <= ((MaxStocks )(xx) / 2))) => (((xx) : (dom(((Shortages) |> (({TRUE}))))))))) & ((res) = (res));
+((res$1) = (res));
+((xx) : (dom(((CurrentStocks) <+ (({((ii) |-> (NewCurrentStock))}))))));
+((((CurrentStocks) <+ (({((ii) |-> (NewCurrentStock))}))) )(xx) +1 <= ((MaxStocks )(xx) / 2));
+((CurrentStocks )(ii) +1 <= ((MaxStocks )(ii) / 2));
+not(((CurrentStocks )(ii) +1 <= ((MaxStocks )(ii) / 2)));
+CurrentStocks : ((1) .. (5)) +-> ((0) .. (4000));
+dom(CurrentStocks) = ((1) .. (5));
+((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000))))));
+((ii) : (dom(CurrentStocks)));
+MaxStocks : ((1) .. (5)) +-> ((0) .. (4000));
+dom(MaxStocks) = ((1) .. (5));
+((MaxStocks) : (((((1) .. (5))) --> (((0) .. (4000))))));
+Shortages : ((1) .. (5)) +-> BOOL;
+dom(Shortages) = ((1) .. (5));
+((Shortages) : (((((1) .. (5))) --> (BOOL))));
+((NewCurrentStock) : (((0) .. (4000))));
+!(xx).(((((xx) : (dom(((Shortages) |> (({TRUE}))))))) => (((CurrentStocks )(xx) +1 <= ((MaxStocks )(xx) / 2)))));
+!(xx).(((((xx) : (dom(CurrentStocks))) & ((CurrentStocks )(xx) +1 <= ((MaxStocks )(xx) / 2))) => (((xx) : (dom(((Shortages) |> (({TRUE})))))))));
+"Refinement is correct";
+((((Shortages) <+ (({((ii) |-> (TRUE))})))) : (((((1) .. (5))) --> (BOOL))));
+((dom(((((Shortages) <+ (({((ii) |-> (TRUE))})))) |> (({TRUE}))))) = (SET(xx).(((xx) : (dom(CurrentStocks))) & ((((CurrentStocks) <+ (({((ii) |-> (NewCurrentStock))}))) )(xx) +1 <= ((MaxStocks )(xx) / 2)))));
+((dom(((((Shortages) <+ (({((ii) |-> (TRUE))})))) |> (({FALSE}))))) = ((((1) .. (5)) - SET(xx).(((xx) : (dom(CurrentStocks))) & ((((CurrentStocks) <+ (({((ii) |-> (NewCurrentStock))}))) )(xx) +1 <= ((MaxStocks )(xx) / 2))))));
+((xx) : (dom(((((Shortages) <+ (({((ii) |-> (TRUE))})))) |> (({TRUE}))))));
+((((Shortages) <+ (({((ii) |-> (FALSE))})))) : (((((1) .. (5))) --> (BOOL))));
+((dom(((((Shortages) <+ (({((ii) |-> (FALSE))})))) |> (({TRUE}))))) = (SET(xx).(((xx) : (dom(CurrentStocks))) & ((((CurrentStocks) <+ (({((ii) |-> (NewCurrentStock))}))) )(xx) +1 <= ((MaxStocks )(xx) / 2)))));
+((dom(((((Shortages) <+ (({((ii) |-> (FALSE))})))) |> (({FALSE}))))) = ((((1) .. (5)) - SET(xx).(((xx) : (dom(CurrentStocks))) & ((((CurrentStocks) <+ (({((ii) |-> (NewCurrentStock))}))) )(xx) +1 <= ((MaxStocks )(xx) / 2))))));
+((xx) : (dom(((((Shortages) <+ (({((ii) |-> (FALSE))})))) |> (({TRUE}))))));
+"Instruction Well Definess";
+((ii) : (dom(MaxStocks)));
+CurrentStocks : ((1) .. (5)) +-> ((0) .. (4000)) & dom(CurrentStocks) = ((1) .. (5)) & ((CurrentStocks) : (((((1) .. (5))) --> (((0) .. (4000)))))) & ((ii) : (dom(CurrentStocks))) & MaxStocks : ((1) .. (5)) +-> ((0) .. (4000)) & dom(MaxStocks) = ((1) .. (5)) & ((MaxStocks) : (((((1) .. (5))) --> (((0) .. (4000)))))) & Shortages : ((1) .. (5)) +-> BOOL & dom(Shortages) = ((1) .. (5)) & ((Shortages) : (((((1) .. (5))) --> (BOOL)))) & ((NewCurrentStock) : (((0) .. (4000)))) & !(xx).(((((xx) : (dom(((Shortages) |> (({TRUE}))))))) => (((CurrentStocks )(xx) +1 <= ((MaxStocks )(xx) / 2))))) & !(xx).(((((xx) : (dom(CurrentStocks))) & ((CurrentStocks )(xx) +1 <= ((MaxStocks )(xx) / 2))) => (((xx) : (dom(((Shortages) |> (({TRUE})))))))));
+"Well definedness";
+((CurrentStocks) : (((dom(CurrentStocks)) +-> (ran(CurrentStocks)))));
+((MaxStocks) : (((dom(MaxStocks)) +-> (ran(MaxStocks)))));
+not(((2) = (0)))
+END
+&
+THEORY EnumerateX
+END

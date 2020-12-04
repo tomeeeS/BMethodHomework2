@@ -93,31 +93,31 @@ THEORY ListConstraintsX IS
 END
 &
 THEORY ListOperationsX IS
-  Internal_List_Operations(Machine(forklift))==(BringIntoWarehouse);
-  List_Operations(Machine(forklift))==(BringIntoWarehouse)
+  Internal_List_Operations(Machine(forklift))==(MoveStock);
+  List_Operations(Machine(forklift))==(MoveStock)
 END
 &
 THEORY ListInputX IS
-  List_Input(Machine(forklift),BringIntoWarehouse)==(CurrentStockCount_in,amt,MaxStockCount_in)
+  List_Input(Machine(forklift),MoveStock)==(NewCurrentStock,MaxStockCount_in)
 END
 &
 THEORY ListOutputX IS
-  List_Output(Machine(forklift),BringIntoWarehouse)==(newCurrent,newRequired)
+  List_Output(Machine(forklift),MoveStock)==(newCurrent,newRequired)
 END
 &
 THEORY ListHeaderX IS
-  List_Header(Machine(forklift),BringIntoWarehouse)==(newCurrent,newRequired <-- BringIntoWarehouse(CurrentStockCount_in,amt,MaxStockCount_in))
+  List_Header(Machine(forklift),MoveStock)==(newCurrent,newRequired <-- MoveStock(NewCurrentStock,MaxStockCount_in))
 END
 &
 THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
-  List_Precondition(Machine(forklift),BringIntoWarehouse)==(CurrentStockCount_in: 0..4000 & MaxStockCount_in: 0..4000 & amt: 1..4000 & CurrentStockCount_in+amt: 0..4000 & CurrentStockCount_in+amt<=MaxStockCount_in & MaxStockCount_in-(CurrentStockCount_in+amt): 0..4000)
+  List_Precondition(Machine(forklift),MoveStock)==(NewCurrentStock: 0..4000 & MaxStockCount_in: 0..4000 & NewCurrentStock: 0..4000 & NewCurrentStock<=MaxStockCount_in & MaxStockCount_in-NewCurrentStock: 0..4000)
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(forklift),BringIntoWarehouse)==(CurrentStockCount_in: 0..4000 & MaxStockCount_in: 0..4000 & amt: 1..4000 & CurrentStockCount_in+amt: 0..4000 & CurrentStockCount_in+amt<=MaxStockCount_in & MaxStockCount_in-(CurrentStockCount_in+amt): 0..4000 | newCurrent,newRequired:=CurrentStockCount_in+amt,MaxStockCount_in-(CurrentStockCount_in+amt));
-  List_Substitution(Machine(forklift),BringIntoWarehouse)==(newCurrent:=CurrentStockCount_in+amt || newRequired:=MaxStockCount_in-(CurrentStockCount_in+amt))
+  Expanded_List_Substitution(Machine(forklift),MoveStock)==(NewCurrentStock: 0..4000 & MaxStockCount_in: 0..4000 & NewCurrentStock: 0..4000 & NewCurrentStock<=MaxStockCount_in & MaxStockCount_in-NewCurrentStock: 0..4000 | newCurrent,newRequired:=NewCurrentStock,MaxStockCount_in-NewCurrentStock);
+  List_Substitution(Machine(forklift),MoveStock)==(newCurrent:=NewCurrentStock || newRequired:=MaxStockCount_in-NewCurrentStock)
 END
 &
 THEORY ListConstantsX IS
@@ -156,11 +156,11 @@ END
 THEORY ListSeenInfoX END
 &
 THEORY ListANYVarX IS
-  List_ANY_Var(Machine(forklift),BringIntoWarehouse)==(?)
+  List_ANY_Var(Machine(forklift),MoveStock)==(?)
 END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(forklift)) == (? | ? | ? | ? | BringIntoWarehouse | ? | ? | ? | forklift);
+  List_Of_Ids(Machine(forklift)) == (? | ? | ? | ? | MoveStock | ? | ? | ? | forklift);
   List_Of_HiddenCst_Ids(Machine(forklift)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(forklift)) == (?);
   List_Of_VisibleVar_Ids(Machine(forklift)) == (? | ?);
@@ -168,8 +168,8 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY OperationsEnvX IS
-  Operations(Machine(forklift)) == (Type(BringIntoWarehouse) == Cst(btype(INTEGER,?,?)*btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?)*btype(INTEGER,?,?)));
-  Observers(Machine(forklift)) == (Type(BringIntoWarehouse) == Cst(btype(INTEGER,?,?)*btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?)*btype(INTEGER,?,?)))
+  Operations(Machine(forklift)) == (Type(MoveStock) == Cst(btype(INTEGER,?,?)*btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?)));
+  Observers(Machine(forklift)) == (Type(MoveStock) == Cst(btype(INTEGER,?,?)*btype(INTEGER,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?)))
 END
 &
 THEORY TCIntRdX IS

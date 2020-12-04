@@ -3,13 +3,11 @@ END
 &
 THEORY Formulas IS
 ((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483648) .. (2147483647))));
-((CurrentStockCount_in) : (((0) .. (4000)))) & ((MaxStockCount_in) : (((0) .. (4000)))) & ((amt) : (((1) .. (4000)))) & (((CurrentStockCount_in + amt)) : (((0) .. (4000)))) & ((CurrentStockCount_in + amt) <= MaxStockCount_in) & (((MaxStockCount_in - (CurrentStockCount_in + amt))) : (((0) .. (4000))));
+((NewCurrentStock) : (((0) .. (4000)))) & ((MaxStockCount_in) : (((0) .. (4000)))) & ((NewCurrentStock) : (((0) .. (4000)))) & (NewCurrentStock <= MaxStockCount_in) & (((MaxStockCount_in - NewCurrentStock)) : (((0) .. (4000))));
 btrue;
-((CurrentStockCount_in + amt) <= MaxStockCount_in);
-(((CurrentStockCount_in + amt)) : (((0) .. (4000))));
-((amt) : (((1) .. (4000))));
-((MaxStockCount_in) : (((0) .. (4000))));
-((CurrentStockCount_in) : (((0) .. (4000))))
+(NewCurrentStock <= MaxStockCount_in);
+((NewCurrentStock) : (((0) .. (4000))));
+((MaxStockCount_in) : (((0) .. (4000))))
 END
 &
 THEORY EnumerateX

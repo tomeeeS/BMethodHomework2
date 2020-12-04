@@ -52,7 +52,7 @@
 </Proof_Obligation>
 <Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
-<Tag>BringIntoWarehouse</Tag>
+<Tag>MoveStock</Tag>
 <Tag>INVARIANT</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -67,192 +67,137 @@
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="15" c="30"/>
+<Pos s="1" c="25" l="14"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:1" value="CurrentStockCount_in">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:1" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="20" l="15" c="9"/>
+<Pos s="15" c="9" l="14"/>
 </Attr>
 </Id>
 <Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" c="28" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="15" c="32"/>
+<Pos expanded="yes" f="definitions.def" s="2" c="28" l="3"/>
+<Pos f="forklift.mch" s="17" c="27" l="14"/>
 </Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:1" value="0">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:1" typref="2701647786" value="0">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" c="27" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="15" c="32"/>
+<Pos expanded="yes" f="definitions.def" s="1" c="27" l="3"/>
+<Pos f="forklift.mch" s="17" c="27" l="14"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:2" value="4000">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:2" typref="2701647786" value="4000">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" c="30" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="15" c="32"/>
+<Pos expanded="yes" f="definitions.def" s="4" c="30" l="3"/>
+<Pos f="forklift.mch" s="17" c="27" l="14"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="16" c="28"/>
+<Pos s="1" c="28" l="15"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:1" value="MaxStockCount_in">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:1" typref="2701647786" value="MaxStockCount_in">
 <Attr>
-<Pos s="16" l="16" c="11"/>
+<Pos s="16" c="11" l="15"/>
 </Attr>
 </Id>
 <Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" c="28" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="16" c="30"/>
+<Pos expanded="yes" f="definitions.def" s="2" c="28" l="3"/>
+<Pos f="forklift.mch" s="17" c="30" l="15"/>
 </Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:1" value="0">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:1" typref="2701647786" value="0">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" c="27" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="16" c="30"/>
+<Pos expanded="yes" f="definitions.def" s="1" c="27" l="3"/>
+<Pos f="forklift.mch" s="17" c="30" l="15"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:2" value="4000">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:2" typref="2701647786" value="4000">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" c="30" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="16" c="30"/>
+<Pos expanded="yes" f="definitions.def" s="4" c="30" l="3"/>
+<Pos f="forklift.mch" s="17" c="30" l="15"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="17" c="15"/>
+<Pos s="1" c="27" l="17"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:1" value="amt">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:1" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="3" l="17" c="11"/>
+<Pos s="15" c="11" l="17"/>
 </Attr>
 </Id>
 <Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" l="17" c="19"/>
+<Pos expanded="yes" f="definitions.def" s="2" c="28" l="3"/>
+<Pos f="forklift.mch" s="17" c="29" l="17"/>
 </Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:1" value="1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:1" typref="2701647786" value="0">
 <Attr>
-<Pos s="1" l="17" c="17"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:2" value="4000">
-<Attr>
-<Pos s="4" l="17" c="22"/>
+<Pos expanded="yes" f="definitions.def" s="1" c="27" l="3"/>
+<Pos f="forklift.mch" s="17" c="29" l="17"/>
 </Attr>
 </Integer_Literal>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:2" typref="2701647786" value="4000">
 <Attr>
-<Pos s="1" l="19" c="38"/>
-</Attr>
-<Binary_Exp typref="2701647786" op="+">
-<Attr>
-<Pos s="1" l="19" c="32"/>
-</Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:1:1" value="CurrentStockCount_in">
-<Attr>
-<Pos s="20" l="19" c="11"/>
-</Attr>
-</Id>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:1:2" value="amt">
-<Attr>
-<Pos s="3" l="19" c="34"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Binary_Exp typref="3603043417" op="..">
-<Attr>
-<Pos s="2" f="definitions.def" l="3" c="28" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="19" c="40"/>
-</Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:2:1" value="0">
-<Attr>
-<Pos s="1" f="definitions.def" l="3" c="27" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="19" c="40"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:2:2" value="4000">
-<Attr>
-<Pos s="4" f="definitions.def" l="3" c="30" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="19" c="40"/>
+<Pos expanded="yes" f="definitions.def" s="4" c="30" l="3"/>
+<Pos f="forklift.mch" s="17" c="29" l="17"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=">
 <Attr>
-<Pos s="2" l="20" c="38"/>
+<Pos s="2" c="27" l="18"/>
 </Attr>
-<Binary_Exp typref="2701647786" op="+">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:1" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="1" l="20" c="32"/>
-</Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:1:1" value="CurrentStockCount_in">
-<Attr>
-<Pos s="20" l="20" c="11"/>
+<Pos s="15" c="11" l="18"/>
 </Attr>
 </Id>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:1:2" value="amt">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:2" typref="2701647786" value="MaxStockCount_in">
 <Attr>
-<Pos s="3" l="20" c="34"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:2" value="MaxStockCount_in">
-<Attr>
-<Pos s="16" l="20" c="41"/>
+<Pos s="16" c="30" l="18"/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="21" c="59"/>
+<Pos s="1" c="48" l="19"/>
 </Attr>
 <Binary_Exp typref="2701647786" op="-">
 <Attr>
-<Pos s="1" l="21" c="28"/>
+<Pos s="1" c="28" l="19"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:6:1:1" value="MaxStockCount_in">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:1:1" typref="2701647786" value="MaxStockCount_in">
 <Attr>
-<Pos s="16" l="21" c="11"/>
+<Pos s="16" c="11" l="19"/>
 </Attr>
 </Id>
-<Binary_Exp typref="2701647786" op="+">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:1:2" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="1" l="21" c="52"/>
-</Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:6:1:2:1" value="CurrentStockCount_in">
-<Attr>
-<Pos s="20" l="21" c="31"/>
+<Pos s="15" c="31" l="19"/>
 </Attr>
 </Id>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:6:1:2:2" value="amt">
-<Attr>
-<Pos s="3" l="21" c="54"/>
-</Attr>
-</Id>
-</Binary_Exp>
 </Binary_Exp>
 <Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" c="28" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="21" c="61"/>
+<Pos expanded="yes" f="definitions.def" s="2" c="28" l="3"/>
+<Pos f="forklift.mch" s="17" c="50" l="19"/>
 </Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:6:2:1" value="0">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:2:1" typref="2701647786" value="0">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" c="27" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="21" c="61"/>
+<Pos expanded="yes" f="definitions.def" s="1" c="27" l="3"/>
+<Pos f="forklift.mch" s="17" c="50" l="19"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:6:2:2" value="4000">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:2:2" typref="2701647786" value="4000">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" c="30" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="21" c="61"/>
+<Pos expanded="yes" f="definitions.def" s="4" c="30" l="3"/>
+<Pos f="forklift.mch" s="17" c="50" l="19"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
@@ -264,63 +209,43 @@
 <Nary_Sub op="||">
 <Simple_Assignement_Sub>
 <Variables>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:1:1:1" value="newCurrent">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:1:1:1" typref="2701647786" value="newCurrent">
 <Attr>
-<Pos s="10" l="23" c="9"/>
+<Pos s="10" c="9" l="21"/>
 </Attr>
 </Id>
 </Variables>
 <Values>
-<Binary_Exp typref="2701647786" op="+">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:1:2:1" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="10" l="23" c="9"/>
-</Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:1:2:1:1" value="CurrentStockCount_in">
-<Attr>
-<Pos s="20" l="23" c="23"/>
+<Pos s="10" c="9" l="21"/>
 </Attr>
 </Id>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:1:2:1:2" value="amt">
-<Attr>
-<Pos s="3" l="23" c="46"/>
-</Attr>
-</Id>
-</Binary_Exp>
 </Values>
 </Simple_Assignement_Sub>
 <Simple_Assignement_Sub>
 <Variables>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:2:1:1" value="newRequired">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:2:1:1" typref="2701647786" value="newRequired">
 <Attr>
-<Pos s="11" l="24" c="12"/>
+<Pos s="11" c="12" l="22"/>
 </Attr>
 </Id>
 </Variables>
 <Values>
 <Binary_Exp typref="2701647786" op="-">
 <Attr>
-<Pos s="11" l="24" c="12"/>
+<Pos s="11" c="12" l="22"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:2:2:1:1" value="MaxStockCount_in">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:2:2:1:1" typref="2701647786" value="MaxStockCount_in">
 <Attr>
-<Pos s="16" l="24" c="27"/>
+<Pos s="16" c="27" l="22"/>
 </Attr>
 </Id>
-<Binary_Exp typref="2701647786" op="+">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:2:2:1:2" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="1" l="24" c="68"/>
-</Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:2:2:1:2:1" value="CurrentStockCount_in">
-<Attr>
-<Pos s="20" l="24" c="47"/>
+<Pos s="15" c="46" l="22"/>
 </Attr>
 </Id>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:4:1:2:2:1:2:2" value="amt">
-<Attr>
-<Pos s="3" l="24" c="70"/>
-</Attr>
-</Id>
-</Binary_Exp>
 </Binary_Exp>
 </Values>
 </Simple_Assignement_Sub>
@@ -388,7 +313,7 @@
 </Proof_Obligation>
 <Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
-<Tag>WellDefinedness_Precondition_BringIntoWarehouse</Tag>
+<Tag>WellDefinedness_Precondition_MoveStock</Tag>
 <Tag>INVARIANT</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -413,28 +338,28 @@
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="15" c="30"/>
+<Pos s="1" c="25" l="14"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:1" value="CurrentStockCount_in">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:1" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="20" l="15" c="9"/>
+<Pos s="15" c="9" l="14"/>
 </Attr>
 </Id>
 <Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" c="28" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="15" c="32"/>
+<Pos expanded="yes" f="definitions.def" s="2" c="28" l="3"/>
+<Pos f="forklift.mch" s="17" c="27" l="14"/>
 </Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:1" value="0">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:1" typref="2701647786" value="0">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" c="27" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="15" c="32"/>
+<Pos expanded="yes" f="definitions.def" s="1" c="27" l="3"/>
+<Pos f="forklift.mch" s="17" c="27" l="14"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:2" value="4000">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:2" typref="2701647786" value="4000">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" c="30" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="15" c="32"/>
+<Pos expanded="yes" f="definitions.def" s="4" c="30" l="3"/>
+<Pos f="forklift.mch" s="17" c="27" l="14"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
@@ -450,28 +375,28 @@
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="16" c="28"/>
+<Pos s="1" c="28" l="15"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:1" value="MaxStockCount_in">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:1" typref="2701647786" value="MaxStockCount_in">
 <Attr>
-<Pos s="16" l="16" c="11"/>
+<Pos s="16" c="11" l="15"/>
 </Attr>
 </Id>
 <Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" c="28" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="16" c="30"/>
+<Pos expanded="yes" f="definitions.def" s="2" c="28" l="3"/>
+<Pos f="forklift.mch" s="17" c="30" l="15"/>
 </Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:1" value="0">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:1" typref="2701647786" value="0">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" c="27" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="16" c="30"/>
+<Pos expanded="yes" f="definitions.def" s="1" c="27" l="3"/>
+<Pos f="forklift.mch" s="17" c="30" l="15"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:2" value="4000">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:2" typref="2701647786" value="4000">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" c="30" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="16" c="30"/>
+<Pos expanded="yes" f="definitions.def" s="4" c="30" l="3"/>
+<Pos f="forklift.mch" s="17" c="30" l="15"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
@@ -487,110 +412,50 @@
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="17" c="15"/>
+<Pos s="1" c="27" l="17"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:1" value="amt">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:1" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="3" l="17" c="11"/>
+<Pos s="15" c="11" l="17"/>
 </Attr>
 </Id>
 <Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" l="17" c="19"/>
+<Pos expanded="yes" f="definitions.def" s="2" c="28" l="3"/>
+<Pos f="forklift.mch" s="17" c="29" l="17"/>
 </Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:1" value="1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:1" typref="2701647786" value="0">
 <Attr>
-<Pos s="1" l="17" c="17"/>
+<Pos expanded="yes" f="definitions.def" s="1" c="27" l="3"/>
+<Pos f="forklift.mch" s="17" c="29" l="17"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:2" value="4000">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:2" typref="2701647786" value="4000">
 <Attr>
-<Pos s="4" l="17" c="22"/>
+<Pos expanded="yes" f="definitions.def" s="4" c="30" l="3"/>
+<Pos f="forklift.mch" s="17" c="29" l="17"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
 </Exp_Comparison>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
-<Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
-<Nary_Pred op="&amp;"/>
-</Binary_Pred>
-<Binary_Pred op="&amp;">
-<Nary_Pred op="&amp;"/>
-<Nary_Pred op="&amp;"/>
-</Binary_Pred>
-</Binary_Pred>
-<Binary_Pred op="=&gt;">
-<Exp_Comparison op=":">
-<Attr>
-<Pos s="1" l="19" c="38"/>
-</Attr>
-<Binary_Exp typref="2701647786" op="+">
-<Attr>
-<Pos s="1" l="19" c="32"/>
-</Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:1:1" value="CurrentStockCount_in">
-<Attr>
-<Pos s="20" l="19" c="11"/>
-</Attr>
-</Id>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:1:2" value="amt">
-<Attr>
-<Pos s="3" l="19" c="34"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Binary_Exp typref="3603043417" op="..">
-<Attr>
-<Pos s="2" f="definitions.def" l="3" c="28" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="19" c="40"/>
-</Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:2:1" value="0">
-<Attr>
-<Pos s="1" f="definitions.def" l="3" c="27" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="19" c="40"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:2:2" value="4000">
-<Attr>
-<Pos s="4" f="definitions.def" l="3" c="30" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="19" c="40"/>
-</Attr>
-</Integer_Literal>
-</Binary_Exp>
-</Exp_Comparison>
-<Nary_Pred op="&amp;">
-<Binary_Pred op="&amp;">
-<Binary_Pred op="&amp;">
-<Nary_Pred op="&amp;"/>
-<Nary_Pred op="&amp;"/>
-</Binary_Pred>
 <Nary_Pred op="&amp;"/>
 </Binary_Pred>
 <Binary_Pred op="=&gt;">
 <Exp_Comparison op="&lt;=">
 <Attr>
-<Pos s="2" l="20" c="38"/>
+<Pos s="2" c="27" l="18"/>
 </Attr>
-<Binary_Exp typref="2701647786" op="+">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:1" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="1" l="20" c="32"/>
-</Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:1:1" value="CurrentStockCount_in">
-<Attr>
-<Pos s="20" l="20" c="11"/>
+<Pos s="15" c="11" l="18"/>
 </Attr>
 </Id>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:1:2" value="amt">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:2" typref="2701647786" value="MaxStockCount_in">
 <Attr>
-<Pos s="3" l="20" c="34"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:2" value="MaxStockCount_in">
-<Attr>
-<Pos s="16" l="20" c="41"/>
+<Pos s="16" c="30" l="18"/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -598,17 +463,12 @@
 <Binary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
 <Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
 <Nary_Pred op="&amp;"/>
 </Binary_Pred>
-</Binary_Pred>
-<Binary_Pred op="&amp;">
-<Nary_Pred op="&amp;"/>
-<Nary_Pred op="&amp;"/>
-</Binary_Pred>
-</Binary_Pred>
-</Nary_Pred>
 </Binary_Pred>
 </Nary_Pred>
 </Binary_Pred>
@@ -625,7 +485,7 @@
 </Proof_Obligation>
 <Proof_Obligation>
 <Comment>Operations dans une machine abstraite</Comment>
-<Tag>WellDefinedness_BringIntoWarehouse</Tag>
+<Tag>WellDefinedness_MoveStock</Tag>
 <Tag>INVARIANT</Tag>
 <Definition name="B definitions"/>
 <Definition name="ctx"/>
@@ -640,192 +500,137 @@
 <Nary_Pred op="&amp;">
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="15" c="30"/>
+<Pos s="1" c="25" l="14"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:1" value="CurrentStockCount_in">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:1" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="20" l="15" c="9"/>
+<Pos s="15" c="9" l="14"/>
 </Attr>
 </Id>
 <Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" c="28" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="15" c="32"/>
+<Pos expanded="yes" f="definitions.def" s="2" c="28" l="3"/>
+<Pos f="forklift.mch" s="17" c="27" l="14"/>
 </Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:1" value="0">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:1" typref="2701647786" value="0">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" c="27" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="15" c="32"/>
+<Pos expanded="yes" f="definitions.def" s="1" c="27" l="3"/>
+<Pos f="forklift.mch" s="17" c="27" l="14"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:2" value="4000">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:1:2:2" typref="2701647786" value="4000">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" c="30" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="15" c="32"/>
+<Pos expanded="yes" f="definitions.def" s="4" c="30" l="3"/>
+<Pos f="forklift.mch" s="17" c="27" l="14"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="16" c="28"/>
+<Pos s="1" c="28" l="15"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:1" value="MaxStockCount_in">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:1" typref="2701647786" value="MaxStockCount_in">
 <Attr>
-<Pos s="16" l="16" c="11"/>
+<Pos s="16" c="11" l="15"/>
 </Attr>
 </Id>
 <Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" c="28" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="16" c="30"/>
+<Pos expanded="yes" f="definitions.def" s="2" c="28" l="3"/>
+<Pos f="forklift.mch" s="17" c="30" l="15"/>
 </Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:1" value="0">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:1" typref="2701647786" value="0">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" c="27" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="16" c="30"/>
+<Pos expanded="yes" f="definitions.def" s="1" c="27" l="3"/>
+<Pos f="forklift.mch" s="17" c="30" l="15"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:2" value="4000">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:2:2:2" typref="2701647786" value="4000">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" c="30" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="16" c="30"/>
+<Pos expanded="yes" f="definitions.def" s="4" c="30" l="3"/>
+<Pos f="forklift.mch" s="17" c="30" l="15"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="17" c="15"/>
+<Pos s="1" c="27" l="17"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:1" value="amt">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:1" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="3" l="17" c="11"/>
+<Pos s="15" c="11" l="17"/>
 </Attr>
 </Id>
 <Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" l="17" c="19"/>
+<Pos expanded="yes" f="definitions.def" s="2" c="28" l="3"/>
+<Pos f="forklift.mch" s="17" c="29" l="17"/>
 </Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:1" value="1">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:1" typref="2701647786" value="0">
 <Attr>
-<Pos s="1" l="17" c="17"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:2" value="4000">
-<Attr>
-<Pos s="4" l="17" c="22"/>
+<Pos expanded="yes" f="definitions.def" s="1" c="27" l="3"/>
+<Pos f="forklift.mch" s="17" c="29" l="17"/>
 </Attr>
 </Integer_Literal>
-</Binary_Exp>
-</Exp_Comparison>
-<Exp_Comparison op=":">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:3:2:2" typref="2701647786" value="4000">
 <Attr>
-<Pos s="1" l="19" c="38"/>
-</Attr>
-<Binary_Exp typref="2701647786" op="+">
-<Attr>
-<Pos s="1" l="19" c="32"/>
-</Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:1:1" value="CurrentStockCount_in">
-<Attr>
-<Pos s="20" l="19" c="11"/>
-</Attr>
-</Id>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:1:2" value="amt">
-<Attr>
-<Pos s="3" l="19" c="34"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Binary_Exp typref="3603043417" op="..">
-<Attr>
-<Pos s="2" f="definitions.def" l="3" c="28" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="19" c="40"/>
-</Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:2:1" value="0">
-<Attr>
-<Pos s="1" f="definitions.def" l="3" c="27" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="19" c="40"/>
-</Attr>
-</Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:2:2" value="4000">
-<Attr>
-<Pos s="4" f="definitions.def" l="3" c="30" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="19" c="40"/>
+<Pos expanded="yes" f="definitions.def" s="4" c="30" l="3"/>
+<Pos f="forklift.mch" s="17" c="29" l="17"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
 </Exp_Comparison>
 <Exp_Comparison op="&lt;=">
 <Attr>
-<Pos s="2" l="20" c="38"/>
+<Pos s="2" c="27" l="18"/>
 </Attr>
-<Binary_Exp typref="2701647786" op="+">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:1" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="1" l="20" c="32"/>
-</Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:1:1" value="CurrentStockCount_in">
-<Attr>
-<Pos s="20" l="20" c="11"/>
+<Pos s="15" c="11" l="18"/>
 </Attr>
 </Id>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:1:2" value="amt">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:4:2" typref="2701647786" value="MaxStockCount_in">
 <Attr>
-<Pos s="3" l="20" c="34"/>
-</Attr>
-</Id>
-</Binary_Exp>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:2" value="MaxStockCount_in">
-<Attr>
-<Pos s="16" l="20" c="41"/>
+<Pos s="16" c="30" l="18"/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op=":">
 <Attr>
-<Pos s="1" l="21" c="59"/>
+<Pos s="1" c="48" l="19"/>
 </Attr>
 <Binary_Exp typref="2701647786" op="-">
 <Attr>
-<Pos s="1" l="21" c="28"/>
+<Pos s="1" c="28" l="19"/>
 </Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:6:1:1" value="MaxStockCount_in">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:1:1" typref="2701647786" value="MaxStockCount_in">
 <Attr>
-<Pos s="16" l="21" c="11"/>
+<Pos s="16" c="11" l="19"/>
 </Attr>
 </Id>
-<Binary_Exp typref="2701647786" op="+">
+<Id tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:1:2" typref="2701647786" value="NewCurrentStock">
 <Attr>
-<Pos s="1" l="21" c="52"/>
-</Attr>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:6:1:2:1" value="CurrentStockCount_in">
-<Attr>
-<Pos s="20" l="21" c="31"/>
+<Pos s="15" c="31" l="19"/>
 </Attr>
 </Id>
-<Id typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:6:1:2:2" value="amt">
-<Attr>
-<Pos s="3" l="21" c="54"/>
-</Attr>
-</Id>
-</Binary_Exp>
 </Binary_Exp>
 <Binary_Exp typref="3603043417" op="..">
 <Attr>
-<Pos s="2" f="definitions.def" l="3" c="28" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="21" c="61"/>
+<Pos expanded="yes" f="definitions.def" s="2" c="28" l="3"/>
+<Pos f="forklift.mch" s="17" c="50" l="19"/>
 </Attr>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:6:2:1" value="0">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:2:1" typref="2701647786" value="0">
 <Attr>
-<Pos s="1" f="definitions.def" l="3" c="27" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="21" c="61"/>
+<Pos expanded="yes" f="definitions.def" s="1" c="27" l="3"/>
+<Pos f="forklift.mch" s="17" c="50" l="19"/>
 </Attr>
 </Integer_Literal>
-<Integer_Literal typref="2701647786" tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:6:2:2" value="4000">
+<Integer_Literal tag="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/bdp/forklift.bxml:1:2:1:3:1:5:2:2" typref="2701647786" value="4000">
 <Attr>
-<Pos s="4" f="definitions.def" l="3" c="30" expanded="yes"/>
-<Pos s="17" f="forklift.mch" l="21" c="61"/>
+<Pos expanded="yes" f="definitions.def" s="4" c="30" l="3"/>
+<Pos f="forklift.mch" s="17" c="50" l="19"/>
 </Attr>
 </Integer_Literal>
 </Binary_Exp>
@@ -837,18 +642,12 @@
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
 <Nary_Pred op="&amp;">
-<Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
-<Nary_Pred op="&amp;"/>
-</Binary_Pred>
 </Nary_Pred>
 <Nary_Pred op="&amp;">
 <Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
-<Binary_Pred op="&amp;">
 <Nary_Pred op="&amp;"/>
-<Nary_Pred op="&amp;"/>
-</Binary_Pred>
 </Binary_Pred>
 </Nary_Pred>
 </Nary_Pred>

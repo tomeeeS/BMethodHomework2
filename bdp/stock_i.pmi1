@@ -1,13 +1,13 @@
 ﻿THEORY BalanceX IS
-  stock_i,54,3,0,42,5,0,0;
+  stock_i,69,6,0,56,7,0,0;
   GetRequiredAmount,2,0,0,2,0,0,0;
   GetSum,10,2,0,7,1,0,0;
   Initialisation,10,0,0,8,2,0,0;
-  Put,19,0,0,13,2,0,0;
+  Put,21,2,0,17,2,0,0;
   ValuesLemmas,1,1,0,0,0,0,0;
   WellDefinedness_GetRequiredAmount,2,0,0,2,0,0,0;
   WellDefinedness_GetSum,5,0,0,5,0,0,0;
-  WellDefinedness_Put,5,0,0,5,0,0,0
+  WellDefinedness_Put,18,1,0,15,2,0,0
 END
 &
 THEORY ProofState IS
@@ -23,6 +23,19 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(1);
+  Proved(0);
+  Proved(0);
+  Proved(0);
   Proved(0);
   Proved(0);
   Proved(1);
@@ -38,12 +51,12 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(1);
-  Unproved;
-  Unproved;
+  Proved(0);
+  Proved(0);
   Proved(1);
   Proved(0);
-  Unproved;
-  Unproved;
+  Proved(0);
+  Proved(Util);
   Proved(0);
   Proved(0);
   Proved(0);
@@ -52,6 +65,8 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(0);
+  Proved(0);
+  Proved(Util);
   Proved(0);
   Proved(0);
   Proved(0);
@@ -80,6 +95,19 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
+  dd & eh(cCurrentStocks$1,_h,Goal) & pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
   pr;
   pr;
   pr;
@@ -95,20 +123,22 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  ?;
-  ?;
-  pr;
-  pr;
-  ?;
-  ?;
   pr;
   pr;
   pr;
   pr;
   pr;
+  dd & eh(CurrentStocks,_h,Goal) & pr;
   pr;
   pr;
   pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  dd & eh(cCurrentStocks$1,_h,Goal) & pr;
   pr;
   pr;
   pr;
@@ -137,6 +167,19 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
+  Force(0),(?;0;1;2);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(1),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(1),(?;0);
@@ -152,12 +195,12 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(1),(?;0);
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),?;
   Force(1),(?;0);
   Force(0),?;
-  Force(0),(?;0;1;2;3);
-  Force(0),(?;0;1;2;3);
+  Force(0),?;
+  Force(0),(?;0;1;2);
   Force(0),?;
   Force(0),?;
   Force(0),?;
@@ -166,6 +209,8 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1;2);
   Force(0),?;
   Force(0),?;
   Force(0),?;

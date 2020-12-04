@@ -6,29 +6,20 @@
 
 OPERATIONS
 
-    newCurrent , newRequired <-- BringIntoWarehouse (
-        CurrentStockCount_in ,
-        amt ,
+    newCurrent , newRequired <-- MoveStock (
+        NewCurrentStock ,
         MaxStockCount_in
     ) =
     PRE
-        CurrentStockCount_in : ( 0 .. 4000 )
+        NewCurrentStock : ( 0 .. 4000 )
         & MaxStockCount_in : ( 0 .. 4000 )
-        & amt : 1 .. 4000
 
-        & CurrentStockCount_in + amt : ( 0 .. 4000 )
-        & CurrentStockCount_in + amt <= MaxStockCount_in
-        & MaxStockCount_in - ( CurrentStockCount_in + amt ) : ( 0 .. 4000 )
+        & NewCurrentStock : ( 0 .. 4000 )
+        & NewCurrentStock <= MaxStockCount_in
+        & MaxStockCount_in - ( NewCurrentStock ) : ( 0 .. 4000 )
     THEN
-        newCurrent := CurrentStockCount_in + amt
-        || newRequired := MaxStockCount_in - ( CurrentStockCount_in + amt )
+        newCurrent := NewCurrentStock
+        || newRequired := MaxStockCount_in - NewCurrentStock
     END
-    /*;
-    
-    
-    ret <-- load_delivery_truck(CurrentStocks, ii, amt) 
-    BEGIN
-        ;
-    END
-    */
+
 END

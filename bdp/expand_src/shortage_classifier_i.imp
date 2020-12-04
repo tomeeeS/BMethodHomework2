@@ -1,6 +1,28 @@
-﻿
-IMPLEMENTATION shortage_classifier_i
+﻿IMPLEMENTATION shortage_classifier_i
+
 REFINES shortage_classifier
 
+DEFINITIONS
+    "definitions.def"
 
- END
+OPERATIONS
+
+
+    res <-- IsOnShortage (
+        Shortages ,
+        CurrentStocks ,
+        ii ,
+        NewCurrentStock ,
+        MaxStocks
+    ) =
+    BEGIN
+        res := Shortages ;
+        IF CurrentStocks ( ii ) < MaxStocks ( ii ) / 2 THEN
+            res ( ii ) := TRUE
+        ELSE
+            res ( ii ) := FALSE
+        END
+    END
+
+
+END

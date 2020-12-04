@@ -1,5 +1,5 @@
 THEORY BalanceX IS
-forklift,0,0,0,0,0,0,0
+forklift_i,0,0,0,0,0,0,0
 END
 &
 THEORY ProofState

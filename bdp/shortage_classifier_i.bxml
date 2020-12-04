@@ -1,0 +1,209 @@
+<Machine name='shortage_classifier_i' type='implementation'>
+<Abstraction>shortage_classifier</Abstraction>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='IsOnShortage'>
+<Attr>
+<Pos l='11' c='5' s='3' endLine='25'/>
+</Attr>
+<Output_Parameters>
+<Id value='res' typref='1127519748'>
+<Attr>
+<Pos l='11' c='5' s='3'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Input_Parameters>
+<Id value='Shortages' typref='1127519748'>
+<Attr>
+<Pos l='12' c='9' s='9'/>
+</Attr>
+</Id>
+<Id value='CurrentStocks' typref='103245008'>
+<Attr>
+<Pos l='13' c='9' s='13'/>
+</Attr>
+</Id>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='14' c='9' s='2'/>
+</Attr>
+</Id>
+<Id value='NewCurrentStock' typref='2701647786'>
+<Attr>
+<Pos l='15' c='9' s='15'/>
+</Attr>
+</Id>
+<Id value='MaxStocks' typref='103245008'>
+<Attr>
+<Pos l='16' c='9' s='9'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Body>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='19' c='13' s='2'/>
+</Attr>
+<Variables>
+<Id value='res' typref='1127519748'>
+<Attr>
+<Pos l='19' c='9' s='3'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='Shortages' typref='1127519748'>
+<Attr>
+<Pos l='19' c='16' s='9'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='20' c='9' s='2'/>
+</Attr>
+<Condition>
+<Exp_Comparison op='&lt;'>
+<Attr>
+<Pos l='20' c='30' s='1'/>
+</Attr>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='20' c='25' s='0'/>
+</Attr>
+<Id value='CurrentStocks' typref='103245008'>
+<Attr>
+<Pos l='20' c='12' s='13'/>
+</Attr>
+</Id>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='20' c='26' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Binary_Exp op='/' typref='2701647786'>
+<Attr>
+<Pos l='20' c='46' s='1'/>
+</Attr>
+<Binary_Exp op='(' typref='2701647786'>
+<Attr>
+<Pos l='20' c='41' s='0'/>
+</Attr>
+<Id value='MaxStocks' typref='103245008'>
+<Attr>
+<Pos l='20' c='32' s='9'/>
+</Attr>
+</Id>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='20' c='42' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+<Integer_Literal value='2' typref='2701647786'>
+<Attr>
+<Pos l='20' c='48' s='1'/>
+</Attr>
+</Integer_Literal>
+</Binary_Exp>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Attr>
+<Pos l='21' c='21' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2043437594'>
+<Attr>
+<Pos l='21' c='16' s='0'/>
+</Attr>
+<Id value='res' typref='1127519748'>
+<Attr>
+<Pos l='21' c='13' s='3'/>
+</Attr>
+</Id>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='21' c='17' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Boolean_Literal value='TRUE' typref='2043437594'>
+<Attr>
+<Pos l='21' c='24' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<Assignement_Sub>
+<Attr>
+<Pos l='23' c='21' s='2'/>
+</Attr>
+<Variables>
+<Binary_Exp op='(' typref='2043437594'>
+<Attr>
+<Pos l='23' c='16' s='0'/>
+</Attr>
+<Id value='res' typref='1127519748'>
+<Attr>
+<Pos l='23' c='13' s='3'/>
+</Attr>
+</Id>
+<Id value='ii' typref='2701647786'>
+<Attr>
+<Pos l='23' c='17' s='2'/>
+</Attr>
+</Id>
+</Binary_Exp>
+</Variables>
+<Values>
+<Boolean_Literal value='FALSE' typref='2043437594'>
+<Attr>
+<Pos l='23' c='24' s='5'/>
+</Attr>
+</Boolean_Literal>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='1127519748'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='BOOL'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='103245008'>
+<Unary_Exp op='POW'>
+<Binary_Exp op='*'>
+<Id value='INTEGER'/>
+<Id value='INTEGER'/>
+</Binary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='2701647786'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+</TypeInfos>
+
+</Machine>
