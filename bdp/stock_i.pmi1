@@ -1,28 +1,27 @@
 ﻿THEORY BalanceX IS
-  stock_i,52,4,0,41,6,0,0;
+  stock_i,51,2,0,40,4,0,0;
   Initialisation,10,0,0,8,2,0,0;
-  Put,21,2,0,16,2,0,0;
+  Put,20,0,0,15,2,0,0;
   ValuesLemmas,1,1,0,0,0,0,0;
-  WellDefinedness_Put,20,1,0,17,2,0,0
+  WellDefinedness_Put,20,1,0,17,0,0,0
 END
 &
 THEORY ProofState IS
   Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
   Proved(Util);
   Proved(0);
   Proved(0);
-  Proved(1);
+  Unproved;
   Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
-  Proved(1);
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
@@ -35,18 +34,18 @@ THEORY ProofState IS
   Proved(1);
   Proved(0);
   Proved(0);
-  Proved(Util);
+  Unproved;
   Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
+  Unproved;
   Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
-  Proved(Util);
   Proved(0);
   Proved(0);
   Proved(0);
@@ -63,12 +62,11 @@ END
 &
 THEORY MethodList IS
   pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
   eh(MaxStocks,_h,Goal) & dd & pr;
+  pr;
+  pr;
+  pr;
+  pr;
   pr;
   pr;
   pr;
@@ -90,12 +88,7 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  eh(cCurrentStocks$1,_h,Goal);
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
+  ?;
   pr;
   pr;
   pr;
@@ -113,26 +106,30 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
   dd & pr & p0 & pr & pr & pr & p0 & pr & pr & pr & p0 & pr & pr & pp & pp & pr
 END
 &
 THEORY PassList IS
   Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
   Force(0),(?;0;1;2;3);
   Force(0),?;
   Force(0),?;
-  Force(1),(?;0);
+  Force(0),(?;0);
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(1),(?;0);
+  Force(0),(?;0);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
@@ -145,18 +142,18 @@ THEORY PassList IS
   Force(1),(?;0);
   Force(0),?;
   Force(0),?;
-  Force(0),(?;0;1;2);
+  Force(0),(?;0);
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
+  Force(0),(?;0);
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(0),(?;0;1;2);
   Force(0),?;
   Force(0),?;
   Force(0),?;

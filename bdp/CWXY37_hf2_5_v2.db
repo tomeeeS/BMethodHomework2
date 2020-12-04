@@ -7,8 +7,8 @@
         <component_file path="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/src" name="forklift" suffix="mch" user="tomi">
             <component name="forklift" type="specification" />
         </component_file>
-        <component_file path="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/src" name="forklift_i" suffix="imp" user="tomi">
-            <component name="forklift_i" type="implementation" />
+        <component_file path="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/src" name="forklift_imp" suffix="imp" user="tomi">
+            <component name="forklift_imp" type="implementation" />
         </component_file>
         <component_file path="/home/tomi/Desktop/workspace/B/CWXY37_hf2_5_v2/src" name="shortage_classifier" suffix="mch" user="tomi">
             <component name="shortage_classifier" type="specification" />

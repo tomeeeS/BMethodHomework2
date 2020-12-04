@@ -1,0 +1,20 @@
+﻿IMPLEMENTATION forklift_imp
+
+REFINES forklift
+
+
+
+
+OPERATIONS
+
+    newCurrent , newRequired <-- BringIntoWarehouse (
+        CurrentStockCount_in ,
+        amt ,
+        MaxStockCount_in
+    ) =
+    BEGIN
+        newCurrent := CurrentStockCount_in + amt ;
+        newRequired := MaxStockCount_in - ( CurrentStockCount_in + amt )
+    END
+
+END

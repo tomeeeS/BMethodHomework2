@@ -1,11 +1,9 @@
 ﻿THEORY BalanceX IS
-  shortage_classifier,12,0,0,12,0,0,0;
-  WellDefinedness_IsOnShortage,12,0,0,12,0,0,0
+  shortage_classifier,10,0,0,10,0,0,0;
+  WellDefinedness_IsOnShortage,10,0,0,10,0,0,0
 END
 &
 THEORY ProofState IS
-  Proved(0);
-  Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
@@ -28,14 +26,10 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  pr;
-  pr;
   pr
 END
 &
 THEORY PassList IS
-  Force(0),?;
-  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;

@@ -1,6 +1,0 @@
-
-IMPLEMENTATION forklift_i
-REFINES forklift
-
-CurrentStocks( ii ) + amt
-END
