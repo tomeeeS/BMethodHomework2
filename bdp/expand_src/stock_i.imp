@@ -60,15 +60,20 @@ OPERATIONS
     BEGIN
         VAR currentTmp , requiredTmp , shortageTmp IN
 
+            shortageTmp <-- IsOnShortage (
+                cShortages ,
+                cCurrentStocks ,
+                ii ,
+                cCurrentStocks ( ii ) + amt ,
+                MaxStocks
+            ) ;
+
             currentTmp , requiredTmp <--
                 BringIntoWarehouse ( cCurrentStocks ( ii ) , amt , MaxStocks ( ii ) ) ;
 
-            shortageTmp <--
-                IsOnShortage ( cCurrentStocks ( ii ) + amt , MaxStocks ( ii ) ) ;
-
             cCurrentStocks ( ii ) := currentTmp ;
             cRequiredAmounts ( ii ) := requiredTmp ;
-            cShortages ( ii ) := shortageTmp
+            cShortages := shortageTmp
         END
     END
     ;

@@ -1,16 +1,12 @@
 THEORY BalanceX IS
-shortage_classifier,1,0,0,1,0,0,0;
-WellDefinedness_Precondition_IsOnShortage,1,0,0,1,0,0,0
+shortage_classifier,0,0,0,0,0,0,0
 END
 &
-THEORY ProofState IS
-Proved(0)
+THEORY ProofState
 END
 &
-THEORY MethodList IS
-pr
+THEORY MethodList
 END
 &
-THEORY PassList IS
-Force(0),?
+THEORY PassList
 END

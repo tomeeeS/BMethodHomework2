@@ -98,7 +98,7 @@ THEORY ListOperationsX IS
 END
 &
 THEORY ListInputX IS
-  List_Input(Machine(shortage_classifier),IsOnShortage)==(CurrentStock,MaxStock)
+  List_Input(Machine(shortage_classifier),IsOnShortage)==(Shortages,CurrentStocks,ii,NewCurrentStock,MaxStocks)
 END
 &
 THEORY ListOutputX IS
@@ -106,18 +106,18 @@ THEORY ListOutputX IS
 END
 &
 THEORY ListHeaderX IS
-  List_Header(Machine(shortage_classifier),IsOnShortage)==(res <-- IsOnShortage(CurrentStock,MaxStock))
+  List_Header(Machine(shortage_classifier),IsOnShortage)==(res <-- IsOnShortage(Shortages,CurrentStocks,ii,NewCurrentStock,MaxStocks))
 END
 &
 THEORY ListOperationGuardX END
 &
 THEORY ListPreconditionX IS
-  List_Precondition(Machine(shortage_classifier),IsOnShortage)==(CurrentStock: 0..4000 & MaxStock: 0..4000)
+  List_Precondition(Machine(shortage_classifier),IsOnShortage)==(CurrentStocks: 1..5 --> 0..4000 & ii: dom(CurrentStocks) & MaxStocks: 1..5 --> 0..4000 & Shortages: 1..5 --> BOOL & NewCurrentStock: 0..4000 & !xx.(xx: dom(Shortages|>{TRUE}) => CurrentStocks(xx)<MaxStocks(xx)/2) & !xx.(xx: dom(CurrentStocks) & CurrentStocks(xx)<MaxStocks(xx)/2 => xx: dom(Shortages|>{TRUE})))
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(shortage_classifier),IsOnShortage)==(CurrentStock: 0..4000 & MaxStock: 0..4000 | @(res$1).(res$1: BOOL & (CurrentStock<MaxStock/2 => res$1 = TRUE) & (not(CurrentStock<MaxStock/2) => res$1 = FALSE) ==> res:=res$1));
-  List_Substitution(Machine(shortage_classifier),IsOnShortage)==(res: (res: BOOL & (CurrentStock<MaxStock/2 => res = TRUE) & (not(CurrentStock<MaxStock/2) => res = FALSE)))
+  Expanded_List_Substitution(Machine(shortage_classifier),IsOnShortage)==(CurrentStocks: 1..5 --> 0..4000 & ii: dom(CurrentStocks) & MaxStocks: 1..5 --> 0..4000 & Shortages: 1..5 --> BOOL & NewCurrentStock: 0..4000 & !xx.(xx: dom(Shortages|>{TRUE}) => CurrentStocks(xx)<MaxStocks(xx)/2) & !xx.(xx: dom(CurrentStocks) & CurrentStocks(xx)<MaxStocks(xx)/2 => xx: dom(Shortages|>{TRUE})) | @(res$1).(res$1: 1..5 --> BOOL & dom(res$1|>{TRUE}) = {xx | xx: dom(CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)<MaxStocks(xx)/2} & dom(res$1|>{FALSE}) = (1..5)-{xx | xx: dom(CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)<MaxStocks(xx)/2} & !xx.(xx: dom(CurrentStocks<+{ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)<MaxStocks(xx)/2 => xx: dom(res$1|>{TRUE})) ==> res:=res$1));
+  List_Substitution(Machine(shortage_classifier),IsOnShortage)==(res: (res: 1..5 --> BOOL & dom(res|>{TRUE}) = {xx | xx: dom(CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)<MaxStocks(xx)/2} & dom(res|>{FALSE}) = (1..5)-{xx | xx: dom(CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)<MaxStocks(xx)/2} & !xx.(xx: dom(CurrentStocks<+{ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)<MaxStocks(xx)/2 => xx: dom(res|>{TRUE}))))
 END
 &
 THEORY ListConstantsX IS
@@ -168,8 +168,8 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY OperationsEnvX IS
-  Operations(Machine(shortage_classifier)) == (Type(IsOnShortage) == Cst(btype(BOOL,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?)));
-  Observers(Machine(shortage_classifier)) == (Type(IsOnShortage) == Cst(btype(BOOL,?,?),btype(INTEGER,?,?)*btype(INTEGER,?,?)))
+  Operations(Machine(shortage_classifier)) == (Type(IsOnShortage) == Cst(SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1)),SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1))*SetOf(btype(INTEGER,1,5)*btype(INTEGER,0,4000))*btype(INTEGER,?,?)*btype(INTEGER,?,?)*SetOf(btype(INTEGER,1,5)*btype(INTEGER,0,4000))));
+  Observers(Machine(shortage_classifier)) == (Type(IsOnShortage) == Cst(SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1)),SetOf(btype(INTEGER,1,5)*btype(BOOL,0,1))*SetOf(btype(INTEGER,1,5)*btype(INTEGER,0,4000))*btype(INTEGER,?,?)*btype(INTEGER,?,?)*SetOf(btype(INTEGER,1,5)*btype(INTEGER,0,4000))))
 END
 &
 THEORY TCIntRdX IS

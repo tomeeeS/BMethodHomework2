@@ -1,12 +1,50 @@
-THEORY BalanceX IS
-shortage_classifier,0,0,0,0,0,0,0
+﻿THEORY BalanceX IS
+  shortage_classifier,10,0,0,10,0,0,0;
+  WellDefinedness_IsOnShortage,10,0,0,10,0,0,0
 END
 &
-THEORY ProofState
+THEORY ProofState IS
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0)
 END
 &
-THEORY MethodList
+THEORY MethodList IS
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr;
+  pr
 END
 &
-THEORY PassList
+THEORY PassList IS
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?
+END
+&
+THEORY ManForms 
+END
+&
+THEORY Version IS
+  PRVersion("svn")(CLT == "svn")
 END
