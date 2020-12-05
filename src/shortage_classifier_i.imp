@@ -16,12 +16,16 @@ OPERATIONS
         MaxStocks
     ) =
     BEGIN
-        res := Shortages;
         IF CurrentStocks(ii) < MaxStocks(ii) / 2 THEN
-            res(ii) := TRUE
+            res := Shortages<+{ii|->TRUE}
         ELSE
-            res(ii) := FALSE
-        END         
+            res := Shortages<+{ii|->FALSE}
+        END/*;
+        
+ASSERT
+    dom(Shortages |> {TRUE}) = {xx | xx : dom(CurrentStocks) 
+        & CurrentStocks(xx) < MaxStocks(xx) / 2}
+    THEN skip END*/
     END
     
 

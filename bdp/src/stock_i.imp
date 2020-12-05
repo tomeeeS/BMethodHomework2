@@ -25,6 +25,10 @@ VALUES
 CONCRETE_VARIABLES
     cCurrentStocks , cShortages , cRequiredAmounts
 
+ASSERTIONS
+    dom ( cShortages |> { TRUE } ) = { xx | xx : dom ( cCurrentStocks )
+        & cCurrentStocks ( xx ) < MaxStocks ( xx ) / 2 }
+
 INVARIANT
     // types
     cCurrentStocks : ( 1 .. 5 ) --> ( 0 .. 4000 )

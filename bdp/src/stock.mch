@@ -87,7 +87,6 @@ OPERATIONS
         & CurrentStocks ( ii ) - amt >= 0
         & CurrentStocks ( ii ) - amt <= MaxStocks ( ii )
         & MaxStocks ( ii ) - ( CurrentStocks ( ii ) - amt ) : ( 0 .. 4000 )
-
     THEN
         CurrentStocks ( ii ) := CurrentStocks ( ii ) - amt
         || RequiredAmounts ( ii ) := MaxStocks ( ii ) - ( CurrentStocks ( ii ) - amt )

@@ -111,8 +111,8 @@ THEORY ListPreconditionX IS
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Implementation(shortage_classifier_i),IsOnShortage)==(CurrentStocks: 1..5 --> 0..4000 & ii: dom(CurrentStocks) & MaxStocks: 1..5 --> 0..4000 & Shortages: 1..5 --> BOOL & NewCurrentStock: 0..4000 & !xx.(xx: dom(Shortages|>{TRUE}) => CurrentStocks(xx)<MaxStocks(xx)/2) & !xx.(xx: dom(CurrentStocks) & CurrentStocks(xx)<MaxStocks(xx)/2 => xx: dom(Shortages|>{TRUE})) | res:=Shortages;(CurrentStocks(ii)<MaxStocks(ii)/2 ==> (ii: dom(res) | res:=res<+{ii|->TRUE}) [] not(CurrentStocks(ii)<MaxStocks(ii)/2) ==> (ii: dom(res) | res:=res<+{ii|->FALSE})));
-  List_Substitution(Implementation(shortage_classifier_i),IsOnShortage)==(res:=Shortages;IF CurrentStocks(ii)<MaxStocks(ii)/2 THEN res(ii):=TRUE ELSE res(ii):=FALSE END)
+  Expanded_List_Substitution(Implementation(shortage_classifier_i),IsOnShortage)==(CurrentStocks: 1..5 --> 0..4000 & ii: dom(CurrentStocks) & MaxStocks: 1..5 --> 0..4000 & Shortages: 1..5 --> BOOL & NewCurrentStock: 0..4000 & !xx.(xx: dom(Shortages|>{TRUE}) => CurrentStocks(xx)<MaxStocks(xx)/2) & !xx.(xx: dom(CurrentStocks) & CurrentStocks(xx)<MaxStocks(xx)/2 => xx: dom(Shortages|>{TRUE})) | CurrentStocks(ii)<MaxStocks(ii)/2 ==> res:=Shortages<+{ii|->TRUE} [] not(CurrentStocks(ii)<MaxStocks(ii)/2) ==> res:=Shortages<+{ii|->FALSE});
+  List_Substitution(Implementation(shortage_classifier_i),IsOnShortage)==(IF CurrentStocks(ii)<MaxStocks(ii)/2 THEN res:=Shortages<+{ii|->TRUE} ELSE res:=Shortages<+{ii|->FALSE} END)
 END
 &
 THEORY ListConstantsX IS
