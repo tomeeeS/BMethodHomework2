@@ -1,3 +1,8 @@
+/*
+ Advantages of putting this logic into a separate machine instead of it being duplicated in stock implementation:
+   - we only have to prove these once, not twice for operation Put and Pop
+   - we only have MaxStocks in our hypotheses, and no {1|->1000,2|->2000,3|->500,4|->125,5|->4000}
+*/
 MACHINE
     shortage_classifier
     
@@ -27,15 +32,13 @@ OPERATIONS
     THEN
         res :(
             res : STOCKS --> BOOL
+            
             & dom(res|>{TRUE}) = {xx | xx: dom(CurrentStocks) 
                 & (CurrentStocks <+ {ii |-> NewCurrentStock})(xx) < MaxStocks(xx) / 2} 
             & dom(res|>{FALSE}) = (1..5) - {xx | xx: dom(CurrentStocks) 
                 & (CurrentStocks <+ {ii |-> NewCurrentStock})(xx) < MaxStocks(xx) / 2}
-            & (CurrentStocks(ii) < MaxStocks(ii) / 2 =>
-                res = Shortages<+{ii|->TRUE})
-            & (not(CurrentStocks(ii) < MaxStocks(ii) / 2) =>
-                res = Shortages<+{ii|->FALSE})
-            /*& !xx.(
+                        
+            & !xx.(
                 (xx : dom(CurrentStocks <+ {ii |-> NewCurrentStock}) 
                 & (CurrentStocks <+ {ii |-> NewCurrentStock})(xx) < MaxStocks(xx) / 2) =>
                     xx : dom(res |> {TRUE})
@@ -43,7 +46,7 @@ OPERATIONS
             & !xx.(
                 xx : dom(res |> {TRUE}) => 
                     (CurrentStocks <+ {ii |-> NewCurrentStock})(xx) < MaxStocks(xx) / 2
-            )*/
+            )
         )        
     END
     

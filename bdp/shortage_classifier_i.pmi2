@@ -1,7 +1,7 @@
 ﻿THEORY BalanceX IS
-  shortage_classifier_i,11,0,0,7,0,0,0;
-  IsOnShortage,7,0,0,3,0,0,0;
-  WellDefinedness_IsOnShortage,4,0,0,4,0,0,0
+  shortage_classifier_i,24,0,0,14,0,0,0;
+  IsOnShortage,21,0,0,11,0,0,0;
+  WellDefinedness_IsOnShortage,3,0,0,3,0,0,0
 END
 &
 THEORY ProofState IS
@@ -12,9 +12,22 @@ THEORY ProofState IS
   Proved(0);
   Unproved;
   Unproved;
+  Unproved;
   Proved(0);
   Unproved;
   Unproved;
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
   Proved(0)
 END
 &
@@ -26,9 +39,22 @@ THEORY MethodList IS
   pr;
   ?;
   ?;
+  ?;
   pr;
   ?;
-  dd & ah(dom(Shortages<+{ii|->TRUE}|>{TRUE}) = dom(Shortages|>{TRUE})\/{ii}) & pr & dd & eh(dom(Shortages<+{ii|->TRUE}|>{TRUE}),_h,Goal);
+  ?;
+  pr;
+  pr;
+  pr;
+  pr;
+  ?;
+  ?;
+  ?;
+  pr;
+  ?;
+  ?;
+  pr;
+  pr;
   pr
 END
 &
@@ -38,11 +64,24 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
   Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
   Force(0),?
 END
 &

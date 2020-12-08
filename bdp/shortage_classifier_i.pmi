@@ -1,7 +1,7 @@
 ﻿THEORY BalanceX IS
-  shortage_classifier_i,11,0,0,7,0,0,0;
-  IsOnShortage,7,0,0,3,0,0,0;
-  WellDefinedness_IsOnShortage,4,0,0,4,0,0,0
+  shortage_classifier_i,26,0,0,14,0,0,0;
+  IsOnShortage,23,0,0,11,0,0,0;
+  WellDefinedness_IsOnShortage,3,0,0,3,0,0,0
 END
 &
 THEORY ProofState IS
@@ -12,8 +12,23 @@ THEORY ProofState IS
   Proved(0);
   Unproved;
   Unproved;
+  Unproved;
   Proved(0);
   Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Proved(0);
+  Proved(0);
+  Unproved;
+  Unproved;
+  Unproved;
+  Proved(0);
+  Unproved;
+  Unproved;
+  Proved(0);
+  Proved(0);
   Unproved;
   Proved(0)
 END
@@ -26,9 +41,24 @@ THEORY MethodList IS
   pr;
   ?;
   ?;
+  ?;
   pr;
   ?;
-  dd & ah(dom(Shortages<+{ii|->TRUE}|>{TRUE}) = dom(Shortages|>{TRUE})\/{ii}) & pr & dd & eh(dom(Shortages<+{ii|->TRUE}|>{TRUE}),_h,Goal);
+  ?;
+  pr;
+  pr;
+  ?;
+  pr;
+  pr;
+  ?;
+  ?;
+  dd & ah(dom(CurrentStocks) = dom(CurrentStocks<+{ii|->NewCurrentStock})) & pr & dd & eh(dom(CurrentStocks),_h,Goal) & ah(dom(CurrentStocks<+{ii|->NewCurrentStock}) = dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock})\/{ii}) & pr & dd & eh(dom(CurrentStocks<+{ii|->NewCurrentStock}),_h,Goal) & ah({xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock})\/{ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} = {xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}\/{xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}) & pr & dd & eh({xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock})\/{ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2},_h,Goal) & ah({xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} = {ii}) & ah({xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} <: {ii}) & ss & pr & ah({ii} <: {xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}) & pr & dd & dd & ar(GenEqualityX.5,Fwd) & dd & eh({xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2},_h,Goal) & eh(dom(Shortages<+{ii|->TRUE}|>{TRUE}),_h,Goal) & ah(dom({ii}<<|Shortages|>{TRUE}) = {xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}) & ah({xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} = {xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock}) & CurrentStocks(xx)+1<=MaxStocks(xx)/2}) & ss & pr & ah({xx | xx: dom(CurrentStocks) & 0<= -1-(CurrentStocks<+{ii|->NewCurrentStock})(xx)+MaxStocks(xx)/2} <: {xx | xx: dom(CurrentStocks) & 0<= -1-CurrentStocks(xx)+MaxStocks(xx)/2}) & ah(!xx.(xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock}) => (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1 = CurrentStocks(xx))) & dd;
+  pr;
+  ?;
+  ?;
+  pr;
+  pr;
+  ?;
   pr
 END
 &
@@ -38,11 +68,26 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
   Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),?;
+  Force(0),(?;0;1);
   Force(0),?
 END
 &

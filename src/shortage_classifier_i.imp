@@ -16,16 +16,44 @@ OPERATIONS
         MaxStocks
     ) =
     BEGIN
-        IF CurrentStocks(ii) < MaxStocks(ii) / 2 THEN
-            res := Shortages<+{ii|->TRUE}
+        IF NewCurrentStock < MaxStocks(ii) / 2 THEN
+            res := Shortages;
+            res(ii) := TRUE
         ELSE
-            res := Shortages<+{ii|->FALSE}
-        END/*;
+            res := Shortages;
+            res(ii) := FALSE
+        END;
         
-ASSERT
-    dom(Shortages |> {TRUE}) = {xx | xx : dom(CurrentStocks) 
-        & CurrentStocks(xx) < MaxStocks(xx) / 2}
-    THEN skip END*/
+        ASSERT // helps in proofs
+            
+            // things outside ii aren't changed
+            !xx.(xx : dom({ii} <<| Shortages) =>
+                res(xx) = Shortages(xx))
+            & !xx.(xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock}) =>
+                (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1 = CurrentStocks(xx))
+        
+            // what happens in ii
+            & (NewCurrentStock < MaxStocks(ii) / 2 => 
+                res(ii) = TRUE)
+            & (not(NewCurrentStock < MaxStocks(ii) / 2) => 
+                res(ii) = FALSE)
+
+
+            // <transform Shortages into the unchanged parts and the changed part >
+            
+            //& Shortages <+ {ii |-> TRUE} = ({ii} <<| Shortages) \/ {ii |-> TRUE}
+            & dom((Shortages <+ {ii |-> TRUE}) |> {TRUE}) =
+                dom(({ii} <<| Shortages) |> {TRUE}) \/ {ii}
+        
+            & Shortages <+ {ii |-> FALSE} = ({ii} <<| Shortages) \/ {ii |-> FALSE}
+            & (Shortages <+ {ii |-> FALSE} = ({ii} <<| Shortages) \/ {ii |-> FALSE} =>
+                dom((Shortages <+ {ii |-> FALSE}) |> {TRUE}) =
+                    dom(({ii} <<| Shortages) |> {TRUE}))
+                
+            // </transform Shortages into the unchanged parts and the changed part>
+        THEN
+            skip
+        END        
     END
     
 

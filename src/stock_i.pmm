@@ -5,6 +5,10 @@ Pattern(dom(a|>{b}) = SET(c).(c : dom(d) & (d<+{e|->d(e)+f})(c)+g<=h(c)/i))
 	& ff(0) & dd & eh(CurrentStocks,_h,Goal) & pr;
 Pattern(dom(a|>{b}) = SET(c).(c : dom(d) & (d<+{e|->d(e)-f})(c)+g<=h(c)/i)) 
 	& ff(0) & dd & eh(CurrentStocks,_h,Goal) & pr;
+Pattern(a : dom(b|>{c})) 
+	& ff(0) & dd & ph(xx,!xx.(xx : dom(cCurrentStocks$1<+{ii|->cCurrentStocks$1(ii)+amt}) & (cCurrentStocks$1<+{ii|->cCurrentStocks$1(ii)+amt})(xx)+1<=MaxStocks(xx)/2 => xx : dom(res$1|>{TRUE}))) & pr & pr;
+Pattern(a : dom(b|>{c})) 
+	& ff(0) & dd & ph(xx,!xx.(xx : dom(cCurrentStocks$1<+{ii|->cCurrentStocks$1(ii)-amt}) & (cCurrentStocks$1<+{ii|->cCurrentStocks$1(ii)-amt})(xx)+1<=MaxStocks(xx)/2 => xx : dom(res$1|>{TRUE}))) & pr & pr;
 Pattern(a = SIGMA(b).(b : c..a | d(b))) 
 	& ff(0) & dd & pr & pr & ar(s1.6,Goal) & pr;
 Pattern(a+b(c+d) = SIGMA(e).(e : d..c+d | b(e))) 

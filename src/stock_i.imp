@@ -70,7 +70,7 @@ OPERATIONS
                 ii,
                 cCurrentStocks(ii) + amt,
                 MaxStocks
-            );
+            ); 
             
             currentTmp, requiredTmp <--
                 MoveStock(cCurrentStocks(ii) + amt, MaxStocks(ii));

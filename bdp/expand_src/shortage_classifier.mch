@@ -27,23 +27,21 @@ OPERATIONS
     THEN
         res : (
             res : STOCKS --> BOOL
+
             & dom ( res |> { TRUE } ) = { xx | xx : dom ( CurrentStocks )
                 & ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx ) < MaxStocks ( xx ) / 2 }
             & dom ( res |> { FALSE } ) = ( 1 .. 5 ) - { xx | xx : dom ( CurrentStocks )
                 & ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx ) < MaxStocks ( xx ) / 2 }
-            & ( CurrentStocks ( ii ) < MaxStocks ( ii ) / 2 =>
-                res = Shortages <+ { ii |-> TRUE } )
-            & ( not ( CurrentStocks ( ii ) < MaxStocks ( ii ) / 2 ) =>
-                res = Shortages <+ { ii |-> FALSE } )
-            /*& !xx.(
-                (xx : dom(CurrentStocks <+ {ii |-> NewCurrentStock}) 
-                & (CurrentStocks <+ {ii |-> NewCurrentStock})(xx) < MaxStocks(xx) / 2) =>
-                    xx : dom(res |> {TRUE})
-            )            
-            & !xx.(
-                xx : dom(res |> {TRUE}) => 
-                    (CurrentStocks <+ {ii |-> NewCurrentStock})(xx) < MaxStocks(xx) / 2
-            )*/
+
+            & ! xx . (
+                ( xx : dom ( CurrentStocks <+ { ii |-> NewCurrentStock } )
+                & ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx ) < MaxStocks ( xx ) / 2 ) =>
+                    xx : dom ( res |> { TRUE } )
+            )
+            & ! xx . (
+                xx : dom ( res |> { TRUE } ) =>
+                    ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx ) < MaxStocks ( xx ) / 2
+            )
         )
     END
 
