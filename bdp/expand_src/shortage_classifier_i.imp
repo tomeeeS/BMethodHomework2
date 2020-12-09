@@ -29,8 +29,17 @@ OPERATIONS
             // things outside ii aren't changed
             ! xx . ( xx : dom ( { ii } <<| Shortages ) =>
                 res ( xx ) = Shortages ( xx ) )
-            & ! xx . ( xx : dom ( { ii } <<| CurrentStocks <+ { ii |-> NewCurrentStock } ) =>
-                ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx ) + 1 = CurrentStocks ( xx ) )
+            & ! xx . ( xx : dom ( { ii } <<| ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ) =>
+                ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx ) = CurrentStocks ( xx ) )
+            & (
+                { xx | xx : dom ( CurrentStocks )
+                    & ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx ) < MaxStocks ( xx ) / 2 }
+                = { xx | xx : dom ( CurrentStocks )
+                    & CurrentStocks ( xx ) < MaxStocks ( xx ) / 2 }
+            )
+            & dom ( ( { ii } <<| Shortages ) |> { TRUE } )
+                = { xx | xx : dom ( { ii } <<| CurrentStocks <+ { ii |-> NewCurrentStock } )
+                    & CurrentStocks ( xx ) < MaxStocks ( xx ) / 2 }
 
             // what happens in ii
             & ( NewCurrentStock < MaxStocks ( ii ) / 2 =>
@@ -39,8 +48,8 @@ OPERATIONS
                 res ( ii ) = FALSE )
 
 
-            // <transform Shortages into the unchanged parts and the changed part >
-
+            // <transform Shortages into the unchanged parts (outside of {ii})
+            //   and the changed part (at {ii}) >
             //& Shortages <+ {ii |-> TRUE} = ({ii} <<| Shortages) \/ {ii |-> TRUE}
             & dom ( ( Shortages <+ { ii |-> TRUE } ) |> { TRUE } ) =
                 dom ( ( { ii } <<| Shortages ) |> { TRUE } ) \/ { ii }
@@ -50,7 +59,6 @@ OPERATIONS
                 dom ( ( Shortages <+ { ii |-> FALSE } ) |> { TRUE } ) =
                     dom ( ( { ii } <<| Shortages ) |> { TRUE } ) )
 
-            // </transform Shortages into the unchanged parts and the changed part>
         THEN
             skip
         END
