@@ -1,7 +1,7 @@
 ﻿THEORY BalanceX IS
-  shortage_classifier_i,52,0,0,38,0,0,0;
-  IsOnShortage,27,0,0,13,0,0,0;
-  WellDefinedness_IsOnShortage,25,0,0,25,0,0,0
+  shortage_classifier_i,30,8,0,12,0,0,0;
+  IsOnShortage,27,8,0,9,0,0,0;
+  WellDefinedness_IsOnShortage,3,0,0,3,0,0,0
 END
 &
 THEORY ProofState IS
@@ -9,54 +9,32 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
+  Unproved;
   Unproved;
   Unproved;
   Unproved;
   Proved(0);
   Unproved;
-  Unproved;
+  Proved(Util);
+  Proved(Util);
   Proved(0);
   Proved(0);
-  Unproved;
-  Unproved;
+  Proved(Util);
   Proved(0);
-  Proved(0);
-  Proved(0);
+  Proved(Util);
   Unproved;
   Unproved;
-  Unproved;
-  Proved(0);
   Unproved;
   Unproved;
   Proved(0);
-  Proved(0);
   Unproved;
-  Unproved;
+  Proved(Util);
+  Proved(Util);
   Proved(0);
-  Proved(0)
+  Proved(0);
+  Proved(Util);
+  Proved(0);
+  Proved(Util)
 END
 &
 THEORY MethodList IS
@@ -65,53 +43,31 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
   ?;
   ?;
   ?;
   pr;
   ?;
-  ?;
+  dd & ah(dom(Shortages<+{ii|->FALSE}|>{TRUE}) = dom({ii}<<|Shortages\/{ii|->FALSE}|>{TRUE})) & pr & dd & ah(dom({ii}<<|Shortages\/{ii|->FALSE}|>{TRUE}) = dom({ii}<<|Shortages|>{TRUE})\/({ii|->FALSE}|>{TRUE})) & ar(SimplifyRelRarLongXY.3,Goal) & pr & dd & eh(dom(Shortages<+{ii|->FALSE}|>{TRUE}),_h,Goal) & eh(dom({ii}<<|Shortages\/{ii|->FALSE}|>{TRUE}),_h,Goal) & pr;
+  dd & ar(b1.38,Once);
   pr;
   pr;
-  ?;
-  ?;
+  dd & ah(dom({ii}<<|Shortages|>{TRUE}) <: {xx | xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)+1<=MaxStocks(xx)/2}) & ah(!xx.(xx: dom(Shortages|>{TRUE}) => CurrentStocks(xx)+1<=MaxStocks(xx)/2)) & pr & dd & ah({xx | xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)+1<=MaxStocks(xx)/2} <: dom({ii}<<|Shortages|>{TRUE})) & ah(!xx.(xx: dom(CurrentStocks) & CurrentStocks(xx)+1<=MaxStocks(xx)/2 => xx: dom(Shortages|>{TRUE}))) & pr & dd & ar(GenEqualityX.5,Fwd);
   pr;
-  pr;
-  pr;
-  ?;
-  ?;
-  dd & ah(dom(CurrentStocks) = dom(CurrentStocks<+{ii|->NewCurrentStock})) & pr & dd & eh(dom(CurrentStocks),_h,Goal) & ah(dom(CurrentStocks<+{ii|->NewCurrentStock}) = dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock})\/{ii}) & pr & dd & eh(dom(CurrentStocks<+{ii|->NewCurrentStock}),_h,Goal) & ah({xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock})\/{ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} = {xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}\/{xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}) & pr & dd & eh({xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock})\/{ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2},_h,Goal) & ah({xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} = {ii}) & ah({xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} <: {ii}) & ss & pr & ah({ii} <: {xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}) & pr & dd & dd & ar(GenEqualityX.5,Fwd) & dd & eh({xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2},_h,Goal) & eh(dom(Shortages<+{ii|->TRUE}|>{TRUE}),_h,Goal) & ah(dom({ii}<<|Shortages|>{TRUE}) = {xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}) & ah({xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} = {xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock}) & CurrentStocks(xx)+1<=MaxStocks(xx)/2}) & ss & pr & dd & eh({xx | xx: dom({ii}<<|CurrentStocks<+{ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2},_h,Goal) & pr & dd & eh(dom({ii}<<|Shortages|>{TRUE}),_h,Goal) & pr;
+  dd & ah({xx | xx: dom({ii}<<|CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} <: {xx | xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)+1<=MaxStocks(xx)/2}) & ah(!xx.(xx: dom({ii}<<|CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)<MaxStocks(xx)/2 => xx: {xx | xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)<MaxStocks(xx)/2})) & pr & dd & ah({xx | xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)+1<=MaxStocks(xx)/2} <: {xx | xx: dom({ii}<<|CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}) & ah(!xx.(xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)<MaxStocks(xx)/2 => xx: {xx | xx: dom({ii}<<|CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)<MaxStocks(xx)/2})) & dd & pr & dd & ar(GenEqualityX.5,Fwd);
+  dd;
   pr;
   ?;
-  ?;
+  dd & ah(dom(CurrentStocks) = dom({ii}<<|CurrentStocks)\/{ii}) & pr & dd & eh(dom(CurrentStocks),_h,Goal) & eh({xx | xx: dom({ii}<<|CurrentStocks)\/{ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2},_h,Goal) & ah({xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} = {ii}) & ah({xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} <: {ii}) & ss & pr & ah({ii} <: {xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}) & pr & dd & dd & ar(GenEqualityX.5,Fwd) & dd & eh({xx | xx: {ii} & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2},_h,Goal) & eh(dom(Shortages<+{ii|->TRUE}|>{TRUE}),_h,Goal) & eh(dom({ii}<<|Shortages|>{TRUE}),_h,Goal) & eh({xx | xx: dom({ii}<<|CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2},_h,Goal) & pr;
+  pr;
+  dd;
+  dd & ah(dom(Shortages<+{ii|->FALSE}|>{TRUE}) = dom({ii}<<|Shortages\/{ii|->FALSE}|>{TRUE})) & pr & dd & ah(dom({ii}<<|Shortages\/{ii|->FALSE}|>{TRUE}) = dom({ii}<<|Shortages|>{TRUE})\/({ii|->FALSE}|>{TRUE})) & ar(SimplifyRelRarLongXY.3,Goal) & pr & dd & eh(dom(Shortages<+{ii|->FALSE}|>{TRUE}),_h,Goal) & eh(dom({ii}<<|Shortages\/{ii|->FALSE}|>{TRUE}),_h,Goal) & pr;
+  dd & ar(b1.38,Once);
   pr;
   pr;
-  ?;
-  ?;
+  dd & ah(dom({ii}<<|Shortages|>{TRUE}) <: {xx | xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)+1<=MaxStocks(xx)/2}) & ah(!xx.(xx: dom(Shortages|>{TRUE}) => CurrentStocks(xx)+1<=MaxStocks(xx)/2)) & pr & dd & ah({xx | xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)+1<=MaxStocks(xx)/2} <: dom({ii}<<|Shortages|>{TRUE})) & ah(!xx.(xx: dom(CurrentStocks) & CurrentStocks(xx)+1<=MaxStocks(xx)/2 => xx: dom(Shortages|>{TRUE}))) & pr & dd & ar(GenEqualityX.5,Fwd);
   pr;
-  pr
+  dd & ah({xx | xx: dom({ii}<<|CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} <: {xx | xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)+1<=MaxStocks(xx)/2}) & ah(!xx.(xx: dom({ii}<<|CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)<MaxStocks(xx)/2 => xx: {xx | xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)<MaxStocks(xx)/2})) & pr & dd & ah({xx | xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)+1<=MaxStocks(xx)/2} <: {xx | xx: dom({ii}<<|CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}) & ah(!xx.(xx: dom({ii}<<|CurrentStocks) & CurrentStocks(xx)<MaxStocks(xx)/2 => xx: {xx | xx: dom({ii}<<|CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)<MaxStocks(xx)/2})) & dd & pr & dd & ar(GenEqualityX.5,Fwd)
 END
 &
 THEORY PassList IS
@@ -119,54 +75,32 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
   Force(0),?;
   Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),?;
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
+  Force(0),(?;0;1);
   Force(0),?;
   Force(0),?;
+  Force(0),(?;0;1);
   Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
-  Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
-  Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
-  Force(0),?;
-  Force(0),?;
-  Force(0),(?;0;1;2);
-  Force(0),(?;0;1;2);
-  Force(0),?;
-  Force(0),?
+  Force(0),(?;0;1)
 END
 &
 THEORY ManForms 
