@@ -1,17 +1,17 @@
 ﻿THEORY BalanceX IS
-  stock_i,123,10,0,97,14,0,0;
+  stock_i,113,12,0,89,12,0,0;
   AssertionLemmas,1,1,0,0,0,0,0;
   GetRequiredAmount,2,0,0,2,0,0,0;
   GetSum,10,2,0,7,1,0,0;
   Initialisation,10,0,0,8,2,0,0;
-  Pop,21,2,0,16,2,0,0;
-  Put,21,2,0,16,2,0,0;
+  Pop,21,3,0,16,2,0,0;
+  Put,21,3,0,16,2,0,0;
   ValuesLemmas,1,1,0,0,0,0,0;
   WellDefinednessAssertions,4,0,0,3,1,0,0;
   WellDefinedness_GetRequiredAmount,2,0,0,2,0,0,0;
   WellDefinedness_GetSum,5,0,0,5,0,0,0;
-  WellDefinedness_Pop,23,1,0,19,3,0,0;
-  WellDefinedness_Put,23,1,0,19,3,0,0
+  WellDefinedness_Pop,18,1,0,15,2,0,0;
+  WellDefinedness_Put,18,1,0,15,2,0,0
 END
 &
 THEORY ProofState IS
@@ -41,21 +41,11 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(0);
-  Proved(1);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
   Proved(Util);
-  Proved(0);
-  Proved(0);
-  Proved(0);
-  Proved(1);
-  Proved(0);
   Proved(0);
   Proved(0);
   Proved(0);
@@ -87,7 +77,7 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(1);
-  Unproved;
+  Proved(Util);
   Proved(0);
   Proved(1);
   Proved(0);
@@ -108,7 +98,7 @@ THEORY ProofState IS
   Proved(0);
   Proved(0);
   Proved(1);
-  Unproved;
+  Proved(Util);
   Proved(0);
   Proved(1);
   Proved(0);
@@ -171,17 +161,7 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
   dd & eh(cCurrentStocks$1,_h,Goal) & pr;
-  pr;
-  pr;
-  pr;
-  pr;
-  pr;
   pr;
   pr;
   pr;
@@ -213,7 +193,7 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  ?;
+  dd & ph(xx,!xx.(xx: dom(cCurrentStocks$1<+{ii|->cCurrentStocks$1(ii)-amt}) & (cCurrentStocks$1<+{ii|->cCurrentStocks$1(ii)-amt})(xx)+1<=MaxStocks(xx)/2 => xx: dom(res$1|>{TRUE}))) & pr & pr;
   pr;
   pr;
   pr;
@@ -234,7 +214,7 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  ?;
+  dd & ph(xx,!xx.(xx: dom(cCurrentStocks$1<+{ii|->cCurrentStocks$1(ii)+amt}) & (cCurrentStocks$1<+{ii|->cCurrentStocks$1(ii)+amt})(xx)+1<=MaxStocks(xx)/2 => xx: dom(res$1|>{TRUE}))) & pr & pr;
   pr;
   pr;
   pr;
@@ -293,21 +273,11 @@ THEORY PassList IS
   Force(0),?;
   Force(0),?;
   Force(0),?;
-  Force(1),(?;0);
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),(?;0;1;2);
-  Force(0),?;
-  Force(0),?;
-  Force(0),?;
-  Force(1),(?;0);
-  Force(0),?;
   Force(0),?;
   Force(0),?;
   Force(0),?;

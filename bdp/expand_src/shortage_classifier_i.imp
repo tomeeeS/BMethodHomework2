@@ -47,14 +47,14 @@ OPERATIONS
                         < MaxStocks ( xx ) / 2
             )
 
-            & ( ! xx . ( xx : dom ( { ii } <<| CurrentStocks )
+            & ( ( ! xx . ( xx : dom ( { ii } <<| CurrentStocks )
                     & ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx )
                         < MaxStocks ( xx ) / 2
                 =>
                     xx : { xx | xx : dom ( { ii } <<| CurrentStocks )
                     & CurrentStocks ( xx ) < MaxStocks ( xx ) / 2 }
-            ) ) &
-            ( ! xx . ( xx : dom ( { ii } <<| CurrentStocks )
+            ) &
+            ! xx . ( xx : dom ( { ii } <<| CurrentStocks )
                     & CurrentStocks ( xx )
                         < MaxStocks ( xx ) / 2
                 =>
@@ -62,7 +62,7 @@ OPERATIONS
                     & ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx )
                         < MaxStocks ( xx ) / 2 }
             ) ) =>
-            ( { // the universally quantified predicates above are only needed to help prove this equality:
+            { // the universally quantified predicates above are only needed to help prove this equality:
                 xx | xx : dom ( { ii } <<| CurrentStocks )
                     & ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx )
                         < MaxStocks ( xx ) / 2 }
