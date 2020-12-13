@@ -24,6 +24,7 @@ OPERATIONS
             res ( ii ) := FALSE
         END ;
 
+
         ASSERT // helps in proofs
 
             // things outside ii aren't changed
@@ -46,30 +47,17 @@ OPERATIONS
                     & ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx )
                         < MaxStocks ( xx ) / 2
             )
-
-            & ( ( ! xx . ( xx : dom ( { ii } <<| CurrentStocks )
-                    & ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx )
-                        < MaxStocks ( xx ) / 2
-                =>
-                    xx : { xx | xx : dom ( { ii } <<| CurrentStocks )
-                    & CurrentStocks ( xx ) < MaxStocks ( xx ) / 2 }
-            ) &
-            ! xx . ( xx : dom ( { ii } <<| CurrentStocks )
-                    & CurrentStocks ( xx )
-                        < MaxStocks ( xx ) / 2
-                =>
-                    xx : { xx | xx : dom ( { ii } <<| CurrentStocks )
-                    & ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx )
-                        < MaxStocks ( xx ) / 2 }
-            ) ) =>
+        THEN skip END ; ASSERT
             { // the universally quantified predicates above are only needed to help prove this equality:
                 xx | xx : dom ( { ii } <<| CurrentStocks )
                     & ( CurrentStocks <+ { ii |-> NewCurrentStock } ) ( xx )
-                        < MaxStocks ( xx ) / 2 }
-                = { xx | xx : dom ( { ii } <<| CurrentStocks )
+                        < MaxStocks ( xx ) / 2
+            } =
+            {
+                xx | xx : dom ( { ii } <<| CurrentStocks )
                     & CurrentStocks ( xx )
                         < MaxStocks ( xx ) / 2
-            } )
+            }
 
             & ! xx . ( xx : dom ( { ii } <<| Shortages ) =>
                 res ( xx ) = Shortages ( xx ) )
