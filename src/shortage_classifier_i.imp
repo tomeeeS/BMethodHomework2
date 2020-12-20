@@ -3,7 +3,8 @@ IMPLEMENTATION shortage_classifier_i
 REFINES shortage_classifier
 
 DEFINITIONS
-    "definitions.def"
+    "definitions.def";
+    RES_SHORTAGE == (CurrentStocks<+{ii|->NewCurrentStock})(xx) < MaxStocks(xx)/2
     
 OPERATIONS
     
@@ -16,6 +17,14 @@ OPERATIONS
         MaxStocks
     ) =
     BEGIN
+        ASSERT
+            dom(Shortages|>{TRUE}) 
+            = {
+                xx | xx : dom(CurrentStocks) & CurrentStocks(xx) < MaxStocks(xx) / 2
+            }
+        THEN skip END;        
+        
+        
         IF NewCurrentStock < MaxStocks(ii) / 2 THEN
             res := Shortages;
             res(ii) := TRUE
@@ -28,16 +37,20 @@ OPERATIONS
         ASSERT // helps in proofs
             
             // things outside ii aren't changed
-            //& !xx.(xx: dom({ii} <<| (CurrentStocks <+ {ii |-> NewCurrentStock})) =>
-                //(CurrentStocks <+ {ii |-> NewCurrentStock})(xx) = CurrentStocks(xx))
-            !xx.(xx:  dom({ii} <<| CurrentStocks) 
+            dom(({ii}<<|Shortages)|>{TRUE}) 
+            = {
+                xx | xx : dom({ii}<<|CurrentStocks) & CurrentStocks(xx) < MaxStocks(xx) / 2
+            }
+            // A: 
+            & !xx.(xx:  dom({ii} <<| CurrentStocks) 
                     & (CurrentStocks <+ {ii |-> NewCurrentStock})(xx) 
                         < MaxStocks(xx)/2
                 =>
                     xx: { xx | xx: dom({ii} <<| CurrentStocks) 
                     & CurrentStocks(xx) < MaxStocks(xx)/2 }
             )
-            & !xx.(xx: 
+            // B: 
+            /*& !xx.(xx: 
                 {
                     xx | xx: dom({ii} <<| CurrentStocks) 
                     & (CurrentStocks <+ {ii |-> NewCurrentStock})(xx) 
@@ -46,18 +59,40 @@ OPERATIONS
                     xx: dom({ii} <<| CurrentStocks) 
                     & (CurrentStocks <+ {ii |-> NewCurrentStock})(xx) 
                         < MaxStocks(xx)/2
+            ) */           
+            
+            & dom(CurrentStocks <+ {ii |-> NewCurrentStock})
+                = dom({ii} <<| CurrentStocks) \/ {ii}
+                
+            /*
+            // C: 
+            & !xx.(xx: 
+                {
+                    xx | xx: dom({ii}<<|CurrentStocks)\/{ii} 
+                        & RES_SHORTAGE
+                } => 
+                    xx: {
+                        xx | xx: dom({ii}<<|CurrentStocks) 
+                            & RES_SHORTAGE }
+                    \/ {
+                        xx | xx: {ii} 
+                            & RES_SHORTAGE
+                    }                        
             )            
-        THEN skip END; ASSERT
-            { // the universally quantified predicates above are only needed to help prove this equality:
-                xx | xx: dom({ii} <<| CurrentStocks) 
-                    & (CurrentStocks <+ {ii |-> NewCurrentStock})(xx) 
-                        < MaxStocks(xx)/2
-            } =
-            {
-                xx | xx: dom({ii} <<| CurrentStocks) 
-                    & CurrentStocks(xx) 
-                        < MaxStocks(xx)/2
-            }
+            // D: 
+            & !xx.(xx: 
+                {xx | xx: dom(CurrentStocks) & not(xx = ii)
+                    & RES_SHORTAGE}
+                \/ {xx | xx = ii
+                    & RES_SHORTAGE}          
+                => 
+                    xx: {xx | xx: dom(CurrentStocks)
+                        & RES_SHORTAGE}
+            )
+            */
+            /*
+!xx.(xx: {xx | xx: dom(CurrentStocks) & not(xx = ii) & 0<= -1-(CurrentStocks<+{ii|->NewCurrentStock})(xx)+MaxStocks(xx)/2}\/{xx | xx = ii & 0<= -1-(CurrentStocks<+{ii|->NewCurrentStock})(xx)+MaxStocks(xx)/2} => xx: dom(CurrentStocks) & 0<= -1-(CurrentStocks<+{ii|->NewCurrentStock})(xx)+MaxStocks(xx)/2)
+*/
 
             & !xx.(xx : dom({ii} <<| Shortages) =>
                 res(xx) = Shortages(xx))
@@ -72,7 +107,6 @@ OPERATIONS
             & (not(NewCurrentStock < MaxStocks(ii) / 2) => 
                 res(ii) = FALSE)
 
-
             // the new Shortages is the unchanged parts (outside of {ii})
             //   and the changed part (at {ii})
             //& Shortages <+ {ii |-> TRUE} = ({ii} <<| Shortages) \/ {ii |-> TRUE}
@@ -80,17 +114,95 @@ OPERATIONS
                 dom(({ii} <<| Shortages) |> {TRUE}) \/ {ii}
         
             & Shortages <+ {ii |-> FALSE} = ({ii} <<| Shortages) \/ {ii |-> FALSE}
-            & (Shortages <+ {ii |-> FALSE} = ({ii} <<| Shortages) \/ {ii |-> FALSE} =>
-                dom((Shortages <+ {ii |-> FALSE}) |> {TRUE}) =
-                    dom(({ii} <<| Shortages) |> {TRUE}))                
             
-            // CurrentStocks can also be split similarly
-            & {xx | xx: dom({ii}<<|CurrentStocks)\/{ii} 
-                    & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} 
-                = {xx | xx: dom({ii}<<|CurrentStocks) 
-                    & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}
+            & dom({ii}<<|Shortages|>{TRUE}) <: dom(Shortages|>{TRUE})
+        THEN skip END; ASSERT
+            { // A and B are only needed to help prove this equality:
+                xx | xx: dom({ii} <<| CurrentStocks) 
+                    & (CurrentStocks <+ {ii |-> NewCurrentStock})(xx) 
+                        < MaxStocks(xx)/2
+            } =
+            {
+                xx | xx: dom({ii} <<| CurrentStocks) 
+                    & CurrentStocks(xx) 
+                        < MaxStocks(xx)/2
+            }  
+
+            & dom((Shortages <+ {ii |-> FALSE}) |> {TRUE}) =
+                dom(({ii} <<| Shortages) |> {TRUE})                
+            
+            /*(
+                {xx | xx: dom({ii}<<|CurrentStocks)\/{ii} 
+                    & RES_SHORTAGE} 
+                <: {xx | xx: dom({ii}<<|CurrentStocks) 
+                    & RES_SHORTAGE}
                 \/ {xx | xx: {ii} 
+                    & RES_SHORTAGE}
+            )
+            & (
+                {xx | xx: dom({ii}<<|CurrentStocks) 
+                    & RES_SHORTAGE}
+                \/ {xx | xx: {ii} 
+                    & RES_SHORTAGE} 
+                <: {xx | xx: dom({ii}<<|CurrentStocks)\/{ii} 
+                    & RES_SHORTAGE}
+            )*/
+
+
+            /* SimplifySetComXY.11 	 (Backward)
+                x\S
+                =>
+                ({x | x: S} == S)
+            & { xx | xx: dom(CurrentStocks <+ {ii |-> NewCurrentStock})}
+                = { xx | xx: dom({ii} <<| CurrentStocks) }
+                \/ {ii}
+            
+        THEN skip END; ASSERT */
+/*
+            !xx.((xx: (dom({ii}<<|CurrentStocks) \/ {ii})
+                    & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2
+                )
+                =>
+                (xx: dom(CurrentStocks<+{ii|->NewCurrentStock}) 
+                    & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2)
+            )            
+        THEN skip END; ASSERT
+            ({ xx | xx: dom({ii}<<|CurrentStocks) 
                     & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}
+                \/ {ii}
+                <: {xx | xx: dom(CurrentStocks<+{ii|->NewCurrentStock}) 
+                    & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}
+            )                        
+            & ({xx | xx: dom(CurrentStocks<+{ii|->NewCurrentStock}) 
+                    & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}
+                <: { xx | xx: dom({ii}<<|CurrentStocks) 
+                    & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}
+                \/ {ii}
+            )
+*/
+        THEN skip END; ASSERT
+            ({xx | xx: dom(CurrentStocks<+{ii|->NewCurrentStock}) 
+                    & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}
+                = { xx | xx: dom({ii}<<|CurrentStocks) 
+                    & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}
+                \/ { xx | xx: dom({ii|->NewCurrentStock})
+                    & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}
+            )
+
+            /*
+
+dom(Shortages<+{ii|->TRUE}|>{TRUE}) = {xx | xx: dom(CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}
+
+            // CurrentStocks can also be split similarly
+            // C and D are only needed to help prove this equality:
+            & (
+                {xx | xx: dom({ii}<<|CurrentStocks)\/{ii} 
+                    & RES_SHORTAGE} 
+                = {xx | xx: dom({ii}<<|CurrentStocks) 
+                    & RES_SHORTAGE}
+                \/ {xx | xx: {ii} 
+                    & RES_SHORTAGE}
+            )*/
         THEN
             skip
         END        
