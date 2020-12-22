@@ -36,8 +36,10 @@ OPERATIONS
         
         ASSERT // helps in proofs
             
+            dom(CurrentStocks) = dom(CurrentStocks<+{ii|->NewCurrentStock})
+        
             // things outside ii aren't changed
-            dom(({ii}<<|Shortages)|>{TRUE}) 
+            & dom(({ii}<<|Shortages)|>{TRUE}) 
             = {
                 xx | xx : dom({ii}<<|CurrentStocks) & CurrentStocks(xx) < MaxStocks(xx) / 2
             }
@@ -62,7 +64,7 @@ OPERATIONS
             ) */           
             
             & dom(CurrentStocks <+ {ii |-> NewCurrentStock})
-                = dom({ii} <<| CurrentStocks) \/ {ii}
+                = dom({ii} <<| CurrentStocks) \/ dom({ii |-> NewCurrentStock})
                 
             /*
             // C: 
@@ -111,7 +113,8 @@ OPERATIONS
             //   and the changed part (at {ii})
             //& Shortages <+ {ii |-> TRUE} = ({ii} <<| Shortages) \/ {ii |-> TRUE}
             & dom((Shortages <+ {ii |-> TRUE}) |> {TRUE}) =
-                dom(({ii} <<| Shortages) |> {TRUE}) \/ {ii}
+                dom(({ii} <<| Shortages) |> {TRUE}) 
+                \/ dom({ii |-> res(ii)} |> {TRUE})
         
             & Shortages <+ {ii |-> FALSE} = ({ii} <<| Shortages) \/ {ii |-> FALSE}
             
@@ -203,9 +206,14 @@ dom(Shortages<+{ii|->TRUE}|>{TRUE}) = {xx | xx: dom(CurrentStocks) & (CurrentSto
                 \/ {xx | xx: {ii} 
                     & RES_SHORTAGE}
             )*/
-        THEN
-            skip
-        END        
+            
+        THEN skip END; ASSERT
+            
+        { xx | xx: dom({ii|->NewCurrentStock})
+                & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}
+            = dom({ii |-> res(ii)} |> {TRUE})
+            
+        THEN skip END
     END
     
 
