@@ -431,7 +431,7 @@ THEORY MethodList IS
   pr;
   pr;
   pr;
-  ?;
+  dd & eh(dom(CurrentStocks),_h,Goal);
   dd & eh(dom(Shortages<+{ii|->TRUE}|>{TRUE}),_h,Goal) & eh(dom({ii}<<|Shortages|>{TRUE}),_h,Goal) & eh(dom(CurrentStocks),_h,Goal) & eh({xx | xx: dom(CurrentStocks<+{ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2},_h,Goal) & eh(dom({ii|->(Shortages<+{ii|->TRUE})(ii)}|>{TRUE}),_h,Goal) & eh({xx | xx: dom({ii}<<|CurrentStocks) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2},_h,Goal) & pr;
   pr;
   dd & ah({xx | xx: dom({ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2} <: dom({ii|->(Shortages<+{ii|->TRUE})(ii)}|>{TRUE})) & pr & dd & ah(dom({ii|->(Shortages<+{ii|->TRUE})(ii)}|>{TRUE}) <: {xx | xx: dom({ii|->NewCurrentStock}) & (CurrentStocks<+{ii|->NewCurrentStock})(xx)+1<=MaxStocks(xx)/2}) & pr & dd & ar(GenEqualityX.5,Fwd);

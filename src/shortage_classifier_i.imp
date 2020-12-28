@@ -80,6 +80,10 @@ OPERATIONS
             
             & dom({ii}<<|Shortages|>{TRUE}) <: dom(Shortages|>{TRUE})
             
+            & dom(Shortages<+{ii|->TRUE}|>{FALSE}) 
+                = dom(Shortages) 
+                    - dom(Shortages<+{ii|->TRUE}|>{TRUE})
+            
         THEN skip END; ASSERT
             { 
                 xx | xx: dom({ii} <<| CurrentStocks) 
